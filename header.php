@@ -31,7 +31,7 @@
 
 <body <?php body_class(); ?>>
 
-<header id="masthead" role="banner" class="site-head site-header" <?php if(is_home()){ ?>style="background-image: url({{@blog.cover}})"<?php } ?>>
+<header id="masthead" role="banner" class="site-head site-header" <?php if(is_home() && get_header_image() ) : ?>style="background-image: url(<?php header_image(); ?>);"<?php endif ?>>
     <div class="vertical">
         <div class="site-head-content inner">
             <a class="blog-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_avatar(1); ?></a>

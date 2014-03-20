@@ -19,7 +19,6 @@
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
-			alert(to);
 			if ( 'blank' === to || '' === to || false === to) {
 				$( 'header .blog-title a, header .blog-description' ).css( {
 					'color' : 'inherit'
@@ -31,6 +30,12 @@
 			}
 		} );
 	} );
+	// Header Color
+	wp.customize( 'tcx_header_color', function( value ) {
+        value.bind( function( to ) {
+            $( '.site-head' ).css( 'color', to );
+        } );
+    });
 	// Link color
 	wp.customize( 'tcx_link_color', function( value ) {
         value.bind( function( to ) {
