@@ -385,7 +385,7 @@ margin on the iframe, cause it breaks stuff. */
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 .blog-logo img {
     display: block;
-    max-height: 100px;
+    max-height: 120px;
     width: auto;
     margin: 0 auto;
     line-height: 0;
@@ -589,7 +589,7 @@ margin on the iframe, cause it breaks stuff. */
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
-    margin: 1.4rem 1.6rem 1.6rem 0;
+    margin: 1.4rem 0 1.6rem 1.6rem;
     color: #BBC7CC;
     text-decoration: none;
 }

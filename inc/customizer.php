@@ -16,7 +16,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->default = '#3A4145';
+	$wp_customize->get_setting( 'header_textcolor' )->default = '#50585D';
 	// Logo Controls
 	$wp_customize->add_section( 'casper_logo_section' , array(
 	    'title'       => __( 'Logo', 'casper' ),
@@ -117,6 +117,38 @@ function casper_customize_register( $wp_customize ) {
 	    array(
 	        'section'   => 'casper_custom',
 	        'label'     => 'Display header on all pages',
+	        'type'      => 'checkbox'
+	    )
+	);
+	// Circle logo
+	$wp_customize->add_setting(
+	    'casper_logo_circle',
+	    array(
+	        'default'    =>  'false',
+	        'transport'  =>  'postMessage'
+	    )
+	);
+	$wp_customize->add_control(
+	    'casper_logo_circle',
+	    array(
+	        'section'   => 'casper_custom',
+	        'label'     => 'Make logo circular',
+	        'type'      => 'checkbox'
+	    )
+	);
+	// Frame logo
+	$wp_customize->add_setting(
+	    'casper_logo_frame',
+	    array(
+	        'default'    =>  'false',
+	        'transport'  =>  'postMessage'
+	    )
+	);
+	$wp_customize->add_control(
+	    'casper_logo_frame',
+	    array(
+	        'section'   => 'casper_custom',
+	        'label'     => 'Frame logo image',
 	        'type'      => 'checkbox'
 	    )
 	);

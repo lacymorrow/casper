@@ -138,6 +138,21 @@ function casper_customizer_css() {
         section a { color: <?php echo get_theme_mod( 'casper_link_color' ); ?>; }
         a:hover, header .blog-title a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
         .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
+        <?php if( false != get_theme_mod( 'casper_logo_circle' ) ) { ?>
+			.blog-logo img {
+				-webkit-border-radius: 50%;
+			    -moz-border-radius: 50%;
+			    border-radius: 50%;
+			}
+        <?php } 
+        if( false != get_theme_mod( 'casper_logo_frame' ) ) { ?>
+			.blog-logo img {
+			    border: 3px solid white;
+			    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+			    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+			    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+			}
+        <?php } ?>
     </style>
     <?php
 }

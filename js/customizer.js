@@ -62,4 +62,39 @@
             $( 'a:hover' ).css( 'color', to );
         } );
     });
+    // Circle logo
+	wp.customize( 'casper_logo_circle', function( value ) {
+        value.bind( function( to ) {
+        	alert();
+        	if (false == to){
+	            $( '.blog-logo img' ).css( {'-webkit-border-radius' : '0',
+	        								'-moz-border-radius' : '0',
+	        								'border-radius' : '0'
+	        	} );
+        	} else {
+	            $( '.blog-logo img' ).css( {'-webkit-border-radius' : '50%',
+	        								'-moz-border-radius' : '50%',
+	        								'border-radius' : '50%'
+	        	} );
+	        }
+        } );
+    });
+    // Logo frame
+	wp.customize( 'casper_logo_frame', function( value ) {
+        value.bind( function( to ) {
+        	if (false == to){
+	            $( '.blog-logo img' ).css( {'border' : 'none',
+											'-webkit-box-shadow' : 'none',
+											'-moz-box-shadow' : 'none',
+											'box-shadow' : 'none' 
+	        	} );
+        	} else {
+	            $( '.blog-logo img' ).css( {'border' : '3px solid white',
+	    									'-webkit-box-shadow' : '0 1px 1px rgba(0,0,0,0.3)',
+	   										'-moz-box-shadow' : '0 1px 1px rgba(0,0,0,0.3)',
+	   										'box-shadow' : '0 1px 1px rgba(0,0,0,0.3);} )' 
+	        	} );
+	        }
+	    });
+    });
 } )( jQuery );
