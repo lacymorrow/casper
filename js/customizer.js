@@ -5,32 +5,36 @@
  */
 
 ( function( $ ) {
-	// Site title and description.
+	// blog title and description.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
+			$( '.blog-title a' ).text( to );
 		} );
 	} );
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-description' ).text( to );
+			$( '.blog-description' ).text( to );
 		} );
 	} );
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
-			if ( 'blank' === to ) {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'rect(1px, 1px, 1px, 1px)',
-					'position': 'absolute'
+			alert(to);
+			if ( 'blank' === to || '' === to || false === to) {
+				$( 'header .blog-title a, header .blog-description' ).css( {
+					'color' : 'inherit'
 				} );
 			} else {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'auto',
-					'color': to,
-					'position': 'relative'
+				$( 'header .blog-title a, header .blog-description' ).css( {
+					'color': to
 				} );
 			}
 		} );
 	} );
+	// Link color
+	wp.customize( 'tcx_link_color', function( value ) {
+        value.bind( function( to ) {
+            $( 'section a' ).css( 'color', to );
+        } );
+    });
 } )( jQuery );

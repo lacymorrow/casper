@@ -48,6 +48,21 @@ function casper_setup() {
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
+	// Enable support for a custom header image
+	$defaults = array(
+		'default-image'          => '',
+		'width'                  => 0,
+		'height'                 => 0,
+		'uploads'                => true,
+		'wp-head-callback'       => ''
+	);
+	global $wp_version;
+	if ( version_compare( $wp_version, '3.4', '>=' ) ) :
+		add_theme_support( 'custom-header', $defaults );
+	else :
+		add_custom_image_header( $wp_head_callback, $admin_head_callback );
+	endif;
+
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'casper_custom_background_args', array(
 		'default-color' => 'ffffff',
@@ -122,3 +137,16 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Customizer hook
+ */
+function tcx_customizer_css() {
+    ?>
+    <style type="text/css">
+        section a { color: <?php echo get_theme_mod( 'tcx_link_color' ); ?>; }
+        header .blog-title a, header .blog-description { color: #<?php echo get_theme_mod('header_textcolor'); ?>; }
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'tcx_customizer_css' );

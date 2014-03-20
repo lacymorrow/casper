@@ -13,7 +13,23 @@
 function casper_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->add_setting( 'tcx_link_color' , array(
+	    'default'     => '#4a4a4a',
+	    'transport'   => 'postMessage',
+	) );
+	$wp_customize->add_control(
+	    new WP_Customize_Color_Control(
+	        $wp_customize,
+	        'link_color',
+	        array(
+	            'label'      => __( 'Link Color', 'tcx' ),
+	            'section'    => 'colors',
+	            'settings'   => 'tcx_link_color'
+	        )
+	    )
+	);
 }
 add_action( 'customize_register', 'casper_customize_register' );
 

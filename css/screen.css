@@ -379,6 +379,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .blog-logo {
     text-decoration: none;
+    color: white;
 }
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */

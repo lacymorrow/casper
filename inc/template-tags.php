@@ -72,7 +72,7 @@ if ( ! function_exists( 'casper_posted_on' ) ) :
 function casper_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
+		//$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -82,7 +82,7 @@ function casper_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'casper' ),
+	printf( __( '<span class="posted-on">%1$s</span><span class="byline"> by %2$s</span>', 'casper' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string
