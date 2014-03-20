@@ -86,11 +86,11 @@ add_action( 'widgets_init', 'casper_widgets_init' );
 function casper_scripts() {
 	wp_enqueue_style( 'casper-screen', get_template_directory_uri() . '/css/screen.css' );
 //	wp_enqueue_style( 'casper-style', get_stylesheet_uri() );
-
+	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'casper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'casper-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-	wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'casper-index', get_template_directory_uri() . '/js/index.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'casper-index', get_template_directory_uri() . '/js/index.js', array('jquery'), '1.0.0', true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -126,14 +126,20 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Customizer hook
  */
-function tcx_customizer_css() {
+function casper_customizer_css() {
     ?>
     <style type="text/css">
-        section a { color: <?php echo get_theme_mod( 'tcx_link_color' ); ?>; }
-        header .blog-title a, header .blog-description { color: #<?php echo get_theme_mod('header_textcolor'); ?>; }
-        .site-head { background-color: <?php echo get_theme_mod('tcx_header_color'); ?>; }
+        <?php if(get_header_textcolor()!='blank' && get_header_textcolor()!=false){ ?> 
+        	header .blog-title a, header .blog-description { color: #<?php header_textcolor(); ?>; } 
+        <?php } else { ?> header .blog-description { display: none; } <?php } ?>
+        <?php if(get_theme_mod( 'casper_header_textcolor' )!='blank' && get_theme_mod( 'casper_header_textcolor' )!=false){ ?> 
+        	.home header .blog-title a, .home header .blog-description { color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>; } <?php } ?>
+        <?php if( false == get_theme_mod( 'casper_display_header' ) ) { ?> body:not(.home) #masthead{ background: none; } <?php } ?>
+        section a { color: <?php echo get_theme_mod( 'casper_link_color' ); ?>; }
+        a:hover, header .blog-title a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
+        .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
     </style>
     <?php
 }
-add_action( 'wp_head', 'tcx_customizer_css' );
+add_action( 'wp_head', 'casper_customizer_css' );
 ?>

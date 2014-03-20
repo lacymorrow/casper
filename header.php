@@ -31,11 +31,13 @@
 
 <body <?php body_class(); ?>>
 
-<header id="masthead" role="banner" class="site-head site-header" <?php if(is_home() && get_header_image() ) : ?>style="background-image: url(<?php header_image(); ?>);"<?php endif ?>>
+<header id="masthead" role="banner" class="site-head site-header" <?php if(get_header_image() ) : ?>style="background-image: url(<?php header_image(); ?>);"<?php endif ?>>
     <div class="vertical">
         <div class="site-head-content inner">
-            <a class="blog-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_avatar(1); ?></a>
-            <h1 class="blog-title"><a class="blog-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+            <?php if ( get_theme_mod( 'casper_logo' ) ) : ?>
+                <a class="blog-logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'casper_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+            <?php endif; ?>
+            <h1 class="blog-title"><a class="blog-logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
             <h2 class="blog-description"><?php bloginfo( 'description' ); ?></h2>
         </div>
     </div>

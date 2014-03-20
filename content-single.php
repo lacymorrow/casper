@@ -11,7 +11,7 @@
 		?>
     <header class="post-header">
         <?php if ( 'post' == get_post_type() ) : ?>
-			<span class="post-meta"><?php casper_posted_on(); ?> in <?php printf($category_list; ?></span>
+			<span class="post-meta"><?php casper_posted_on(); ?> in <?php printf($category_list); ?></span>
 		<?php endif; ?>
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
     </header>
@@ -40,15 +40,15 @@
 
 	    <section class="share">
 	        <h4>Share this post</h4>
-	        <a class="icon-twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+	        <a class="icon-twitter" href="http://twitter.com/share?text=<?php bloginfo( 'name' ); ?>&url=<?php the_permalink(); ?>"
 	            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
 	            <span class="hidden">Twitter</span>
 	        </a>
-	        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+	        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"
 	            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
 	            <span class="hidden">Facebook</span>
 	        </a>
-	        <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+	        <a class="icon-google-plus" href="https://plus.google.com/share?url=<?php the_permalink(); ?>"
 	           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
 	            <span class="hidden">Google+</span>
 	        </a>

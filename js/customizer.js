@@ -16,30 +16,50 @@
 			$( '.blog-description' ).text( to );
 		} );
 	} );
-	// Header text color.
+	// Header text color
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to || '' === to || false === to) {
-				$( 'header .blog-title a, header .blog-description' ).css( {
+				$( '.page header .blog-title a, .page header .blog-description' ).css( {
 					'color' : 'inherit'
 				} );
 			} else {
-				$( 'header .blog-title a, header .blog-description' ).css( {
+				$( '.page header .blog-title a, .page header .blog-description' ).css( {
+					'color': to
+				} );
+			}
+		} );
+	} );
+	// Home Header text color
+	wp.customize( 'casper_header_textcolor', function( value ) {
+		value.bind( function( to ) {
+			if ( 'blank' === to || '' === to || false === to) {
+				$( '.home header .blog-title a, .home header .blog-description' ).css( {
+					'color' : 'inherit'
+				} );
+			} else {
+				$( '.home header .blog-title a, .home header .blog-description' ).css( {
 					'color': to
 				} );
 			}
 		} );
 	} );
 	// Header Color
-	wp.customize( 'tcx_header_color', function( value ) {
+	wp.customize( 'casper_header_color', function( value ) {
         value.bind( function( to ) {
-            $( '.site-head' ).css( 'color', to );
+            $( '.site-head' ).css( 'background-color', to );
         } );
     });
 	// Link color
-	wp.customize( 'tcx_link_color', function( value ) {
+	wp.customize( 'casper_link_color', function( value ) {
         value.bind( function( to ) {
             $( 'section a' ).css( 'color', to );
+        } );
+    });
+    // Hover color
+	wp.customize( 'casper_hover_color', function( value ) {
+        value.bind( function( to ) {
+            $( 'a:hover' ).css( 'color', to );
         } );
     });
 } )( jQuery );
