@@ -84,12 +84,14 @@ add_action( 'widgets_init', 'casper_widgets_init' );
  * Enqueue scripts and styles.
  */
 function casper_scripts() {
-	wp_enqueue_style( 'casper-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'casper-screen', get_template_directory_uri() . '/css/screen.css' );
+//	wp_enqueue_style( 'casper-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'casper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
 	wp_enqueue_script( 'casper-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
+	wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'casper-index', get_template_directory_uri() . '/js/index.js', array(), '1.0.0', true );
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

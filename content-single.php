@@ -5,58 +5,54 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-
-		<div class="entry-meta">
-			<?php casper_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'casper' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', 'casper' ) );
-
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'casper' ) );
-
-			if ( ! casper_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'casper' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'casper' );
-				}
-
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'casper' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'casper' );
-				}
-
-			} // end check for categories on this blog
-
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink()
-			);
 		?>
+    <header class="post-header">
+        <?php if ( 'post' == get_post_type() ) : ?>
+			<span class="post-meta"><?php casper_posted_on(); ?> in <?php printf($category_list; ?></span>
+		<?php endif; ?>
+        <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+    </header>
+    <?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		<section class="post-excerpt">
+	        <p><?php the_excerpt(); ?></p>
+	    </section><!-- .entry-summary -->
+	<?php else : ?>
+		<section class="post-content">
+		    <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'casper' ) ); ?>
+		    <?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'casper' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</section>
+	<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'casper' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
+	<footer class="post-footer">
+
+	    <section class="author">
+	        <h4><?php the_author_link(); ?></h4>
+	        <p><?php the_author_meta('description'); ?></p>
+	    </section>
+
+	    <section class="share">
+	        <h4>Share this post</h4>
+	        <a class="icon-twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+	            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+	            <span class="hidden">Twitter</span>
+	        </a>
+	        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+	            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+	            <span class="hidden">Facebook</span>
+	        </a>
+	        <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+	           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	            <span class="hidden">Google+</span>
+	        </a>
+	    </section>
+
+	</footer>
 </article><!-- #post-## -->
