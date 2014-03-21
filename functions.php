@@ -37,7 +37,7 @@ function casper_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -84,12 +84,12 @@ add_action( 'widgets_init', 'casper_widgets_init' );
  * Enqueue scripts and styles.
  */
 function casper_scripts() {
-	wp_enqueue_style( 'casper-screen', get_template_directory_uri() . '/css/screen.css' );
-//	wp_enqueue_style( 'casper-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'casper-style', get_stylesheet_uri() );
 	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'casper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'casper-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'responsive-img', get_template_directory_uri() . '/js/responsive-img.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'casper-index', get_template_directory_uri() . '/js/index.js', array('jquery'), '1.0.0', true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -122,6 +122,14 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Custom Editor Styles
+ */
+function casper_add_editor_styles() {
+    add_editor_style( 'css/custom-editor-style.css' );
+}
+add_action( 'init', 'casper_add_editor_styles' );
 
 /**
  * Customizer hook

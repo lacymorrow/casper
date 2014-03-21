@@ -96,4 +96,13 @@
 	        }
 	    });
     });
+    // Footer info
+	wp.customize( 'casper_custom_footer', function( value ) {
+        value.bind( function( to ) {
+        	if (false == to){
+	            $( '.copywright').html('<a href="#">Casper WP</a> &bull; Inspired by <a class="icon-ghost" href="#">Ghost</a>');
+        	} else {
+	            $( '.copywright').html(to);
+	        }
+        } );
 } )( jQuery );

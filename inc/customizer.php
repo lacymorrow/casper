@@ -174,12 +174,14 @@ function casper_customize_register( $wp_customize ) {
 	        $wp_customize,
 	        'casper_custom_meta',
 	        array(
-	            'label' => 'Custom meta information (tags):',
+	            'label' => 'Custom meta information (tags)',
 	            'section' => 'casper_custom',
 	            'settings' => 'casper_custom_meta'
 	        )
 	    )
 	);
+	$wp_customize->add_setting('casper_custom_footer', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_custom_footer', array('section' => 'casper_custom', 'label' => 'Custom footer', 'type' => 'text'));
 
 	/* ==========================================================================
     Social Icons
