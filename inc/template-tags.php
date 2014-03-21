@@ -18,17 +18,17 @@ function casper_paging_nav() {
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
 	}
+	global $wp_query;
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'casper' ); ?></h1>
+	<nav class="pagination navigation paging-navigation" role="navigation">
 		<div class="nav-links">
-
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'casper' ) ); ?></div>
+			<div class="older-posts"><?php next_posts_link( __( 'Older Posts <span class="meta-nav">&rarr;</span>', 'casper' ) ); ?></div>
 			<?php endif; ?>
-
+				<div class="screen-reader-text page-number"><?php  _e( 'Page '.$paged.' of '.$wp_query->max_num_pages, 'casper' ); ?></div>
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'casper' ) ); ?></div>
+			<div class="newer-posts"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Newer Posts', 'casper' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -51,13 +51,15 @@ function casper_post_nav() {
 	if ( ! $next && ! $previous ) {
 		return;
 	}
+	global $wp_query;
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'casper' ); ?></h1>
+	<nav class="pagination navigation post-navigation" role="navigation">
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'casper' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'casper' ) );
+				previous_post_link( '<div class="older-posts">%link</div>', _x( '%title <span class="meta-nav">&rarr;</span>', 'Previous post link', 'casper' ) ); ?>
+				<div class="page-number">&bull;</div>
+				<?php next_post_link(     '<div class="newer-posts">%link</div>',     _x( '<span class="meta-nav">&larr;</span> %title', 'Next post link',     'casper' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

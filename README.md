@@ -1,5 +1,5 @@
 #Casper
-*(for Wordpress)*
+Casper *(for Wordpress)* is a simple yet beautiful theme for bloggers.
 
 Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [Wordpress](http://wordpress.org) port of the default theme by the same name. The goal of this project is to emulate the gorgeous theme while taking advantage of features exclusive to the Wordpress framework.
 

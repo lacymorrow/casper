@@ -65,7 +65,6 @@
     // Circle logo
 	wp.customize( 'casper_logo_circle', function( value ) {
         value.bind( function( to ) {
-        	alert();
         	if (false == to){
 	            $( '.blog-logo img' ).css( {'-webkit-border-radius' : '0',
 	        								'-moz-border-radius' : '0',

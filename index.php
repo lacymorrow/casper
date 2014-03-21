@@ -31,6 +31,7 @@ get_header(); ?>
 
 			<?php casper_paging_nav(); ?>
 
+
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>

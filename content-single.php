@@ -11,7 +11,7 @@
 		?>
     <header class="post-header">
         <?php if ( 'post' == get_post_type() ) : ?>
-			<span class="post-meta"><?php casper_posted_on(); ?> on <?php printf($category_list); ?></span>
+			<span class="post-meta"><?php casper_posted_on(); ?> | <?php printf($category_list); ?></span>
 		<?php endif; ?>
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
     </header>
@@ -21,7 +21,7 @@
 	    </section><!-- .entry-summary -->
 	<?php else : ?>
 		<section class="post-content">
-		    <?php the_content( __( '&hellip; <span class="meta-nav">&rarr;</span>', 'casper' ) ); ?>
+		    <?php the_content( __( 'more&nbsp<span class="meta-nav">&rarr;</span>', 'casper' ) ); ?>
 		    <?php
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . __( 'Pages:', 'casper' ),

@@ -359,6 +359,13 @@ margin on the iframe, cause it breaks stuff. */
     vertical-align: middle;
 }
 
+.clear {
+    clear: both;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
 
 /* ==========================================================================
    4. General - The main styles for the the theme
@@ -375,6 +382,27 @@ margin on the iframe, cause it breaks stuff. */
     color: #fff;
     background: #303538 no-repeat center center;
     background-size: cover;
+    border-bottom: #EBF2F6 1px solid;
+}
+
+.site-head:after {
+    display: block;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: #E7EEF2 1px solid;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+    background: #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    box-shadow: #fff 0 0 0 5px;
+}
+body.home .site-head:after {
+    z-index: -3;
 }
 
 .blog-logo {
@@ -575,6 +603,11 @@ margin on the iframe, cause it breaks stuff. */
     margin-right: 180px;
 }
 
+.post-footer .author a{
+    text-decoration: none;
+}
+
+
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
@@ -615,6 +648,78 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 1.1rem;
 }
 
+/* Comments */
+.comments-area {
+    width:80%;
+    max-width: 700px;
+    margin: 4rem auto;
+    padding-bottom: 4rem;
+}
+
+.comment-form-comment label{
+    width: 100%;
+    display: inline-block;
+}
+
+.form-allowed-tags {
+    width:80%;
+    float: right;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: #9EABB3;
+    margin: -1rem;
+}
+
+.form-submit #submit{
+    max-width: 18%;
+    float: left;
+    border-width: 3px;
+    background: none;
+    display: inline-block;
+    padding: 15px;
+    border: #EBF2F6 2px solid;
+    text-decoration: none;
+    transition: border ease 0.3s;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: #9EABB3;
+}
+
+/* Main widget wrapper */
+.widget-area {
+    width:80%;
+    max-width: 700px;
+    margin: 4rem auto;
+    padding-bottom: 4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: #9EABB3;
+}
+
+.widget-area h1 {
+    font-size: 2.5rem;
+}
+
+.widget-area aside {
+    float: left;
+    width: 30%;
+    padding: 2rem 1.5%;
+}
+
+.search-submit {
+    border-width: 3px;
+    background: none;
+    display: inline-block;
+    padding: 15px;
+    border: #EBF2F6 2px solid;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: border ease 0.3s;
+}
+
+.search-submit:hover, .form-submit #submit {
+    border-color: #9EABB3;
+}
 
 /* ==========================================================================
    7. Pagination - Tools to let you flick between pages
@@ -802,7 +907,6 @@ margin on the iframe, cause it breaks stuff. */
         min-height: 240px;
         padding: 15% 0;
     }
-
     .blog-title {
         font-size: 4rem;
         letter-spacing: -1px;
