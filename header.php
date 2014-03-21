@@ -61,14 +61,14 @@
                         <span class="hidden">Twitter</span>
                     </a>
                 <?php } ?>
-                <?php if ( false != get_theme_mod( 'casper_social_mail')) { ?>
-                    <a class="icon-envelope" href="mailto:<?php echo get_theme_mod( 'casper_social_mail'); ?>">
-                        <span class="hidden">Email</span>
-                    </a>
-                <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_website')) { ?>
                     <a class="icon-home" href="<?php echo get_theme_mod( 'casper_social_website'); ?>">
                         <span class="hidden">Home</span>
+                    </a>
+                <?php } ?>
+                <?php if ( false != get_theme_mod( 'casper_social_mail')) { ?>
+                    <a class="icon-envelope" href="mailto:<?php echo get_theme_mod( 'casper_social_mail'); ?>">
+                        <span class="hidden">Email</span>
                     </a>
                 <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_linkedin')) { ?>
