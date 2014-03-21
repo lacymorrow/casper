@@ -11,7 +11,21 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function casper_customize_register( $wp_customize ) {
-
+	/**
+	 * Adds textarea support to the theme customizer
+	 */
+	class Casper_textarea_control extends WP_Customize_Control {
+	    public $type = 'textarea';
+	 
+	    public function render_content() {
+	        ?>
+	            <label>
+	                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+	                <textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+	            </label>
+	        <?php
+	    }
+	}
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
@@ -152,6 +166,52 @@ function casper_customize_register( $wp_customize ) {
 	        'type'      => 'checkbox'
 	    )
 	);
+	// Custom meta
+	$wp_customize->add_setting( 'casper_custom_meta' );
+ 
+	$wp_customize->add_control(
+	    new Casper_textarea_control(
+	        $wp_customize,
+	        'casper_custom_meta',
+	        array(
+	            'label' => 'Custom meta information (tags):',
+	            'section' => 'casper_custom',
+	            'settings' => 'casper_custom_meta'
+	        )
+	    )
+	);
+
+	/* ==========================================================================
+    Social Icons
+    ========================================================================== */
+
+	$wp_customize->add_section(
+	    'casper_social',
+	    array(
+	        'title'     => 'Social URLs',
+	        'priority'  => 199
+	    )
+	);
+	$wp_customize->add_setting('casper_social_dribbble', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_social_dribbble', array('section' => 'casper_social', 'label' => 'Dribbble', 'type' => 'text'));
+	$wp_customize->add_setting('casper_social_facebook', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_social_facebook', array('section' => 'casper_social', 'label' => 'Facebook', 'type' => 'text'));
+	$wp_customize->add_setting('casper_social_github', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_social_github', array('section' => 'casper_social', 'label' => 'GitHub', 'type' => 'text'));
+	$wp_customize->add_setting('casper_social_google', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_social_google', array('section' => 'casper_social', 'label' => 'Google+', 'type' => 'text'));
+	$wp_customize->add_setting('casper_social_linkedin', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_social_linkedin', array('section' => 'casper_social', 'label' => 'LinkedIn', 'type' => 'text'));
+	$wp_customize->add_setting('casper_social_mail', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_social_mail', array('section' => 'casper_social', 'label' => 'Email', 'type' => 'text'));
+	$wp_customize->add_setting('casper_social_tumblr', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_social_tumblr', array('section' => 'casper_social', 'label' => 'Tumblr', 'type' => 'text'));
+	$wp_customize->add_setting('casper_social_twitter', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_social_twitter', array('section' => 'casper_social', 'label' => 'Twitter', 'type' => 'text'));
+	$wp_customize->add_setting('casper_social_website', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_social_website', array('section' => 'casper_social', 'label' => 'Website', 'type' => 'text'));
+	$wp_customize->add_setting('casper_social_youtube', array('transport' => 'postMessage'));
+	$wp_customize->add_control('casper_social_youtube', array('section' => 'casper_social', 'label' => 'Youtube', 'type' => 'text'));
 }
 add_action( 'customize_register', 'casper_customize_register' );
 

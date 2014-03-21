@@ -14,11 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="HandheldFriendly" content="True" />
 <meta name="MobileOptimized" content="320" />
-<meta property="og:site_name" content="Amjad Masad" />
-<meta property="og:title" content="Why I'm Excited About Object.observe" />
+<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
 <meta property="og:type" content="article" />
-<meta property="article:publisher" content="https://www.twitter.com/amasad" />
-<meta property="article:author" content="https://www.twitter.com/amasad" />
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
@@ -37,6 +34,59 @@
             <?php if ( get_theme_mod( 'casper_logo' ) ) : ?>
                 <a class="blog-logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'casper_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
             <?php endif; ?>
+
+            <div class="contact">
+                <?php if ( false != get_theme_mod( 'casper_social_youtube')) { ?>
+                    <a class="icon-youtube" href="<?php echo get_theme_mod( 'casper_social_youtube'); ?>">
+                        <span class="hidden">YouTube</span>
+                    </a>
+                <?php } ?>
+                <?php if ( false != get_theme_mod( 'casper_social_tumblr')) { ?>
+                    <a class="icon-tumblr" href="<?php echo get_theme_mod( 'casper_social_tumblr'); ?>">
+                        <span class="hidden">Tumblr</span>
+                    </a>
+                <?php } ?>
+                <?php if ( false != get_theme_mod( 'casper_social_google')) { ?>
+                    <a class="icon-google-plus" href="<?php echo get_theme_mod( 'casper_social_google'); ?>">
+                        <span class="hidden">Google+</span>
+                    </a>
+                <?php } ?>
+                <?php if ( false != get_theme_mod( 'casper_social_facebook')) { ?>
+                    <a class="icon-facebook" href="<?php echo get_theme_mod( 'casper_social_facebook'); ?>">
+                        <span class="hidden">Facebook</span>
+                    </a>
+                <?php } ?>
+                <?php if ( false != get_theme_mod( 'casper_social_twitter')) { ?>
+                    <a class="icon-twitter" href="<?php echo get_theme_mod( 'casper_social_twitter' ); ?>">
+                        <span class="hidden">Twitter</span>
+                    </a>
+                <?php } ?>
+                <?php if ( false != get_theme_mod( 'casper_social_mail')) { ?>
+                    <a class="icon-envelope" href="mailto:<?php echo get_theme_mod( 'casper_social_mail'); ?>">
+                        <span class="hidden">Email</span>
+                    </a>
+                <?php } ?>
+                <?php if ( false != get_theme_mod( 'casper_social_website')) { ?>
+                    <a class="icon-home" href="<?php echo get_theme_mod( 'casper_social_website'); ?>">
+                        <span class="hidden">Home</span>
+                    </a>
+                <?php } ?>
+                <?php if ( false != get_theme_mod( 'casper_social_linkedin')) { ?>
+                    <a class="icon-linkedin" href="<?php echo get_theme_mod( 'casper_social_linkedin'); ?>">
+                        <span class="hidden">LinkedIn</span>
+                    </a>
+                <?php } ?>
+                <?php if ( false != get_theme_mod( 'casper_social_github')) { ?>
+                    <a class="icon-github" href="<?php echo get_theme_mod( 'casper_social_github'); ?>">
+                        <span class="hidden">GitHub</span>
+                    </a>
+                <?php } ?>
+                <?php if ( false != get_theme_mod( 'casper_social_dribbble')) { ?>
+                    <a class="icon-dribbble" href="<?php echo get_theme_mod( 'casper_social_dribbble'); ?>">
+                        <span class="hidden">Dribbble</span>
+                    </a>
+                <?php } ?>
+            </div>
             <h1 class="blog-title"><a class="blog-logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
             <h2 class="blog-description"><?php bloginfo( 'description' ); ?></h2>
         </div>

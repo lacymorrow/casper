@@ -126,9 +126,9 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Customizer hook
  */
-function casper_customizer_css() {
-    ?>
-    <style type="text/css">
+function casper_customizer_head() {
+   	if(get_theme_mod( 'casper_custom_meta' )!='blank' && get_theme_mod( 'casper_custom_meta' )!=false) { echo get_theme_mod( 'casper_custom_meta' ); }
+    ?>    <style type="text/css">
         <?php if(get_header_textcolor()!='blank' && get_header_textcolor()!=false){ ?> 
         	header .blog-title a, header .blog-description { color: #<?php header_textcolor(); ?>; } 
         <?php } else { ?> header .blog-description { display: none; } <?php } ?>
@@ -156,5 +156,5 @@ function casper_customizer_css() {
     </style>
     <?php
 }
-add_action( 'wp_head', 'casper_customizer_css' );
+add_action( 'wp_head', 'casper_customizer_head' );
 ?>

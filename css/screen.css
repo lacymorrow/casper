@@ -46,7 +46,14 @@
 .icon-feed:before, 
 .icon-twitter:before, 
 .icon-google-plus:before, 
-.icon-facebook:before {
+.icon-facebook:before,
+.icon-home:before,
+.icon-github:before,
+.icon-envelope:before,
+.icon-linkedin:before,
+.icon-youtube:before,
+.icon-tumblr:before,
+.icon-dribbble:before{
     font-family: 'icons';
     speak: none;
     font-style: normal;
@@ -55,6 +62,7 @@
     text-transform: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-decoration: none;
 }
 
@@ -70,12 +78,37 @@
     content: "\e002";
     font-size: 1.1em;
 }
-.icon-google-plus:before {
-    content: "\e003";
+.icon-home:before {
+    content: "\e600";
+    font-size: 1.1em;
 }
 .icon-facebook:before {
-    content: "\e004";
+    content: "\e602";
 }
+.icon-github:before {
+    content: "\e603";
+    font-size: 1.1em;
+}
+.icon-google-plus:before {
+    content: "\e605";
+}
+.icon-envelope:before {
+    content: "\e606";
+}
+.icon-linkedin:before {
+    content: "\e607";
+}
+.icon-youtube:before {
+    content: "\e608";
+}
+.icon-tumblr:before {
+    content: "\e609";
+}
+.icon-dribbble:before {
+    content: "\e60a";
+    font-size: 1.1em;
+}
+
 
 
 /* ==========================================================================
@@ -646,6 +679,16 @@ body.home .site-head:after {
 .gist .line-number {
     min-width: 25px;
     font-size: 1.1rem;
+}
+
+/* Social links */
+.contact {
+    margin-top: 15px;
+}
+.contact a {
+    text-decoration: none;
+    font-size: 1.3em;
+    margin: 0 5px;
 }
 
 /* Comments */
