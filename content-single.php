@@ -3,7 +3,6 @@
  * @package Casper
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php
 			/* translators: used between list items, there is a space after the comma */
