@@ -141,10 +141,10 @@ function casper_customizer_head() {
         	header .blog-title a, header .blog-description { color: #<?php header_textcolor(); ?>; } 
         <?php } else { ?> header .blog-description { display: none; } <?php } ?>
         <?php if(get_theme_mod( 'casper_header_textcolor' )!='blank' && get_theme_mod( 'casper_header_textcolor' )!=false){ ?> 
-        	.home header .blog-title a, .home header .blog-description { color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>; } <?php } ?>
+        	.home header .blog-title a, .home header .contact a, .home header .blog-description { color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>; } <?php } ?>
         <?php if( false == get_theme_mod( 'casper_display_header' ) ) { ?> body:not(.home) #masthead{ background: none; } <?php } ?>
         section a { color: <?php echo get_theme_mod( 'casper_link_color' ); ?>; }
-        a:hover, header .blog-title a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
+        a:hover, header .blog-title a:hover, .home header .contact a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
         .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
         <?php if( false != get_theme_mod( 'casper_logo_circle' ) ) { ?>
 			.blog-logo img {

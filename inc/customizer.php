@@ -122,7 +122,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 	    'casper_display_header',
 	    array(
-	        'default'    =>  'false',
+	        'default'    =>  false,
 	        'transport'  =>  'postMessage'
 	    )
 	);
@@ -138,7 +138,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 	    'casper_logo_circle',
 	    array(
-	        'default'    =>  'false',
+	        'default'    =>  false,
 	        'transport'  =>  'postMessage'
 	    )
 	);
@@ -154,7 +154,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 	    'casper_logo_frame',
 	    array(
-	        'default'    =>  'false',
+	        'default'    =>  false,
 	        'transport'  =>  'postMessage'
 	    )
 	);
