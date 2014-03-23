@@ -137,12 +137,15 @@ add_action( 'init', 'casper_add_editor_styles' );
 function casper_customizer_head() {
    	if(get_theme_mod( 'casper_custom_meta' )!='blank' && get_theme_mod( 'casper_custom_meta' )!=false) { echo get_theme_mod( 'casper_custom_meta' ); }
     ?>    <style type="text/css">
-        <?php if(get_header_textcolor()!='blank' && get_header_textcolor()!=false){ ?> 
+        <?php if(get_header_textcolor()!='blank' && get_header_textcolor()!=false && false == get_theme_mod( 'casper_display_header' )){ ?> 
         	header .blog-title a, header .blog-description { color: #<?php header_textcolor(); ?>; } 
-        <?php } else { ?> header .blog-description { display: none; } <?php } ?>
-        <?php if(get_theme_mod( 'casper_header_textcolor' )!='blank' && get_theme_mod( 'casper_header_textcolor' )!=false){ ?> 
-        	.home header .blog-title a, .home header .contact a, .home header .blog-description { color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>; } <?php } ?>
-        <?php if( false == get_theme_mod( 'casper_display_header' ) ) { ?> body:not(.home) #masthead{ background: none; } <?php } ?>
+        <?php } else if(get_header_textcolor()=='blank' || get_header_textcolor()==false) { ?>
+			header .blog-description { display: none; } 
+		<?php }
+		if(get_theme_mod( 'casper_header_textcolor' )!='blank' && get_theme_mod( 'casper_header_textcolor' )!=false){ ?> 
+        	.home header .blog-title a, .home header .contact a, .home header .blog-description { color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>; }
+        <?php }
+		if( false == get_theme_mod( 'casper_display_header' ) ) { ?> body:not(.home) #masthead{ background: none; } <?php } ?>
         section a { color: <?php echo get_theme_mod( 'casper_link_color' ); ?>; }
         a:hover, header .blog-title a:hover, .home header .contact a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
         .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }

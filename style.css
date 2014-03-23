@@ -1110,7 +1110,7 @@ body.home .site-head:after {
 
 .post-footer .share a {
     font-size: 1.8rem;
-    display: inline-block;
+    display: inline;
     margin: 1.4rem 0 1.6rem 1.6rem;
     color: #BBC7CC;
     text-decoration: none;
