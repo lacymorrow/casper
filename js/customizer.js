@@ -20,11 +20,11 @@
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to || '' === to || false === to) {
-				$( '.page header .blog-title a, .page header .blog-description' ).css( {
+				$( '.page header .blog-title a, .page header .blog-description, .social-icons a' ).css( {
 					'color' : 'inherit'
 				} );
 			} else {
-				$( '.page header .blog-title a, .page header .blog-description' ).css( {
+				$( '.page header .blog-title a, .page header .blog-description, .social-icons a' ).css( {
 					'color': to
 				} );
 			}
@@ -34,11 +34,11 @@
 	wp.customize( 'casper_header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to || '' === to || false === to) {
-				$( '.home header .blog-title a, .home header .blog-description' ).css( {
+				$( '.home header .blog-title a, .home header .blog-description, .home .social-icons a' ).css( {
 					'color' : 'inherit'
 				} );
 			} else {
-				$( '.home header .blog-title a, .home header .blog-description' ).css( {
+				$( '.home header .blog-title a, .home header .blog-description, .home .social-icons a' ).css( {
 					'color': to
 				} );
 			}

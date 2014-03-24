@@ -35,7 +35,7 @@
                 <a class="blog-logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'casper_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
             <?php endif; ?>
 
-            <div class="contact">
+            <div class="social-icons">
                 <?php if ( false != get_theme_mod( 'casper_social_youtube')) { ?>
                     <a class="icon-youtube" href="<?php echo get_theme_mod( 'casper_social_youtube'); ?>">
                         <span class="hidden">YouTube</span>

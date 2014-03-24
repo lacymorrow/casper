@@ -1138,13 +1138,14 @@ body.home .site-head:after {
 }
 
 /* Social links */
-.contact {
+.social-icons {
     margin-top: 15px;
 }
-.contact a {
+.social-icons a {
     text-decoration: none;
     font-size: 1.3em;
     margin: 0 5px;
+    color: white;
 }
 
 /* Comments */
@@ -1221,7 +1222,7 @@ body.home .site-head:after {
     transition: border ease 0.3s;
 }
 
-.search-submit:hover, .form-submit #submit {
+.search-submit:hover, .form-submit #submit:hover {
     border-color: #9EABB3;
 }
 
