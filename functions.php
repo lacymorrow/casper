@@ -70,7 +70,7 @@ add_action( 'after_setup_theme', 'casper_setup' );
  */
 function casper_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'casper' ),
+		'name'          => __( 'Footer Bar', 'casper' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -149,7 +149,16 @@ function casper_customizer_head() {
         section a { color: <?php echo get_theme_mod( 'casper_link_color' ); ?>; }
         a:hover, header .blog-title a:hover, header .social-icons a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
         .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
-        <?php if( false != get_theme_mod( 'casper_logo_circle' ) ) { ?>
+        <?php if(get_theme_mod( 'casper_menu_color' )!='blank' && get_theme_mod( 'casper_menu_color' )!=false){ ?> 
+        	.main-navigation a { color: <?php echo get_theme_mod( 'casper_menu_color' ); ?>; }
+        <?php }
+        if(get_theme_mod( 'casper_home_menu_color' )!='blank' && get_theme_mod( 'casper_home_menu_color' )!=false){ ?> 
+        	.home .main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
+        	 <?php if(false != get_theme_mod( 'casper_display_header' ) ){ ?> 
+        	 	.main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>;
+        	 <?php } ?>
+        <?php }
+        if( false != get_theme_mod( 'casper_logo_circle' ) ) { ?>
 			.blog-logo img {
 				-webkit-border-radius: 50%;
 			    -moz-border-radius: 50%;

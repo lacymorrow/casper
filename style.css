@@ -52,11 +52,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* Import the font file with the icons in it */
 @font-face {
     font-family: 'icons';
-    src:url('fonts/icons.eot');
-    src:url('fonts/icons.eot?#iefix') format('embedded-opentype'),
-        url('fonts/icons.woff') format('woff'),
-        url('fonts/icons.ttf') format('truetype'),
-        url('fonts/icons.svg#icons') format('svg');
+    src:url('fonts/fa.eot');
+    src:url('fonts/fa.eot?#iefix') format('embedded-opentype'),
+        url('fonts/fa.woff') format('woff'),
+        url('fonts/fa.ttf') format('truetype'),
+        url('fonts/fa.svg#icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -68,6 +68,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .icon-google-plus:before, 
 .icon-facebook:before,
 .icon-home:before,
+.icon-menu:before,
 .icon-github:before,
 .icon-envelope:before,
 .icon-linkedin:before,
@@ -101,6 +102,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .icon-home:before {
     content: "\e600";
     font-size: 1.1em;
+}
+.icon-menu:before {
+    content: "\e601";
 }
 .icon-facebook:before {
     content: "\e602";
@@ -575,13 +579,25 @@ textarea {
 .main-navigation {
     clear: both;
     display: block;
-    float: left;
+    position: absolute;
+    top: 0;
+    color: white;
     width: 100%;
+    z-index: 2;
+    font-family: 'Open Sans', sans-serif;
+}
+.main-navigation>div {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
 }
 .main-navigation ul {
     list-style: none;
-    margin: 0;
-    padding-left: 0;
+    margin: 0 4rem 0 4rem;
+    padding: 0;
+    float: right;
+    font-size: 1.2rem;
 }
 .main-navigation li {
     float: left;
@@ -590,6 +606,16 @@ textarea {
 .main-navigation a {
     display: block;
     text-decoration: none;
+    color: white;
+    padding: 12px 20px;
+    background-color: rgba(0,0,0,0);
+    -webkit-transition:  color 0.3s ease, background 0.3s ease;
+    -moz-transition:  color 0.3s ease, background 0.3s ease;
+    transition:  color 0.3s ease, background 0.3s ease;
+}
+.main-navigation a:hover {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
 }
 .main-navigation ul ul {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -616,7 +642,22 @@ textarea {
 /* Small menu */
 .menu-toggle {
     cursor: pointer;
+    font-size: 0;
+    height: 48px;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    width: 48px;
     display: none;
+}
+.menu-toggle a {
+    padding: 5px;
+}
+.menu-toggle a:before {
+    font-size: 3rem;
 }
 @media screen and (max-width: 600px) {
     .menu-toggle,
@@ -626,6 +667,15 @@ textarea {
 
     .main-navigation ul {
         display: none;
+        margin: 0;
+        font-size: 1.8rem;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .main-navigation li {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+        border-bottom: 1px solid #444;
     }
 }
 .site-main .comment-navigation,
@@ -882,12 +932,11 @@ body.home .site-head:after {
     z-index: -3;
 }
 
+/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 .blog-logo {
     text-decoration: none;
     color: white;
 }
-
-/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 .blog-logo img {
     display: block;
     max-height: 120px;

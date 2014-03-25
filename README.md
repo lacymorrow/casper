@@ -17,3 +17,5 @@ Want to report a bug, request a feature, or help me build this project? The more
 
 
 Many thanks to the [Ghost](http://ghost.org) & [Wordpress](http://wordpress.org) teams, as well as the [Underscores _s](http://underscores.me/) contributers, and [kvendrik](https://github.com/kvendrik/responsive-images.js). Built using all of the above.
+
+All assets licensed under the [MIT License](http://opensource.org/licenses/MIT) a similar GPL-compatible license.

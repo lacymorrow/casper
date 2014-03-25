@@ -16,20 +16,40 @@
 			$( '.blog-description' ).text( to );
 		} );
 	} );
+	/* 
 	// Header text color
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to || '' === to || false === to) {
-				$( '.page header .blog-title a, .page header .blog-description, .social-icons a' ).css( {
+				$( 'header .blog-title a, header .blog-description, .social-icons a' ).css( {
 					'color' : 'inherit'
 				} );
 			} else {
-				$( '.page header .blog-title a, .page header .blog-description, .social-icons a' ).css( {
+				$( 'header .blog-title a, header .blog-description, .social-icons a' ).css( {
 					'color': to
 				} );
 			}
 		} );
 	} );
+	// Hover color
+	wp.customize( 'casper_hover_color', function( value ) {
+        value.bind( function( to ) {
+            $( 'a:hover, header .blog-title a:hover, header .social-icons a:hover' ).css( 'color', to );
+        } );
+    });
+    // Home Menu color
+	wp.customize( 'casper_home_menu_color', function( value ) {
+        value.bind( function( to ) {
+            $( '.main-navigation a' ).css( 'color', to );
+        } );
+    });
+    // Menu color
+	wp.customize( 'casper_menu_color', function( value ) {
+        value.bind( function( to ) {
+            $( '.main-navigation a' ).css( 'color', to );
+        } );
+    });
+	*/
 	// Home Header text color
 	wp.customize( 'casper_header_textcolor', function( value ) {
 		value.bind( function( to ) {
@@ -54,12 +74,6 @@
 	wp.customize( 'casper_link_color', function( value ) {
         value.bind( function( to ) {
             $( 'section a' ).css( 'color', to );
-        } );
-    });
-    // Hover color
-	wp.customize( 'casper_hover_color', function( value ) {
-        value.bind( function( to ) {
-            $( 'a:hover' ).css( 'color', to );
         } );
     });
     // Circle logo
@@ -105,4 +119,5 @@
 	            $( '.copywright').html(to);
 	        }
         } );
+    });
 } )( jQuery );

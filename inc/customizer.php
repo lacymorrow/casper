@@ -29,7 +29,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'header_textcolor' )->transport = 'refresh';
 	$wp_customize->get_setting( 'header_textcolor' )->default = '#50585D';
 	// Logo Controls
 	$wp_customize->add_section( 'casper_logo_section' , array(
@@ -38,7 +38,7 @@ function casper_customize_register( $wp_customize ) {
 	    'description' => 'Upload a logo to display above the site title on each page',
 	) );
 	$wp_customize->add_setting( 'casper_logo'  , array(
-	    'transport'   => 'postMessage'
+	    'transport'   => 'refresh'
 	) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'casper_logo', array(
 	    'label'    => __( 'Logo', 'casper' ),
@@ -105,7 +105,7 @@ function casper_customize_register( $wp_customize ) {
 	// Theme hover color
 	$wp_customize->add_setting( 'casper_hover_color' , array(
 	    'default'     => '#57A3E8',
-	    'transport'   => 'postMessage'
+	    'transport'   => 'refresh'
 	) );
 	$wp_customize->add_control(
 	    new WP_Customize_Color_Control(
@@ -118,12 +118,45 @@ function casper_customize_register( $wp_customize ) {
 	        )
 	    )
 	);
+	// Home Menu color
+	$wp_customize->add_setting( 'casper_home_menu_color' , array(
+	    'default'     => '#ffffff',
+	    'transport'   => 'refresh'
+	) );
+	$wp_customize->add_control(
+	    new WP_Customize_Color_Control(
+	        $wp_customize,
+	        'home_menu_color',
+	        array(
+	            'label'      => __( 'Home Menu Color', 'casper' ),
+	            'section'    => 'colors',
+	            'settings'   => 'casper_home_menu_color'
+	        )
+	    )
+	);
+	// Menu color
+	$wp_customize->add_setting( 'casper_menu_color' , array(
+	    'default'     => '#50585D',
+	    'transport'   => 'refresh'
+	) );
+	$wp_customize->add_control(
+	    new WP_Customize_Color_Control(
+	        $wp_customize,
+	        'menu_color',
+	        array(
+	            'label'      => __( 'Menu Color', 'casper' ),
+	            'section'    => 'colors',
+	            'settings'   => 'casper_menu_color'
+	        )
+	    )
+	);
+
 	// Display header on all pages (vs home only)
 	$wp_customize->add_setting(
 	    'casper_display_header',
 	    array(
 	        'default'    =>  true,
-	        'transport'  =>  'postMessage'
+	        'transport'  =>  'refresh'
 	    )
 	);
 	$wp_customize->add_control(
@@ -180,7 +213,7 @@ function casper_customize_register( $wp_customize ) {
 	        )
 	    )
 	);
-	$wp_customize->add_setting('casper_custom_footer', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_custom_footer', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_custom_footer', array('section' => 'casper_custom', 'label' => 'Custom footer', 'type' => 'text'));
 
 	/* ==========================================================================
@@ -194,25 +227,25 @@ function casper_customize_register( $wp_customize ) {
 	        'priority'  => 199
 	    )
 	);
-	$wp_customize->add_setting('casper_social_dribbble', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_social_dribbble', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_social_dribbble', array('section' => 'casper_social', 'label' => 'Dribbble', 'type' => 'text'));
-	$wp_customize->add_setting('casper_social_facebook', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_social_facebook', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_social_facebook', array('section' => 'casper_social', 'label' => 'Facebook', 'type' => 'text'));
-	$wp_customize->add_setting('casper_social_github', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_social_github', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_social_github', array('section' => 'casper_social', 'label' => 'GitHub', 'type' => 'text'));
-	$wp_customize->add_setting('casper_social_google', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_social_google', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_social_google', array('section' => 'casper_social', 'label' => 'Google+', 'type' => 'text'));
-	$wp_customize->add_setting('casper_social_linkedin', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_social_linkedin', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_social_linkedin', array('section' => 'casper_social', 'label' => 'LinkedIn', 'type' => 'text'));
-	$wp_customize->add_setting('casper_social_mail', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_social_mail', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_social_mail', array('section' => 'casper_social', 'label' => 'Email', 'type' => 'text'));
-	$wp_customize->add_setting('casper_social_tumblr', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_social_tumblr', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_social_tumblr', array('section' => 'casper_social', 'label' => 'Tumblr', 'type' => 'text'));
-	$wp_customize->add_setting('casper_social_twitter', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_social_twitter', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_social_twitter', array('section' => 'casper_social', 'label' => 'Twitter', 'type' => 'text'));
-	$wp_customize->add_setting('casper_social_website', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_social_website', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_social_website', array('section' => 'casper_social', 'label' => 'Website', 'type' => 'text'));
-	$wp_customize->add_setting('casper_social_youtube', array('transport' => 'postMessage'));
+	$wp_customize->add_setting('casper_social_youtube', array('transport' => 'refresh'));
 	$wp_customize->add_control('casper_social_youtube', array('section' => 'casper_social', 'label' => 'Youtube', 'type' => 'text'));
 }
 add_action( 'customize_register', 'casper_customize_register' );
@@ -221,6 +254,6 @@ add_action( 'customize_register', 'casper_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function casper_customize_preview_js() {
-	wp_enqueue_script( 'casper_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_enqueue_script( 'casper_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'jquery', 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'casper_customize_preview_js' );

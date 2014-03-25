@@ -30,6 +30,17 @@
 
 <header id="masthead" role="banner" class="site-head site-header" <?php if(get_header_image() ) : ?>style="background-image: url(<?php header_image(); ?>);"<?php endif ?>>
     <div class="vertical">
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div>
+                <h1 class="menu-toggle">
+                    <a class="icon-menu" href="#">
+                        <span class="hidden">Menu</span>
+                    </a>
+                </h1>
+                <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'casper' ); ?></a>
+                <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+            </div>
+        </nav><!-- #site-navigation -->
         <div class="site-head-content inner">
             <?php if ( get_theme_mod( 'casper_logo' ) ) : ?>
                 <a class="blog-logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'casper_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
@@ -91,12 +102,6 @@
             <h2 class="blog-description"><?php bloginfo( 'description' ); ?></h2>
         </div>
     </div>
-    <!-- <nav id="site-navigation" class="main-navigation" role="navigation">
-		<h1 class="menu-toggle"><?php _e( 'Menu', 'casper' ); ?></h1>
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'casper' ); ?></a>
-
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</nav> --><!-- #site-navigation -->
 </header><!-- #masthead -->
 
 <main id="content" class="content" role="main">

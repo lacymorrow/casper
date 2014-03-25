@@ -8,14 +8,21 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="post-header">
-    	    <a class="blog-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                {{#if @blog.logo}}
-                    <img src="{{@blog.logo}}" alt="Blog Logo" />
-                {{else}}
-                    <span class="blog-title"><?php the_title(); ?></span>
-                {{/if}}
-            </a>
-	</header><!-- .entry-header -->
+        <?php if ( 'post' == get_post_type() ) : ?>
+            <span class="post-meta"><?php casper_posted_on(); ?> | <?php printf($category_list); if ( '' != $tag_list ) { echo " in "; } printf($tag_list); ?></span>
+        <?php endif; ?>
+        <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+        <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it. 
+            $image_id = get_post_thumbnail_id();
+            $thumb_url = wp_get_attachment_image_src($image_id,'thumbnail', true);
+            $medium_url = wp_get_attachment_image_src($image_id,'medium', true);
+            $large_url = wp_get_attachment_image_src($image_id,'large', true);
+        ?>
+
+            <img data-src='<480:<?php echo $thumb_url[0]; ?>, <768:<?php echo $medium_url[0]; ?>, >768:<?php echo $large_url[0]; ?>' />
+            <noscript><?php the_post_thumbnail('thumbnail'); ?></noscript>
+        <?php } ?>
+    </header><!-- .entry-header -->
 	<h1 class="post-title"><?php the_title(); ?></h1>
 	<div class="post-content">
 		<?php the_content(); ?>
