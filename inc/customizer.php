@@ -30,7 +30,6 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'refresh';
-	$wp_customize->get_setting( 'header_textcolor' )->default = '#50585D';
 	// Logo Controls
 	$wp_customize->add_section( 'casper_logo_section' , array(
 	    'title'       => __( 'Logo', 'casper' ),
@@ -71,7 +70,7 @@ function casper_customize_register( $wp_customize ) {
 	);
 	// Home head text color
 	$wp_customize->add_setting( 'casper_header_textcolor' , array(
-	    'default'     => '#ffffff',
+	    'default'     => '#50585D',
 	    'transport'   => 'postMessage'
 	) );
 	$wp_customize->add_control(
@@ -79,10 +78,9 @@ function casper_customize_register( $wp_customize ) {
 	        $wp_customize,
 	        'casper_home_header_color',
 	        array(
-	            'label'      => __( 'Home Header Text Color', 'casper' ),
+	            'label'      => __( 'Page Header Text Color', 'casper' ),
 	            'section'    => 'colors',
 	            'settings'   => 'casper_header_textcolor',
-	            'priority'	 => 1
 	        )
 	    )
 	);
@@ -171,7 +169,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 	    'casper_logo_circle',
 	    array(
-	        'default'    =>  false,
+	        'default'    =>  'false',
 	        'transport'  =>  'postMessage'
 	    )
 	);
@@ -187,7 +185,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 	    'casper_logo_frame',
 	    array(
-	        'default'    =>  false,
+	        'default'    =>  'false',
 	        'transport'  =>  'postMessage'
 	    )
 	);

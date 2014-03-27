@@ -50,15 +50,15 @@
         } );
     });
 	*/
-	// Home Header text color
+	// Other Page Header text color
 	wp.customize( 'casper_header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to || '' === to || false === to) {
-				$( '.home header .blog-title a, .home header .blog-description, .home .social-icons a' ).css( {
+				$( ' header .blog-title a,  header .blog-description,  .social-icons a' ).css( {
 					'color' : 'inherit'
 				} );
 			} else {
-				$( '.home header .blog-title a, .home header .blog-description, .home .social-icons a' ).css( {
+				$( ' header .blog-title a,  header .blog-description,  .social-icons a' ).css( {
 					'color': to
 				} );
 			}

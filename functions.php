@@ -135,37 +135,53 @@ add_action( 'init', 'casper_add_editor_styles' );
  * Customizer hook
  */
 function casper_customizer_head() {
-   	if(get_theme_mod( 'casper_custom_meta' )!='blank' && get_theme_mod( 'casper_custom_meta' )!=false) { echo get_theme_mod( 'casper_custom_meta' ); }
-    ?>    <style type="text/css">
-        <?php if(get_header_textcolor()!='blank' && get_header_textcolor()!=false && false == get_theme_mod( 'casper_display_header' )){ ?> 
-        	header .blog-title a, header .blog-description, header .social-icons a { color: #<?php header_textcolor(); ?>; } 
-        <?php } else if(get_header_textcolor()=='blank' || get_header_textcolor()==false) { ?>
-			header .blog-description { display: none; } 
-		<?php }
-		if(get_theme_mod( 'casper_header_textcolor' )!='blank' && get_theme_mod( 'casper_header_textcolor' )!=false){ ?> 
-        	.home header .blog-title a, .home header .social-icons a, .home header .blog-description { color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>; }
-        <?php }
-		if( false == get_theme_mod( 'casper_display_header' ) ) { ?> body:not(.home) #masthead{ background: none; } <?php } ?>
-        section a { color: <?php echo get_theme_mod( 'casper_link_color' ); ?>; }
-        a:hover, header .blog-title a:hover, header .social-icons a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
-        .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
-        <?php if(get_theme_mod( 'casper_menu_color' )!='blank' && get_theme_mod( 'casper_menu_color' )!=false){ ?> 
+   	if (get_theme_mod( 'casper_custom_meta' )!=false) { echo get_theme_mod( 'casper_custom_meta' ); } ?>    
+
+   	<style type="text/css">
+		<?php if(get_header_textcolor()){ ?>
+			.blog-title a, .blog-description, .social-icons a { color: #<?php header_textcolor(); ?>; } 
+		<?php } ?>
+
+		<?php if(false === get_header_textcolor()) { ?>
+			.blog-description { display: none; } 
+		<?php } ?>
+		<?php if(get_theme_mod( 'casper_header_textcolor' )){ ?> 
+        	:not(.home) .blog-title a, :not(.home) .blog-description, :not(.home) .social-icons a { 
+        		color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>; 
+        	}
+        <?php } ?>
+		<?php if(get_theme_mod('casper_header_color')){ ?>
+		    .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
+		<?php } ?>
+        <?php if( false === get_theme_mod( 'casper_display_header' )) { ?> 
+        	body:not(.home) #masthead{ background: none; }
+        <?php } ?>
+		
+		<?php if( get_theme_mod( 'casper_link_color' )) { ?> 
+			section a { color: <?php echo get_theme_mod( 'casper_link_color' ); ?>; }
+		<?php } ?>
+
+		<?php if(get_theme_mod( 'casper_hover_color' )) { ?>
+			a:hover, .blog-title a:hover, .social-icons a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
+		<?php } ?>
+
+        <?php if(get_theme_mod( 'casper_menu_color' )){ ?> 
         	.main-navigation a { color: <?php echo get_theme_mod( 'casper_menu_color' ); ?>; }
-        <?php }
-        if(get_theme_mod( 'casper_home_menu_color' )!='blank' && get_theme_mod( 'casper_home_menu_color' )!=false){ ?> 
+        <?php } ?>
+        <?php if(get_theme_mod( 'casper_home_menu_color' )){ ?> 
         	.home .main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
-        	 <?php if(false != get_theme_mod( 'casper_display_header' ) ){ ?> 
+        	 <?php if(get_theme_mod( 'casper_display_header' )){ ?> 
         	 	.main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>;
         	 <?php } ?>
-        <?php }
-        if( false != get_theme_mod( 'casper_logo_circle' ) ) { ?>
+        <?php } ?>
+        <?php if( false != get_theme_mod( 'casper_logo_circle' ) ) { ?>
 			.blog-logo img {
 				-webkit-border-radius: 50%;
 			    -moz-border-radius: 50%;
 			    border-radius: 50%;
 			}
-        <?php } 
-        if( false != get_theme_mod( 'casper_logo_frame' ) ) { ?>
+        <?php } ?>
+        <?php if( false != get_theme_mod( 'casper_logo_frame' ) ) { ?>
 			.blog-logo img {
 			    border: 3px solid white;
 			    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);

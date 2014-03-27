@@ -1196,7 +1196,9 @@ body.home .site-head:after {
     margin: 0 5px;
     color: white;
 }
-
+.blog-title a:hover, .social-icons a:hover {
+    color: #57A3E8;
+}
 /* Comments */
 .comments-area {
     width:80%;
@@ -1275,6 +1277,24 @@ body.home .site-head:after {
     border-color: #9EABB3;
 }
 
+#main > header.page-header {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #9EABB3;
+    text-align: center;
+}
+#main > header.page-header > h1 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: normal;
+    text-indent: 0;
+    letter-spacing: normal;
+    margin: 0 4rem;
+    padding: 0;
+}
 /* ==========================================================================
    7. Pagination - Tools to let you flick between pages
    ========================================================================== */

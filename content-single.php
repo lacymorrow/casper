@@ -31,7 +31,8 @@
 		?>
     <header class="post-header">
         <?php if ( 'post' == get_post_type() ) : ?>
-			<span class="post-meta"><?php casper_posted_on(); ?> | <?php printf($category_list); if ( '' != $tag_list ) { echo " in "; } printf($tag_list); ?></span>
+			<span class="post-meta"><?php casper_posted_on(); ?> | <?php printf($category_list); if ( '' != $tag_list ) { echo " in "; } printf($tag_list); 
+			edit_post_link( __( 'Edit&rarr;', 'casper' ), '<span class="edit-link">&nbsp;&bull;&nbsp;', '</span>' );?></span>
 		<?php endif; ?>
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
         <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it. 
@@ -44,6 +45,7 @@
         	<img data-src='<480:<?php echo $thumb_url[0]; ?>, <768:<?php echo $medium_url[0]; ?>, >768:<?php echo $large_url[0]; ?>' />
 			<noscript><?php the_post_thumbnail('thumbnail'); ?></noscript>
 	    <?php } ?>
+
     </header>
     <?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<section class="post-excerpt">
@@ -51,7 +53,7 @@
 	    </section><!-- .entry-summary -->
 	<?php else : ?>
 		<section class="post-content">
-		    <?php the_content( __( 'more&nbsp<span class="meta-nav">&rarr;</span>', 'casper' ) ); ?>
+		    <?php the_content( __( '&hellip;&nbsp<span class="meta-nav">&rarr;</span>', 'casper' ) ); ?>
 		    <?php
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . __( 'Pages:', 'casper' ),
