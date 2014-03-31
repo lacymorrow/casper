@@ -13,7 +13,7 @@
 		<div class="site-info inner">
 		    <section class="copyright">
 		    	<?php if(  false == get_theme_mod( 'casper_custom_footer') ) { ?>
-		    		<a href="https://github.com/lacymorrow/casper-wp" rel="home">Casper WP</a> &bull; Inspired by <a class="icon-ghost" href="http://ghost.org">Ghost</a>
+		    		<a href="https://github.com/lacymorrow/casper-wp" rel="home">Casper WP</a> &bull; Inspired by <span class="icon-ghost">Ghost.org</span>
 		    	<?php } else { echo get_theme_mod( 'casper_custom_footer'); } ?>
 		    </section>
 		</div><!-- .site-info -->

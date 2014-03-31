@@ -84,9 +84,8 @@ add_action( 'widgets_init', 'casper_widgets_init' );
  * Enqueue scripts and styles.
  */
 function casper_scripts() {
-	wp_enqueue_style('wptavern-google-fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400');
+	wp_enqueue_style('casper-google-fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400');
 	wp_enqueue_style( 'casper-style', get_stylesheet_uri() );
-	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'casper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'casper-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '1.0.0', true );
@@ -146,7 +145,7 @@ function casper_customizer_head() {
 		<?php if('blank' === get_header_textcolor()) { ?>
 			.blog-description { display: none; } 
 		<?php } ?>
-		<?php if(get_theme_mod( 'casper_header_textcolor' )){ ?> 
+		<?php if(false != get_theme_mod( 'casper_header_textcolor' ) && false != get_theme_mod( 'casper_display_header' )){ ?> 
         	body:not(.home) .blog-title a, body:not(.home) .blog-description, body:not(.home) .social-icons a { 
         		color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>; 
         	}
@@ -154,7 +153,7 @@ function casper_customizer_head() {
 		<?php if(get_theme_mod('casper_header_color')){ ?>
 		    .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
 		<?php } ?>
-        <?php if(false === get_theme_mod( 'casper_display_header' )) { ?> 
+        <?php if(false != get_theme_mod( 'casper_display_header' )) { ?> 
         	body:not(.home) #masthead{ background: none; }
         <?php } ?>
 		
