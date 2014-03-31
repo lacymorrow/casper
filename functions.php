@@ -12,11 +12,6 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-/**
- * Define the template directory.
- */
-define( 'TEMPLATE_DIR', get_template_directory() );
-
 if ( ! function_exists( 'casper_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -32,7 +27,7 @@ function casper_setup() {
 	 * If you're building a theme based on Casper, use a find and replace
 	 * to change 'casper' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'casper', TEMPLATE_DIR . '/languages' );
+	load_theme_textdomain( 'casper', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -89,6 +84,7 @@ add_action( 'widgets_init', 'casper_widgets_init' );
  * Enqueue scripts and styles.
  */
 function casper_scripts() {
+	wp_enqueue_style('wptavern-google-fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400');
 	wp_enqueue_style( 'casper-style', get_stylesheet_uri() );
 	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'casper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -96,7 +92,7 @@ function casper_scripts() {
 	wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'responsive-img', get_template_directory_uri() . '/js/responsive-img.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'casper-index', get_template_directory_uri() . '/js/index.js', array('jquery'), '1.0.0', true );
-
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -106,27 +102,27 @@ add_action( 'wp_enqueue_scripts', 'casper_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require TEMPLATE_DIR . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require TEMPLATE_DIR . '/inc/template-tags.php';
+require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require TEMPLATE_DIR . '/inc/extras.php';
+require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.
  */
-require TEMPLATE_DIR . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require TEMPLATE_DIR . '/inc/jetpack.php';
+require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Custom Editor Styles
@@ -140,29 +136,29 @@ add_action( 'init', 'casper_add_editor_styles' );
  * Customizer hook
  */
 function casper_customizer_head() {
-   	if (get_theme_mod( 'casper_custom_meta' )!=false) { echo get_theme_mod( 'casper_custom_meta' ); } ?>
+   	if (get_theme_mod( 'casper_custom_meta' )!=false) { echo get_theme_mod( 'casper_custom_meta' ); } ?>    
 
    	<style type="text/css">
 		<?php if(get_header_textcolor()){ ?>
-			.blog-title a, .blog-description, .social-icons a { color: #<?php header_textcolor(); ?>; }
+			.blog-title a, .blog-description, .social-icons a { color: #<?php header_textcolor(); ?>; } 
 		<?php } ?>
 
 		<?php if('blank' === get_header_textcolor()) { ?>
-			.blog-description { display: none; }
+			.blog-description { display: none; } 
 		<?php } ?>
-		<?php if(get_theme_mod( 'casper_header_textcolor' )){ ?>
-        	body:not(.home) .blog-title a, body:not(.home) .blog-description, body:not(.home) .social-icons a {
-        		color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>;
+		<?php if(get_theme_mod( 'casper_header_textcolor' )){ ?> 
+        	body:not(.home) .blog-title a, body:not(.home) .blog-description, body:not(.home) .social-icons a { 
+        		color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>; 
         	}
         <?php } ?>
 		<?php if(get_theme_mod('casper_header_color')){ ?>
 		    .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
 		<?php } ?>
-        <?php if( false === get_theme_mod( 'casper_display_header' )) { ?>
+        <?php if(false === get_theme_mod( 'casper_display_header' )) { ?> 
         	body:not(.home) #masthead{ background: none; }
         <?php } ?>
-
-		<?php if( get_theme_mod( 'casper_link_color' )) { ?>
+		
+		<?php if( get_theme_mod( 'casper_link_color' )) { ?> 
 			section a { color: <?php echo get_theme_mod( 'casper_link_color' ); ?>; }
 		<?php } ?>
 
@@ -170,12 +166,12 @@ function casper_customizer_head() {
 			a:hover, body .blog-title a:hover, body .social-icons a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
 		<?php } ?>
 
-        <?php if(get_theme_mod( 'casper_menu_color' )){ ?>
+        <?php if(get_theme_mod( 'casper_menu_color' )){ ?> 
         	.main-navigation a { color: <?php echo get_theme_mod( 'casper_menu_color' ); ?>; }
         <?php } ?>
-        <?php if(get_theme_mod( 'casper_home_menu_color' )){ ?>
+        <?php if(get_theme_mod( 'casper_home_menu_color' )){ ?> 
         	.home .main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
-        	 <?php if(get_theme_mod( 'casper_display_header' )){ ?>
+        	 <?php if(get_theme_mod( 'casper_display_header' )){ ?> 
         	 	.main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>;
         	 <?php } ?>
         <?php } ?>
