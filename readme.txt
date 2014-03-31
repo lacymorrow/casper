@@ -13,4 +13,11 @@ Want to report a bug, request a feature, or help me build this project? The more
 
 Many thanks to the Ghost & WordPress teams, as well as the Underscores _s contributers, and kvendrik. Built using all of the above.
 
-All assets licensed under the MIT License a similar GPL-compatible license.
+Licensed under the MIT license.
+
+Casper Logo is Public Domain
+responsive-img.js is open source
+Underscores _s is licensed under GPLv2 or later
+Font Awesome is fully open source and is GPL compatible
+Casper: The default theme for Ghost is released under the MIT license
+PHP 4 and PHP 5 are distributed under the PHP License v3.01, copyright (c) the PHP Group
