@@ -171,7 +171,7 @@ function casper_customizer_head() {
         <?php if(get_theme_mod( 'casper_home_menu_color' )){ ?> 
         	.home .main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
         	 <?php if(get_theme_mod( 'casper_display_header' )){ ?> 
-        	 	.main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>;
+        	 	.main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
         	 <?php } ?>
         <?php } ?>
         <?php if( false != get_theme_mod( 'casper_logo_circle' ) ) { ?>
