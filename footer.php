@@ -7,7 +7,6 @@
  * @package Casper
  */
 ?>
-
 	<footer id="colophon" class="site-footer" role="contentinfo">
 	    <a class="subscribe icon-feed" href="<?php bloginfo('rss2_url'); ?>"><span class="tooltip">Subscribe!</span></a>
 		<div class="site-info inner">
@@ -18,7 +17,6 @@
 		    </section>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-
 <?php wp_footer(); ?>
 </main><!-- /#content -->
 
