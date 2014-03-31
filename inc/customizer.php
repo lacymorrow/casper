@@ -153,7 +153,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 	    'casper_display_header',
 	    array(
-	        'default'    =>  true,
+	        'default'    =>  'true',
 	        'transport'  =>  'refresh'
 	    )
 	);

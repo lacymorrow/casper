@@ -142,7 +142,7 @@ function casper_customizer_head() {
 			.blog-title a, .blog-description, .social-icons a { color: #<?php header_textcolor(); ?>; } 
 		<?php } ?>
 
-		<?php if(false === get_header_textcolor()) { ?>
+		<?php if('blank' === get_header_textcolor()) { ?>
 			.blog-description { display: none; } 
 		<?php } ?>
 		<?php if(get_theme_mod( 'casper_header_textcolor' )){ ?> 
@@ -153,7 +153,7 @@ function casper_customizer_head() {
 		<?php if(get_theme_mod('casper_header_color')){ ?>
 		    .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
 		<?php } ?>
-        <?php if( false === get_theme_mod( 'casper_display_header' )) { ?> 
+        <?php echo get_theme_mod( 'casper_display_header' ); if(false === get_theme_mod( 'casper_display_header' )) { ?> 
         	body:not(.home) #masthead{ background: none; }
         <?php } ?>
 		
