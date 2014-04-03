@@ -156,6 +156,12 @@ function casper_customizer_head() {
         <?php if(false != get_theme_mod( 'casper_display_header' )) { ?> 
         	body:not(.home) #masthead{ background: none; }
         <?php } ?>
+        <?php if(false != get_theme_mod( 'casper_display_header_all' )) { ?> 
+        	body:not(.home) .site-head:after { display: none; }
+        	body:not(.home) #masthead{ height: auto; border: none; }
+        	body:not(.home) .blog-title, body:not(.home) .blog-description { display: none; }
+        	body:not(.home) .inner { padding-top: 1em; }
+        <?php } ?>
 		
 		<?php if( get_theme_mod( 'casper_link_color' )) { ?> 
 			section a { color: <?php echo get_theme_mod( 'casper_link_color' ); ?>; }
@@ -170,7 +176,7 @@ function casper_customizer_head() {
         <?php } ?>
         <?php if(get_theme_mod( 'casper_home_menu_color' )){ ?> 
         	.home .main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
-        	 <?php if(get_theme_mod( 'casper_display_header' )){ ?> 
+        	 <?php if(!get_theme_mod( 'casper_display_header' )){ ?> 
         	 	.main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
         	 <?php } ?>
         <?php } ?>

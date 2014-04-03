@@ -154,6 +154,7 @@ body {
     font-size: 2.0rem;
     line-height: 1.6em;
     color: #3A4145;
+    overflow-x: none;
 }
 
 ::-moz-selection {

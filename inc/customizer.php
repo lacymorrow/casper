@@ -149,7 +149,7 @@ function casper_customize_register( $wp_customize ) {
 	    )
 	);
 
-	// Display header on all pages (vs home only)
+	// Display header bg on all pages (vs home only)
 	$wp_customize->add_setting(
 	    'casper_display_header',
 	    array(
@@ -159,6 +159,22 @@ function casper_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_control(
 	    'casper_display_header',
+	    array(
+	        'section'   => 'casper_custom',
+	        'label'     => 'Only display header background on home page',
+	        'type'      => 'checkbox'
+	    )
+	);
+	// Display header on all pages (vs home only)
+	$wp_customize->add_setting(
+	    'casper_display_header_all',
+	    array(
+	        'default'    =>  false,
+	        'transport'  =>  'refresh'
+	    )
+	);
+	$wp_customize->add_control(
+	    'casper_display_header_all',
 	    array(
 	        'section'   => 'casper_custom',
 	        'label'     => 'Only display header on home page',
