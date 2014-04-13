@@ -17,8 +17,8 @@
 		    </section>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-<?php wp_footer(); ?>
 </main><!-- /#content -->
 
+<?php wp_footer(); ?>
 </body>
 </html>
