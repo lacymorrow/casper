@@ -1,15 +1,15 @@
-# Copyright (C) 2013 Automattic
-# This file is distributed under the GNU General Public License v2 or later.
+# Copyright (C) 2014 Lacy Morrow
+# This file is distributed under the GNU General Public License.
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0-wpcom\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2013-12-19 02:31:31+00:00\n"
+"Project-Id-Version: Casper 1.0.3\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/casper-wp\n"
+"POT-Creation-Date: 2014-04-15 15:43:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Lacy Morrow <me@lacymorrow.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: 404.php:15
@@ -31,92 +31,92 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: archive.php:31
+#: archive.php:27
 msgid "Author: %s"
 msgstr ""
 
-#: archive.php:39
+#: archive.php:30
 msgid "Day: %s"
 msgstr ""
 
-#: archive.php:42
+#: archive.php:33
 msgid "Month: %s"
 msgstr ""
 
-#: archive.php:42
+#: archive.php:33
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: archive.php:45
+#: archive.php:36
 msgid "Year: %s"
 msgstr ""
 
-#: archive.php:45
+#: archive.php:36
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: archive.php:48
+#: archive.php:39
 msgid "Asides"
 msgstr ""
 
-#: archive.php:51
+#: archive.php:42
 msgid "Galleries"
 msgstr ""
 
-#: archive.php:54
+#: archive.php:45
 msgid "Images"
 msgstr ""
 
-#: archive.php:57
+#: archive.php:48
 msgid "Videos"
 msgstr ""
 
-#: archive.php:60
+#: archive.php:51
 msgid "Quotes"
 msgstr ""
 
-#: archive.php:63
+#: archive.php:54
 msgid "Links"
 msgstr ""
 
-#: archive.php:66
+#: archive.php:57
 msgid "Statuses"
 msgstr ""
 
-#: archive.php:69
+#: archive.php:60
 msgid "Audios"
 msgstr ""
 
-#: archive.php:72
+#: archive.php:63
 msgid "Chats"
 msgstr ""
 
-#: archive.php:75 sidebar.php:17
+#: archive.php:66
 msgid "Archives"
 msgstr ""
 
-#: comments.php:30
+#: comments.php:28
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:37 comments.php:57
+#: comments.php:35 comments.php:52
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:38 comments.php:58
+#: comments.php:36 comments.php:53
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:39 comments.php:59
+#: comments.php:37 comments.php:54
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:69
+#: comments.php:64
 msgid "Comments are closed."
 msgstr ""
 
@@ -141,164 +141,184 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-single.php:20 content.php:27
-msgid "Pages:"
+#: content-page.php:12 content-single.php:34
+msgid "in"
 msgstr ""
 
-#: content-page.php:23 content-single.php:60 content.php:61
-#: inc/template-tags.php:81 inc/template-tags.php:100
+#: content-page.php:30
 msgid "Edit"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: content-single.php:29 content-single.php:32 content.php:38 content.php:48
+#: content-single.php:9 content-single.php:12 content.php:10
 msgid ", "
 msgstr ""
 
-#: content-single.php:37
+#: content-single.php:17
 msgid ""
 "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
 "\">permalink</a>."
 msgstr ""
 
-#: content-single.php:39
+#: content-single.php:19
 msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: content-single.php:45
+#: content-single.php:25
 msgid ""
 "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
 "rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: content-single.php:47
+#: content-single.php:27
 msgid ""
 "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
 "\">permalink</a>."
 msgstr ""
 
-#: content.php:24
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+#: content-single.php:35
+msgid "Edit&rarr;"
 msgstr ""
 
-#: content.php:42
-msgid "Posted in %1$s"
+#: content-single.php:56
+msgid "&hellip;&nbsp<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content.php:52
-msgid "Tagged %1$s"
+#: content-single.php:59 content.php:37
+msgid "Pages:"
 msgstr ""
 
-#: content.php:58
-msgid "Leave a comment"
+#: content.php:14
+msgid "on %1$s"
 msgstr ""
 
-#: content.php:58
-msgid "1 Comment"
+#: content.php:34
+msgid "&hellip;&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content.php:58
-msgid "% Comments"
+#: footer.php:11
+msgid "Subscribe!"
 msgstr ""
 
-#: footer.php:16
-msgid "Proudly powered by %s"
+#: footer.php:15
+msgid ""
+"<a href=\"%1$s\" rel=\"home\">Casper WP</a> &bull; Inspired by <span class="
+"\"icon-ghost\">Ghost.org</span>"
 msgstr ""
 
-#: footer.php:18
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: functions.php:45
+#: functions.php:44
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:65
-msgid "Sidebar"
+#: functions.php:73
+msgid "Footer Bar"
 msgstr ""
 
-#: header.php:31
+#: header.php:35
 msgid "Menu"
 msgstr ""
 
-#: header.php:32
+#: header.php:38
 msgid "Skip to content"
+msgstr ""
+
+#: header.php:50
+msgid "Youtube"
+msgstr ""
+
+#: header.php:55
+msgid "Tumblr"
+msgstr ""
+
+#: header.php:60
+msgid "Google+"
+msgstr ""
+
+#: header.php:65
+msgid "Facebook"
+msgstr ""
+
+#: header.php:70
+msgid "Twitter"
+msgstr ""
+
+#: header.php:75
+msgid "Home"
+msgstr ""
+
+#: header.php:80
+msgid "Email"
+msgstr ""
+
+#: header.php:85
+msgid "LinkedIn"
+msgstr ""
+
+#: header.php:90
+msgid "GitHub"
+msgstr ""
+
+#: header.php:95
+msgid "Dribbble"
+msgstr ""
+
+#: inc/customizer.php:35 inc/customizer.php:43
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:65
+msgid "Header Color"
+msgstr ""
+
+#: inc/customizer.php:81
+msgid "Page Header Text Color"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Hover Color"
+msgstr ""
+
+#: inc/customizer.php:129
+msgid "Home Menu Color"
+msgstr ""
+
+#: inc/customizer.php:145
+msgid "Menu Color"
 msgstr ""
 
 #: inc/extras.php:63
 msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:23
-msgid "Posts navigation"
-msgstr ""
-
 #: inc/template-tags.php:27
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgid "Older Posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: inc/template-tags.php:31
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: inc/template-tags.php:56
-msgid "Post navigation"
-msgstr ""
-
-#: inc/template-tags.php:59
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgid "<span class=\"meta-nav\">&larr;</span> Newer Posts"
 msgstr ""
 
 #: inc/template-tags.php:60
-msgctxt "Next post link"
+msgctxt "Previous post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:81
-msgid "Pingback:"
+#: inc/template-tags.php:62
+msgctxt "Next post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
 msgstr ""
 
-#: inc/template-tags.php:91
-msgid "%s <span class=\"says\">says:</span>"
-msgstr ""
-
-#: inc/template-tags.php:97
-msgctxt "1: date, 2: time"
-msgid "%1$s at %2$s"
-msgstr ""
-
-#: inc/template-tags.php:104
-msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: inc/template-tags.php:145
+#: inc/template-tags.php:87
 msgid ""
-"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
-"%2$s</span>"
+"<span class=\"posted-on\">%1$s</span><span class=\"byline\"> by %2$s</span>"
 msgstr ""
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
-
-#: searchform.php:10
-msgctxt "label"
-msgid "Search for:"
-msgstr ""
-
-#: searchform.php:11
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr ""
-
-#: searchform.php:13
-msgctxt "submit button"
-msgid "Search"
-msgstr ""
-
-#: sidebar.php:24
-msgid "Meta"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -306,7 +326,7 @@ msgid "Casper"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://lacymorrow.com/projects/casper"
+msgid "https://github.com/lacymorrow/casper-wp"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -326,5 +346,5 @@ msgid "Lacy Morrow"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://lacymorrow.com/"
+msgid "http://lacymorrow.com"
 msgstr ""

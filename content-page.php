@@ -9,7 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="post-header">
         <?php if ( 'post' == get_post_type() ) : ?>
-            <span class="post-meta"><?php casper_posted_on(); ?> | <?php printf($category_list); if ( '' != $tag_list ) { echo " in "; } printf($tag_list); ?></span>
+            <span class="post-meta"><?php casper_posted_on(); ?> | <?php printf($category_list); if ( '' != $tag_list ) { _e('in', 'casper'); } printf($tag_list); ?></span>
         <?php endif; ?>
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
         <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it. 

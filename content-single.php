@@ -31,7 +31,7 @@
 		?>
     <header class="post-header">
         <?php if ( 'post' == get_post_type() ) : ?>
-			<span class="post-meta"><?php casper_posted_on(); ?> | <?php printf($category_list); if ( '' != $tag_list ) { echo " in "; } printf($tag_list); 
+			<span class="post-meta"><?php casper_posted_on(); ?> | <?php printf($category_list); if ( '' != $tag_list ) { _e('in', 'casper'); } printf($tag_list); 
 			edit_post_link( __( 'Edit&rarr;', 'casper' ), '<span class="edit-link">&nbsp;&bull;&nbsp;', '</span>' );?></span>
 		<?php endif; ?>
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>

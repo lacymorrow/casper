@@ -32,7 +32,7 @@
             <div>
                 <h1 class="menu-toggle">
                     <a class="icon-menu" href="#">
-                        <span class="hidden">Menu</span>
+                        <span class="hidden"><?php _e( 'Menu', 'casper' ); ?></span>
                     </a>
                 </h1>
                 <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'casper' ); ?></a>
@@ -47,52 +47,52 @@
             <div class="social-icons">
                 <?php if ( false != get_theme_mod( 'casper_social_youtube')) { ?>
                     <a class="icon-youtube" href="<?php echo get_theme_mod( 'casper_social_youtube'); ?>">
-                        <span class="hidden">YouTube</span>
+                        <span class="hidden"><?php _e( 'Youtube', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_tumblr')) { ?>
                     <a class="icon-tumblr" href="<?php echo get_theme_mod( 'casper_social_tumblr'); ?>">
-                        <span class="hidden">Tumblr</span>
+                        <span class="hidden"><?php _e( 'Tumblr', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_google')) { ?>
                     <a class="icon-google-plus" href="<?php echo get_theme_mod( 'casper_social_google'); ?>">
-                        <span class="hidden">Google+</span>
+                        <span class="hidden"><?php _e( 'Google+', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_facebook')) { ?>
                     <a class="icon-facebook" href="<?php echo get_theme_mod( 'casper_social_facebook'); ?>">
-                        <span class="hidden">Facebook</span>
+                        <span class="hidden"><?php _e( 'Facebook', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_twitter')) { ?>
                     <a class="icon-twitter" href="<?php echo get_theme_mod( 'casper_social_twitter' ); ?>">
-                        <span class="hidden">Twitter</span>
+                        <span class="hidden"><?php _e( 'Twitter', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_website')) { ?>
                     <a class="icon-home" href="<?php echo get_theme_mod( 'casper_social_website'); ?>">
-                        <span class="hidden">Home</span>
+                        <span class="hidden"><?php _e( 'Home', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_mail')) { ?>
                     <a class="icon-envelope" href="mailto:<?php echo get_theme_mod( 'casper_social_mail'); ?>">
-                        <span class="hidden">Email</span>
+                        <span class="hidden"><?php _e( 'Email', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_linkedin')) { ?>
                     <a class="icon-linkedin" href="<?php echo get_theme_mod( 'casper_social_linkedin'); ?>">
-                        <span class="hidden">LinkedIn</span>
+                        <span class="hidden"><?php _e( 'LinkedIn', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_github')) { ?>
                     <a class="icon-github" href="<?php echo get_theme_mod( 'casper_social_github'); ?>">
-                        <span class="hidden">GitHub</span>
+                        <span class="hidden"><?php _e( 'GitHub', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
                 <?php if ( false != get_theme_mod( 'casper_social_dribbble')) { ?>
                     <a class="icon-dribbble" href="<?php echo get_theme_mod( 'casper_social_dribbble'); ?>">
-                        <span class="hidden">Dribbble</span>
+                        <span class="hidden"><?php _e( 'Dribbble', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
             </div>
