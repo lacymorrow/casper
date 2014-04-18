@@ -969,7 +969,7 @@ body.home .site-head:after {
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
-.post {
+.hentry {
     position: relative;
     width:80%;
     max-width: 700px;
@@ -981,7 +981,7 @@ body.home .site-head:after {
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
-.post:after {
+.hentry:after {
     display: block;
     content: "";
     width: 7px;
