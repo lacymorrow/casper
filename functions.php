@@ -85,7 +85,7 @@ add_action( 'widgets_init', 'casper_widgets_init' );
  */
 function casper_scripts() {
 	wp_enqueue_style('casper-google-fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400');
-	wp_enqueue_style( 'casper-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'casper-style', get_template_directory_uri() . '/css/style.css' );
 	wp_enqueue_script( 'casper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'casper-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '1.0.0', true );
