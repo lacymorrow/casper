@@ -33,11 +33,11 @@
 /* Import the font file with the icons in it */
 @font-face {
     font-family: 'icons';
-    src:url('fonts/fa.eot');
-    src:url('fonts/fa.eot?#iefix') format('embedded-opentype'),
-        url('fonts/fa.woff') format('woff'),
-        url('fonts/fa.ttf') format('truetype'),
-        url('fonts/fa.svg#icons') format('svg');
+    src:url('../fonts/fa.eot');
+    src:url('../fonts/fa.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fa.woff') format('woff'),
+        url('../fonts/fa.ttf') format('truetype'),
+        url('../fonts/fa.svg#icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -948,19 +948,18 @@ body.home .site-head:after {
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
-.hentry {
+.post-wrap {
     position: relative;
     width:80%;
     max-width: 700px;
     margin: 4rem auto;
-    border-bottom: #EBF2F6 1px solid;
     word-break: break-word;
     hyphens: auto;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
-.hentry:after {
+.circle-in-border {
     display: block;
     content: "";
     width: 7px;
@@ -975,6 +974,26 @@ body.home .site-head:after {
     -moz-border-radius: 100%;
     border-radius: 100%;
     box-shadow: #fff 0 0 0 5px;
+}
+
+.error-404 {
+    article {
+        border-top: #EBF2F6 1px solid;
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+}
+
+.hentry{
+    .post-wrap();
+    border-bottom: #EBF2F6 1px solid;
+}
+
+/* Add a little circle in the middle of the border-bottom on our .post
+   just for the lolz and stylepoints. */
+
+.hentry:after {
+    .circle-in-border();
 }
 
 .post-title {
