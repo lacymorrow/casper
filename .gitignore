@@ -1,2 +1,4 @@
 .git
 .fuse*
+node_modules/*
+.DS_Store

@@ -11,7 +11,7 @@
 		?>
     <header class="post-header">
         <?php if ( 'post' == get_post_type() ) : ?>
-			<span class="post-meta"><?php casper_posted_on(); printf( __( 'on %1$s', 'casper' ), $category_list ); ?></span>
+			<span class="post-meta"><?php casper_posted_on(); printf( __( ' on %1$s', 'casper' ), $category_list ); ?></span>
 		<?php endif; ?>
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
         <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it. 
