@@ -1,5 +1,4 @@
-/*global jQuery */
-/*jshint multistr:true browser:true */
+/* global jQuery */
 /*!
 * FitVids 1.0.3
 *

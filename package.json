@@ -1,9 +1,34 @@
 {
   "name": "Casper",
-  "version": "0.1.0",
+  "version": "1.0.4",
+  "author": "Lacy Morrow <me@lacymorrow.com>",
+  "description": "A port of Ghost's Casper theme to WordPress",
+  "homepage": "https://github.com/lacymorrow/casper-wp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lacymorrow/casper-wp"
+  },
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-less": "~0.11.0",
-    "grunt-contrib-watch": "~0.6.1"
-  }
+    "grunt": "^0.4.4",
+    "grunt-contrib-csslint": "^0.2.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-imagemin": "^0.6.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^0.11.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-csscomb": "^2.0.1",
+    "grunt-autoprefixer": "^0.7.2",
+    "load-grunt-tasks": "^0.4.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-concat": "^0.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/lacymorrow/casper-wp/issues"
+  },
+  "licenses": [
+    {
+      "type": "GPL"
+    }
+  ]
 }
