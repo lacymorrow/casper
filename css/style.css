@@ -5,7 +5,7 @@
   Author URI:       http://lacymorrow.com
   Description:      A port of Ghost's Casper theme to WordPress
   Version:          1.0.4
-  License:          GNU General Public License
+  License:          MIT License
   License URI:      license.txt
   Text Domain:      casper
   Domain Path:      /languages/
@@ -13,96 +13,214 @@
   GitHub Theme URI: https://github.com/lacymorrow/casper-wp
   GitHub Branch:    master
   Casper is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
-  */
+*/
+/*
+
+    0.  Includes
+    1.  Icons
+    2.  General
+    3.  Utilities
+    4.  General
+    5.  Single Post
+    6.  Third Party Elements
+    7.  Pagination
+    8.  Footer
+    9.  Media Queries (Tablet)
+    10. Media Queries (Mobile)
+
+ */
+/* ==========================================================================
+   0. Includes - Ground zero
+   ========================================================================== */
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary
 {
     display: block;
 }
-audio,canvas,video
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video
 {
     display: inline-block;
 }
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
 audio:not([controls])
 {
     display: none;
 
     height: 0;
 }
-[hidden],template
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template
 {
     display: none;
 }
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
 html
 {
     font-family: sans-serif;
 
+  /* 1 */
         -ms-text-size-adjust: 100%;
+  /* 2 */
     -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
+/**
+ * Remove default margin.
+ */
 body
 {
     margin: 0;
 }
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
 a
 {
     background: transparent;
 }
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
 a:focus
 {
     outline: thin dotted;
 }
-a:active,a:hover
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover
 {
     outline: 0;
 }
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
 h1
 {
     font-size: 2em;
 
     margin: .67em 0;
 }
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
 abbr[title]
 {
     border-bottom: 1px dotted;
 }
-b,strong
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong
 {
     font-weight: bold;
 }
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
 dfn
 {
     font-style: italic;
 }
+/**
+ * Address differences between Firefox and other browsers.
+ */
 hr
 {
     -moz-box-sizing: content-box;
          box-sizing: content-box;
     height: 0;
 }
+/**
+ * Address styling not present in IE 8/9.
+ */
 mark
 {
     color: #000;
     background: #ff0;
 }
-code,kbd,pre,samp
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp
 {
     font-family: monospace, serif;
     font-size: 1em;
 }
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
 pre
 {
     white-space: pre-wrap;
 }
+/**
+ * Set consistent quote types.
+ */
 q
 {
     quotes: '\201C' '\201D' '\2018' '\2019';
 }
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
 small
 {
     font-size: 80%;
 }
-sub,sup
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup
 {
     font-size: 75%;
     line-height: 0;
@@ -119,18 +237,39 @@ sub
 {
     bottom: -.25em;
 }
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
 img
 {
     border: 0;
 }
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
 svg:not(:root)
 {
     overflow: hidden;
 }
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
 figure
 {
     margin: 0;
 }
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
 fieldset
 {
     margin: 0 2px;
@@ -138,79 +277,177 @@ fieldset
 
     border: 1px solid #c0c0c0;
 }
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
 legend
 {
+  /* 1 */
     padding: 0;
 
     border: 0;
+  /* 2 */
 }
-button,input,select,textarea
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea
 {
     font-family: inherit;
+  /* 1 */
     font-size: 100%;
 
+  /* 2 */
     margin: 0;
+  /* 3 */
 }
-button,input
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input
 {
     line-height: normal;
 }
-button,select
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select
 {
     text-transform: none;
 }
-button,html input[type='button'],input[type='reset'],input[type='submit']
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit']
 {
+  /* 2 */
     cursor: pointer;
 
     -webkit-appearance: button;
+  /* 3 */
 }
-button[disabled],html input[disabled]
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled]
 {
     cursor: default;
 }
-input[type='checkbox'],input[type='radio']
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type='checkbox'],
+input[type='radio']
 {
     box-sizing: border-box;
+  /* 1 */
     padding: 0;
+  /* 2 */
 }
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
 input[type='search']
 {
     -webkit-box-sizing: content-box;
+  /* 1 */
        -moz-box-sizing: content-box;
+  /* 2 */
             box-sizing: content-box;
 
     -webkit-appearance: textfield;
 }
-input[type='search']::-webkit-search-cancel-button,input[type='search']::-webkit-search-decoration
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration
 {
     -webkit-appearance: none;
 }
-button::-moz-focus-inner,input::-moz-focus-inner
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner
 {
     padding: 0;
 
     border: 0;
 }
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
 textarea
 {
     overflow: auto;
 
+  /* 1 */
     vertical-align: top;
+  /* 2 */
 }
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
 table
 {
     border-spacing: 0;
     border-collapse: collapse;
-}@font-face{
+}
+/* ==========================================================================
+   1. Icons - Sets up the icon font and respective classes
+   ========================================================================== */
+/* Import the font file with the icons in it */
+@font-face {
     font-family: 'icons';
     font-weight: normal;
     font-style: normal;
 
     src: url('../fonts/fa.eot');
-    src: url('../fonts/fa.eot?#iefix') format('embedded-opentype'),url('../fonts/fa.woff') format('woff'),url('../fonts/fa.ttf') format('truetype'),url('../fonts/fa.svg#icons') format('svg');
+    src: url('../fonts/fa.eot?#iefix') format('embedded-opentype'), url('../fonts/fa.woff') format('woff'), url('../fonts/fa.ttf') format('truetype'), url('../fonts/fa.svg#icons') format('svg');
 }
-.icon-ghost:before,.icon-feed:before,.icon-twitter:before,.icon-google-plus:before,.icon-facebook:before,.icon-home:before,.icon-menu:before,.icon-github:before,.icon-envelope:before,.icon-linkedin:before,.icon-youtube:before,.icon-tumblr:before,.icon-dribbble:before
+/* Apply these base styles to all icons */
+.icon-ghost:before,
+.icon-feed:before,
+.icon-twitter:before,
+.icon-google-plus:before,
+.icon-facebook:before,
+.icon-home:before,
+.icon-menu:before,
+.icon-github:before,
+.icon-envelope:before,
+.icon-linkedin:before,
+.icon-youtube:before,
+.icon-tumblr:before,
+.icon-dribbble:before
 {
     font-family: 'icons';
     font-weight: normal;
@@ -225,6 +462,8 @@ table
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+/* Each icon is created by inserting the corret character into the 
+   content of the :before pseudo element. Like a boss. */
 .icon-ghost:before
 {
     content: '\e000';
@@ -285,6 +524,9 @@ table
 
     content: '\e60a';
 }
+/* ==========================================================================
+   2. General - Setting up some base styles
+   ========================================================================== */
 html
 {
     font-size: 62.5%;
@@ -294,7 +536,7 @@ html
 }
 body
 {
-    font-family: 'Noto Serif',serif;
+    font-family: 'Noto Serif', serif;
     font-size: 2.0rem;
     line-height: 1.6em;
 
@@ -317,9 +559,14 @@ body
     background: #d6edff;
     text-shadow: none;
 }
-h1,h2,h3,h4,h5,h6
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
 {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1;
 
     margin-top: 0;
@@ -368,15 +615,26 @@ a:hover
 {
     color: #57a3e8;
 }
-h1 a,h2 a,h3 a,h4 a,h5 a,h6 a
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a
 {
     color: #50585d;
 }
-p,ul,ol,dl
+p,
+ul,
+ol,
+dl
 {
     margin: 1.6em 0;
 }
-ol ol,ul ul,ul ol,ol ul
+ol ol,
+ul ul,
+ul ol,
+ol ul
 {
     margin: .4em 0;
 }
@@ -452,9 +710,10 @@ mark
 {
     background-color: #ffc336;
 }
-code,tt
+code,
+tt
 {
-    font-family: Inconsolata,monospace,sans-serif;
+    font-family: Inconsolata, monospace, sans-serif;
     font-size: .85em;
 
     padding: 1px 3px;
@@ -467,7 +726,7 @@ code,tt
 }
 pre
 {
-    font-family: Inconsolata,monospace,sans-serif;
+    font-family: Inconsolata, monospace, sans-serif;
     font-size: .9em;
 
     overflow: auto;
@@ -484,7 +743,8 @@ pre
     border-radius: 3px;
     background: #f7fafb;
 }
-pre code,tt
+pre code,
+tt
 {
     font-size: inherit;
 
@@ -510,7 +770,7 @@ kbd
     border: #ccc 1px solid;
     border-radius: 4px;
     background: #f4f4f4;
-    box-shadow: 0 1px 0 rgba(0,0,0,.2),0 1px 0 0 #fff inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 1px 0 0 #fff inset;
     text-shadow: #fff 0 1px 0;
 }
 table
@@ -523,7 +783,8 @@ table
 
     background-color: transparent;
 }
-table th,table td
+table th,
+table td
 {
     line-height: 20px;
 
@@ -538,7 +799,12 @@ table th
 {
     color: #000;
 }
-table caption + thead tr:first-child th,table caption + thead tr:first-child td,table colgroup + thead tr:first-child th,table colgroup + thead tr:first-child td,table thead:first-child tr:first-child th,table thead:first-child tr:first-child td
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td
 {
     border-top: 0;
 }
@@ -550,24 +816,33 @@ table table table
 {
     background-color: #fff;
 }
-table tbody > tr:nth-child(odd) > td,table tbody > tr:nth-child(odd) > th
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th
 {
     background-color: #f6f6f6;
 }
-table.plain tbody > tr:nth-child(odd) > td,table.plain tbody > tr:nth-child(odd) > th
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th
 {
     background: transparent;
 }
-iframe,.fluid-width-video-wrapper
+iframe,
+.fluid-width-video-wrapper
 {
     display: block;
 
     margin: 1.6em 0;
 }
+/* When a video is inside the fitvids wrapper, drop the
+margin on the iframe, cause it breaks stuff. */
 .fluid-width-video-wrapper iframe
 {
     margin: 0;
 }
+/* ==========================================================================
+   3. Utilities - These things get used a lot
+   ========================================================================== */
+/* Hides shit */
 .hidden
 {
     display: none;
@@ -575,6 +850,7 @@ iframe,.fluid-width-video-wrapper
 
     text-indent: -9999px;
 }
+/* Creates a responsive wrapper that makes our content scale nicely */
 .inner
 {
     position: relative;
@@ -583,6 +859,7 @@ iframe,.fluid-width-video-wrapper
     max-width: 700px;
     margin: 0 auto;
 }
+/* Centres vertically yo. (IE8+) */
 .vertical
 {
     display: table-cell;
@@ -597,6 +874,12 @@ iframe,.fluid-width-video-wrapper
     margin: 0;
     padding: 0;
 }
+/* ==========================================================================
+   WP styles
+   ========================================================================== */
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
 hr
 {
     height: 1px;
@@ -605,7 +888,8 @@ hr
     border: 0;
     background-color: #ccc;
 }
-ul,ol
+ul,
+ol
 {
     margin: 0 0 1.5em 3em;
 }
@@ -617,7 +901,8 @@ ol
 {
     list-style: decimal;
 }
-li > ul,li > ol
+li > ul,
+li > ol
 {
     margin-bottom: 0;
     margin-left: 1.5em;
@@ -632,8 +917,10 @@ dd
 }
 img
 {
+  /* Make sure images are scaled correctly. */
     max-width: 100%;
     height: auto;
+  /* Adhere to container width. */
 }
 figure
 {
@@ -648,18 +935,32 @@ th
 {
     font-weight: bold;
 }
-button,input,select,textarea
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+button,
+input,
+select,
+textarea
 {
     font-size: 100%;
 
+  /* Corrects font size not being inherited in all browsers */
     margin: 0;
 
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
     vertical-align: baseline;
 
+  /* Improves appearance and consistency in all browsers */
     *vertical-align: middle;
+  /* Improves appearance and consistency in IE6/IE7 */
 }
-button,input[type='button'],input[type='reset'],input[type='submit']
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit']
 {
+  /* Corrects inability to style clickable 'input' types in iOS */
     font-size: 12px;
     font-size: 1.2rem;
     line-height: 1;
@@ -668,33 +969,48 @@ button,input[type='button'],input[type='reset'],input[type='submit']
 
     cursor: pointer;
 
-    color: rgba(0,0,0,.8);
+    color: rgba(0, 0, 0, .8);
     border: 1px solid #ccc;
     border-color: #ccc #ccc #bbb #ccc;
     border-radius: 3px;
     background: #e6e6e6;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.5),inset 0 15px 17px rgba(255,255,255,.5),inset 0 -5px 12px rgba(0,0,0,.05);
-    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 15px 17px rgba(255, 255, 255, .5), inset 0 -5px 12px rgba(0, 0, 0, .05);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
 
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
     -webkit-appearance: button;
 }
-button:hover,input[type='button']:hover,input[type='reset']:hover,input[type='submit']:hover
+button:hover,
+input[type='button']:hover,
+input[type='reset']:hover,
+input[type='submit']:hover
 {
     border-color: #ccc #bbb #aaa #bbb;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.8),inset 0 15px 17px rgba(255,255,255,.8),inset 0 -5px 12px rgba(0,0,0,.02);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), inset 0 15px 17px rgba(255, 255, 255, .8), inset 0 -5px 12px rgba(0, 0, 0, .02);
 }
-button:focus,input[type='button']:focus,input[type='reset']:focus,input[type='submit']:focus,button:active,input[type='button']:active,input[type='reset']:active,input[type='submit']:active
+button:focus,
+input[type='button']:focus,
+input[type='reset']:focus,
+input[type='submit']:focus,
+button:active,
+input[type='button']:active,
+input[type='reset']:active,
+input[type='submit']:active
 {
     border-color: #aaa #bbb #bbb #bbb;
-    box-shadow: inset 0 -1px 0 rgba(255,255,255,.5),inset 0 2px 5px rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .5), inset 0 2px 5px rgba(0, 0, 0, .15);
 }
-input[type='checkbox'],input[type='radio']
+input[type='checkbox'],
+input[type='radio']
 {
     padding: 0;
+  /* Addresses excess padding in IE8/9 */
 }
 input[type='search']
 {
+  /* Addresses appearance set to searchfield in S5, Chrome */
     -webkit-box-sizing: content-box;
+  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
        -moz-box-sizing: content-box;
             box-sizing: content-box;
 
@@ -702,25 +1018,42 @@ input[type='search']
 }
 input[type='search']::-webkit-search-decoration
 {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
     -webkit-appearance: none;
 }
-button::-moz-focus-inner,input::-moz-focus-inner
+button::-moz-focus-inner,
+input::-moz-focus-inner
 {
     padding: 0;
 
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
     border: 0;
 }
-input[type='text'],input[type='email'],input[type='url'],input[type='password'],input[type='search'],textarea
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+textarea
 {
     color: #666;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-input[type='text']:focus,input[type='email']:focus,input[type='url']:focus,input[type='password']:focus,input[type='search']:focus,textarea:focus
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+textarea:focus
 {
     color: #111;
 }
-input[type='text'],input[type='email'],input[type='url'],input[type='password'],input[type='search']
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search']
 {
     padding: 3px;
 }
@@ -728,14 +1061,22 @@ textarea
 {
     overflow: auto;
 
+  /* Improves readability and alignment in all browsers */
     width: 98%;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
     padding-left: 3px;
 
     vertical-align: top;
 }
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
 .main-navigation
 {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
     position: absolute;
     z-index: 2;
@@ -784,12 +1125,12 @@ textarea
     text-decoration: none;
 
     color: white;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
 }
 .main-navigation a:hover
 {
     color: white;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, .4);
 }
 .main-navigation ul ul
 {
@@ -801,7 +1142,7 @@ textarea
     display: none;
     float: left;
 
-    box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
 }
 .main-navigation ul ul ul
 {
@@ -816,6 +1157,7 @@ textarea
 {
     display: block;
 }
+/* Small menu */
 .menu-toggle
 {
     font-size: 0;
@@ -842,9 +1184,10 @@ textarea
 {
     font-size: 3rem;
 }
-@media screen and (max-width:600px)
+@media screen and (max-width: 600px)
 {
-    .menu-toggle,.main-navigation.toggled .nav-menu
+    .menu-toggle,
+  .main-navigation.toggled .nav-menu
     {
         display: block;
     }
@@ -856,7 +1199,7 @@ textarea
 
         margin: 0;
 
-        background-color: rgba(0,0,0,.4);
+        background-color: rgba(0, 0, 0, .4);
     }
     .main-navigation li
     {
@@ -868,19 +1211,25 @@ textarea
         border-bottom: 1px solid #444;
     }
 }
-.site-main .comment-navigation,.site-main .paging-navigation,.site-main .post-navigation
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation
 {
     overflow: hidden;
 
     margin: 0 0 1.5em;
 }
-.comment-navigation .nav-previous,.paging-navigation .nav-previous,.post-navigation .nav-previous
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous
 {
     float: left;
 
     width: 50%;
 }
-.comment-navigation .nav-next,.paging-navigation .nav-next,.post-navigation .nav-next
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next
 {
     float: right;
 
@@ -888,13 +1237,19 @@ textarea
 
     text-align: right;
 }
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
 .screen-reader-text
 {
     position: absolute !important;
 
     clip: rect(1px, 1px, 1px, 1px);
 }
-.screen-reader-text:hover,.screen-reader-text:active,.screen-reader-text:focus
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus
 {
     font-size: 14px;
     font-weight: bold;
@@ -916,8 +1271,12 @@ textarea
     color: #21759b;
     border-radius: 3px;
     background-color: #f1f1f1;
-    box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+  /* Above WP toolbar */
 }
+/*--------------------------------------------------------------
+7.0 Alignments
+--------------------------------------------------------------*/
 .alignleft
 {
     display: inline;
@@ -939,41 +1298,75 @@ textarea
 
     margin: 0 auto;
 }
-.clear:before,.clear:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-header:before,.site-header:after,.site-content:before,.site-content:after,.site-footer:before,.site-footer:after
+/*--------------------------------------------------------------
+8.0 Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after
 {
     display: table;
 
     content: '';
 }
-.clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after
 {
     clear: both;
 }
+/*--------------------------------------------------------------
+9.0 Widgets
+--------------------------------------------------------------*/
 .widget
 {
     margin: 0 0 1.5em;
 }
+/* Make sure select elements fit in widgets */
 .widget select
 {
     max-width: 100%;
 }
+/* Search widget */
 .widget_search .search-submit
 {
     display: none;
 }
+/*--------------------------------------------------------------
+10.0 Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
 .hentry
 {
     margin: 0 0 1.5em;
 }
-.byline,.updated
+.byline,
+.updated
 {
     display: none;
 }
-.single .byline,.group-blog .byline
+.single .byline,
+.group-blog .byline
 {
     display: inline;
 }
-.page-content,.entry-content,.entry-summary
+.page-content,
+.entry-content,
+.entry-summary
 {
     margin: 1.5em 0 0;
 }
@@ -983,18 +1376,32 @@ textarea
 
     margin: 0 0 1.5em;
 }
-.blog .format-aside .entry-title,.archive .format-aside .entry-title
+/*--------------------------------------------------------------
+10.2 Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title
 {
     display: none;
 }
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
 .comment-content a
 {
     word-wrap: break-word;
 }
-.infinite-scroll .paging-navigation,.infinite-scroll.neverending .site-footer
+/*--------------------------------------------------------------
+11.0 Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation,
+.infinite-scroll.neverending .site-footer
 {
+  /* Theme Footer (when set to scrolling) */
     display: none;
 }
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer
 {
     display: block;
@@ -1032,14 +1439,22 @@ textarea
 
     border: none;
 }
-.site-main .gallery dd,.site-main .gallery figcaption
+.site-main .gallery dd,
+.site-main .gallery figcaption
 {
     margin: 0;
 }
-embed,iframe,object
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object
 {
     max-width: 100%;
 }
+/* ==========================================================================
+   4. General - The main styles for the the theme
+   ========================================================================== */
+/* Big cover image on the home page */
 .site-head
 {
     position: relative;
@@ -1082,6 +1497,7 @@ body.home .site-head:after
 {
     z-index: -3;
 }
+/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 .blog-logo
 {
     text-decoration: none;
@@ -1098,9 +1514,10 @@ body.home .site-head:after
     max-height: 120px;
     margin: 0 auto;
 }
+/* The details of your blog. Defined in ghost/settings/ */
 .blog-title
 {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 5rem;
     font-weight: bold;
 
@@ -1108,11 +1525,11 @@ body.home .site-head:after
 
     letter-spacing: -1px;
 
-    text-shadow: 0 1px 6px rgba(0,0,0,.1);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, .1);
 }
 .blog-description
 {
-    font-family: 'Noto Serif',serif;
+    font-family: 'Noto Serif', serif;
     font-size: 1.8rem;
     font-weight: 300;
     line-height: 1.5em;
@@ -1121,8 +1538,9 @@ body.home .site-head:after
 
     letter-spacing: 0;
 
-    text-shadow: 0 1px 3px rgba(0,0,0,.15);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .15);
 }
+/* Every post, on every page, gets this style on its <article> tag */
 .post-wrap
 {
     position: relative;
@@ -1134,6 +1552,8 @@ body.home .site-head:after
     word-break: break-word;
     hyphens: auto;
 }
+/* Add a little circle in the middle of the border-bottom on our .post
+   just for the lolz and stylepoints. */
 .circle-in-border
 {
     position: absolute;
@@ -1175,6 +1595,8 @@ body.home .site-head:after
 
     border-bottom: #ebf2f6 1px solid;
 }
+/* Add a little circle in the middle of the border-bottom on our .post
+   just for the lolz and stylepoints. */
 .hentry:after
 {
     position: absolute;
@@ -1213,7 +1635,7 @@ body.home .site-head:after
 }
 .post-meta
 {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
 
     display: inline-block;
@@ -1283,6 +1705,10 @@ body.home .site-head:after
 
     display: block;
 }
+/* ==========================================================================
+   5. Single Post - When you click on an individual post
+   ========================================================================== */
+/* Tweak the .post wrapper style */
 .post-template .post
 {
     margin-top: 0;
@@ -1290,10 +1716,12 @@ body.home .site-head:after
 
     border-bottom: none;
 }
+/* Kill that stylish little circle that was on the border, too */
 .post-template .post:after
 {
     display: none;
 }
+/* Insert some mad padding up in the header for better spacing */
 .post-template .post-header
 {
     padding: 60px 0;
@@ -1322,6 +1750,7 @@ body.home .site-head:after
 
     padding: 2.5rem 0;
 }
+/* Keep large images within the bounds of the post-width */
 .post-content img
 {
     display: block;
@@ -1330,6 +1759,7 @@ body.home .site-head:after
     height: auto;
     margin: 0 auto;
 }
+/* The author credit area after the post */
 .post-footer
 {
     position: relative;
@@ -1352,6 +1782,7 @@ body.home .site-head:after
 
     margin: 1rem 0;
 }
+/* Create some space to the right for the share links */
 .post-footer .author
 {
     margin-right: 180px;
@@ -1361,6 +1792,10 @@ body.home .site-head:after
 {
     text-decoration: none;
 }
+/* Drop the share links in the space to the right.
+   Doing it like this means it's easier for the author bio
+   to be flexible at smaller screen sizes while the share
+   links remain at a fixed width the whole time */
 .post-footer .share
 {
     position: absolute;
@@ -1385,6 +1820,10 @@ body.home .site-head:after
 {
     color: #50585d;
 }
+/* ==========================================================================
+   6. Third Party Elements - Embeds from other services
+   ========================================================================== */
+/* Github */
 .gist table
 {
     font-size: 1.4rem;
@@ -1397,6 +1836,7 @@ body.home .site-head:after
 
     min-width: 25px;
 }
+/* Social links */
 .social-icons
 {
     margin-top: 15px;
@@ -1411,10 +1851,12 @@ body.home .site-head:after
 
     color: white;
 }
-.blog-title a:hover,.social-icons a:hover
+.blog-title a:hover,
+.social-icons a:hover
 {
     color: #57a3e8;
 }
+/* Comments */
 .comments-area
 {
     width: 80%;
@@ -1430,7 +1872,7 @@ body.home .site-head:after
 }
 .form-allowed-tags
 {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
 
     float: right;
@@ -1448,7 +1890,7 @@ body.home .site-head:after
 }
 .form-submit #submit
 {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
 
     display: inline-block;
@@ -1465,9 +1907,10 @@ body.home .site-head:after
     border-width: 3px;
     background: none;
 }
+/* Main widget wrapper */
 .widget-area
 {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
 
     width: 80%;
@@ -1484,8 +1927,10 @@ body.home .site-head:after
 .widget-area aside
 {
     float: left;
+    overflow: hidden;
 
     width: 30%;
+    height: 200px;
     padding: 2rem 1.5%;
 }
 .search-submit
@@ -1502,13 +1947,14 @@ body.home .site-head:after
     border-radius: 30px;
     background: none;
 }
-.search-submit:hover,.form-submit #submit:hover
+.search-submit:hover,
+.form-submit #submit:hover
 {
     border-color: #9eabb3;
 }
 #main > header.page-header
 {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
     width: 80%;
     max-width: 700px;
@@ -1531,9 +1977,13 @@ body.home .site-head:after
     text-indent: 0;
     letter-spacing: normal;
 }
+/* ==========================================================================
+   7. Pagination - Tools to let you flick between pages
+   ========================================================================== */
+/* The main wrapper for our pagination links */
 .pagination
 {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
 
     position: relative;
@@ -1550,7 +2000,9 @@ body.home .site-head:after
 {
     color: #9eabb3;
 }
-.older-posts,.newer-posts
+/* Push the previous/next links out to the left/right */
+.older-posts,
+.newer-posts
 {
     position: absolute;
 
@@ -1578,13 +2030,17 @@ body.home .site-head:after
 {
     left: 0;
 }
-.older-posts:hover,.newer-posts:hover
+.older-posts:hover,
+.newer-posts:hover
 {
     border-color: #9eabb3;
 }
+/* ==========================================================================
+   8. Footer - The bottom of every page
+   ========================================================================== */
 .site-footer
 {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
 
@@ -1625,6 +2081,7 @@ body.home .site-head:after
 
     margin-right: .2em;
 }
+/* The subscribe icon on the footer */
 .subscribe
 {
     line-height: 2.4rem;
@@ -1644,6 +2101,7 @@ body.home .site-head:after
     border-radius: 50px;
     background: #fff;
 }
+/* The RSS icon, inserted via icon font */
 .subscribe:before
 {
     font-size: 10px;
@@ -1657,16 +2115,18 @@ body.home .site-head:after
 
     color: #d2dee3;
 }
+/* Add a box shadow to on hover */
 .subscribe:hover
 {
     transition: box-shadow .25s;
 
-    box-shadow: rgba(0,0,0,.05) 0 0 0 3px;
+    box-shadow: rgba(0, 0, 0, .05) 0 0 0 3px;
 }
 .subscribe:hover:before
 {
     color: #50585d;
 }
+/* CSS tooltip saying "Subscribe!" - initially hidden */
 .tooltip
 {
     font-size: 1.1rem;
@@ -1684,11 +2144,12 @@ body.home .site-head:after
     text-align: center;
 
     opacity: 0;
-    color: rgba(255,255,255,.9);
+    color: rgba(255, 255, 255, .9);
     border-radius: 20px;
     background: #50585d;
-    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
 }
+/* The little chiclet arrow under the tooltip, pointing down */
 .tooltip:after
 {
     position: absolute;
@@ -1707,13 +2168,17 @@ body.home .site-head:after
     border-style: solid;
     border-color: #50585d transparent;
 }
+/* On hover, show the tooltip! */
 .subscribe:hover .tooltip
 {
     top: -33px;
 
     opacity: 1;
 }
-@media only screen and (max-width:900px)
+/* ==========================================================================
+   9. Media Queries - Smaller than 900px
+   ========================================================================== */
+@media only screen and (max-width: 900px)
 {
     blockquote
     {
@@ -1771,13 +2236,17 @@ body.home .site-head:after
         font-size: 2.8rem;
     }
 }
-@media only screen and (max-width:500px)
+/* ==========================================================================
+   10. Media Queries - Smaller than 500px
+   ========================================================================== */
+@media only screen and (max-width: 500px)
 {
     .blog-logo img
     {
         max-height: 80px;
     }
-    .inner,.pagination
+    .inner,
+  .pagination
     {
         width: auto;
         margin-right: 16px;
@@ -1804,7 +2273,8 @@ body.home .site-head:after
     {
         font-size: 1.5rem;
     }
-    h1,h2
+    h1,
+  h2
     {
         font-size: 3rem;
         line-height: 1.1em;
@@ -1854,7 +2324,8 @@ body.home .site-head:after
     {
         margin: 1.4rem .8rem 0 .8rem;
     }
-    .older-posts,.newer-posts
+    .older-posts,
+  .newer-posts
     {
         position: static;
 
@@ -1870,460 +2341,8 @@ body.home .site-head:after
 
         margin-top: 6rem;
     }
-}/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fcss%2Fnormalize.css%22%2C%22src%2Fcss%2Fstyle.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%224DAUA%2CQACA%2CMACA%2CQACA%2CWACA%2COACA%2COACA%2COACA%2COACA%2CKACA%2CIACA%2CQACA%2CQACI%2CcAOJ%2CMACA%2COACA%2CMACI%2CqBAQJ%2CKAAK%2CIAAI%2CaACL%2CYAAA%2CCACA%2CSAQJ%2CSACA%2CSACI%2CaAaJ%2CKACI%2CsBAAA%2CCACA%2CyBAAA%2CCACA%2C8BAOJ%2CKACI%2CSAWJ%2CEACI%2CuBAOJ%2CCAAC%2COACG%2CoBAOJ%2CCAAC%2CQACD%2CCAAC%2COACG%2CUAYJ%2CGACI%2CaAAA%2CCACA%2CgBAOJ%2CIAAI%2CQACA%2CyBAOJ%2CEACA%2COACI%2CiBAOJ%2CIACI%2CkBAOJ%2CGACI%2C2BAAA%2CCACA%2CsBAAA%2CCACA%2CSAOJ%2CKACI%2CeAAA%2CCACA%2CWAOJ%2CKACA%2CIACA%2CIACA%2CKACI%2C4BAAA%2CCACA%2CcAOJ%2CIACI%2CqBAOJ%2CEACI%2COAAQ%2CQAAQ%2CQAAQ%2CQAAQ%2CQAOpC%2CMACI%2CcAOJ%2CIACA%2CIACI%2CaAAA%2CCACA%2CaAAA%2CCACA%2CiBAAA%2CCACA%2CwBAGJ%2CIACI%2CWAGJ%2CIACI%2CeAWJ%2CIACI%2CSAOJ%2CGAAG%2CIAAI%2CQACH%2CgBAWJ%2COACI%2CSAWJ%2CSACI%2CwBAAA%2CCACA%2CYAAA%2CCACA%2C8BAQJ%2COACI%2CQAAA%2CCACA%2CUASJ%2COACA%2CMACA%2COACA%2CSACI%2CmBAAA%2CCACA%2CcAAA%2CCACA%2CSAQJ%2COACA%2CMACI%2CmBAUJ%2COACA%2COACI%2CoBAWJ%2COACA%2CIAAK%2CMAAK%2CgBACV%2CKAAK%2CeACL%2CKAAK%2CgBACD%2CyBAAA%2CCACA%2CeAOJ%2CMAAM%2CWACN%2CIAAK%2CMAAK%2CWACN%2CeAQJ%2CKAAK%2CkBACL%2CKAAK%2CeACD%2CqBAAA%2CCACA%2CUASJ%2CKAAK%2CgBACD%2C4BAAA%2CCACA%2C2BAAA%2CCACA%2C8BAAA%2CCACA%2CuBAQJ%2CKAAK%2CeAAe%2C%2BBACpB%2CKAAK%2CeAAe%2C4BAChB%2CwBAOJ%2CMAAM%2CmBACN%2CKAAK%2CmBACD%2CQAAA%2CCACA%2CUAQJ%2CSACI%2CaAAA%2CCACA%2CmBAWJ%2CMACI%2CwBAAA%2CCACA%2CiBCnXJ%2CWACI%2CYAAa%2COAAb%2CCACA%2CQAAQ%2CkBAAR%2CCACA%2CQAAQ%2C0BAA0B%2COAAO%2CyBACjC%2CoBAAoB%2COAAO%2CYAC3B%2CmBAAmB%2COAAO%2CgBAC1B%2CyBAAyB%2COAAO%2CMAHxC%2CCAIA%2CkBAAA%2CCACA%2CkBAIJ%2CWAAW%2CQACX%2CUAAU%2CQACV%2CaAAa%2CQACb%2CiBAAiB%2CQACjB%2CcAAc%2CQACd%2CUAAU%2CQACV%2CUAAU%2CQACV%2CYAAY%2CQACZ%2CcAAc%2CQACd%2CcAAc%2CQACd%2CaAAa%2CQACb%2CYAAY%2CQACZ%2CcAAc%2CQACV%2CYAAa%2COAAb%2CCACA%2CUAAA%2CCACA%2CiBAAA%2CCACA%2CkBAAA%2CCACA%2CmBAAA%2CCACA%2CmBAAA%2CCACA%2CaAAA%2CCACA%2CkCAAA%2CCACA%2CiCAAA%2CCACA%2CqBAKJ%2CWAAW%2CQACP%2CQAAS%2CQAEb%2CUAAU%2CQACN%2CQAAS%2CQAEb%2CaAAa%2CQACT%2CQAAS%2COAAT%2CCACA%2CgBAEJ%2CUAAU%2CQACN%2CQAAS%2COAAT%2CCACA%2CgBAEJ%2CUAAU%2CQACN%2CQAAS%2CQAEb%2CcAAc%2CQACV%2CQAAS%2CQAEb%2CYAAY%2CQACR%2CQAAS%2COAAT%2CCACA%2CgBAEJ%2CiBAAiB%2CQACb%2CQAAS%2CQAEb%2CcAAc%2CQACV%2CQAAS%2CQAEb%2CcAAc%2CQACV%2CQAAS%2CQAEb%2CaAAa%2CQACT%2CQAAS%2CQAEb%2CYAAY%2CQACR%2CQAAS%2CQAEb%2CcAAc%2CQACV%2CQAAS%2COAAT%2CCACA%2CgBASJ%2CKACI%2CWAAA%2CCACA%2CeAAA%2CCACA%2CgBAGJ%2CKACI%2CWAAA%2CCACA%2CeAAA%2CCACA%2CYAAa%2CkBAAb%2CCACA%2CgBAAA%2CCACA%2CiBAAA%2CCACA%2CaAAA%2CCACA%2CgBAGJ%2CiBACI%2CUAAA%2CCACA%2CkBAAA%2CCACA%2CiBAGJ%2CYACI%2CUAAA%2CCACA%2CkBAAA%2CCACA%2CiBAGJ%2CGAAI%2CGAAI%2CGACR%2CGAAI%2CGAAI%2CGACJ%2CiCAAA%2CCACA%2CaAAA%2CCACA%2CYAAA%2CCACA%2CYAAa%2CuBAGjB%2CGACI%2CcAAA%2CCACA%2CiBAAA%2CCACA%2CmBAAA%2CCACA%2CiBAGJ%2CGACI%2CcAAA%2CCACA%2CiBAAA%2CCACA%2CmBAAA%2CCACA%2CiBAGJ%2CGACI%2CiBAGJ%2CGACI%2CeAGJ%2CGACI%2CiBAGJ%2CGACI%2CeAGJ%2CEACI%2CaAAA%2CCACA%2C2BAGJ%2CCAAC%2COACG%2CcAGJ%2CEAAG%2CGAAG%2CEAAG%2CGAAG%2CEAAG%2CGACf%2CEAAG%2CGAAG%2CEAAG%2CGAAG%2CEAAG%2CGACX%2CcAIJ%2CEAAG%2CGAAI%2CGAAI%2CGACP%2CeAGJ%2CEAAG%2CIAAI%2CEAAG%2CIACV%2CEAAG%2CIAAI%2CEAAG%2CIACN%2CeAGJ%2CEAAG%2CIACC%2CUAAA%2CCACA%2CWAAA%2CCACA%2CeAAA%2CCACA%2CUAAA%2CCACA%2CgBAAA%2CCACA%2CsBAAA%2CCACA%2CkBAAA%2CCACA%2CgBAAA%2CCACA%2CkBAGJ%2CEAAG%2CIACC%2CiBAAA%2CCACA%2CkBAGJ%2CGACI%2CaAAA%2CCACA%2CUAAA%2CCACA%2CQAAA%2CCACA%2C4BAAA%2CCACA%2CcAAA%2CCACA%2CUAGJ%2CWACI%2C0BAAA%2CCACA%2CqBAAA%2CCACA%2C2BAAA%2CCACA%2CmBAAA%2CCACA%2CgCAGJ%2CUAAW%2CGACP%2CcAAA%2CCACA%2CkBAGJ%2CUAAW%2COACP%2CoBAAA%2CCACA%2C0BAAA%2CCACA%2CeAAA%2CCACA%2CWAGJ%2CUAAW%2CMAAK%2CQAAU%2CQAAS%2CcAEnC%2CUAAW%2CMACP%2CiBAGJ%2CUAAW%2CKAAK%2CGAAI%2CmBAEpB%2CKACI%2CyBAGJ%2CKAAM%2CGACF%2CeAAA%2CCACA%2C4CAAA%2CCACA%2CgBAAA%2CCACA%2CoBAAA%2CCACA%2CwBAAA%2CCACA%2CkBAAA%2CCACA%2CkBAGJ%2CIACI%2C0BAAA%2CCACA%2CqBAAA%2CCACA%2CcAAA%2CCACA%2CwBAAA%2CCACA%2CUAAA%2CCACA%2CYAAA%2CCACA%2C4CAAA%2CCACA%2CeAAA%2CCACA%2CeAAA%2CCACA%2CaAAA%2CCACA%2CkBAAA%2CCACA%2CkBAGJ%2CGAAI%2CMAAM%2CGACN%2CiBAAA%2CCACA%2CyBAAA%2CCACA%2CoBAAA%2CCACA%2CsBAAA%2CCACA%2CWAAA%2CCACA%2CUAGJ%2CIACI%2CoBAAA%2CCACA%2CmBAAA%2CCACA%2CeAAA%2CCACA%2CqBAAA%2CCACA%2CUAAA%2CCACA%2CwBAAA%2CCACA%2CeAAA%2CCACA%2CgBAAA%2CCACA%2CkBAAA%2CCACA%2CiBAAA%2CCACA%2CwDAKJ%2CMACI%2C0BAAA%2CCACA%2CqBAAA%2CCACA%2CcAAA%2CCACA%2CUAAA%2CCACA%2CcAAA%2CCACA%2C6BAGJ%2CKAAM%2CIACN%2CKAAM%2CIACF%2CWAAA%2CCACA%2CgBAAA%2CCACA%2CeAAA%2CCACA%2CkBAAA%2CCACA%2C6BAGJ%2CKAAM%2CIAAK%2CWAEX%2CKAAM%2CQAAQ%2CMAAQ%2CGAAE%2CYAAa%2CIACrC%2CKAAM%2CQAAQ%2CMAAQ%2CGAAE%2CYAAa%2CIACrC%2CKAAM%2CSAAS%2CMAAQ%2CGAAE%2CYAAa%2CIACtC%2CKAAM%2CSAAS%2CMAAQ%2CGAAE%2CYAAa%2CIACtC%2CKAAM%2CMAAK%2CYAAa%2CGAAE%2CYAAa%2CIACvC%2CKAAM%2CMAAK%2CYAAa%2CGAAE%2CYAAa%2CIACnC%2CaAGJ%2CKAAM%2CMAAM%2COAAU%2C6BAEtB%2CKAAM%2CMAAM%2COAAQ%2CsBAEpB%2CKAAM%2CMAAM%2CGAAI%2CUAAU%2CKAAM%2CIAChC%2CKAAM%2CMAAM%2CGAAI%2CUAAU%2CKAAM%2CIAC5B%2CyBAGJ%2CKAAK%2CMAAO%2CMAAM%2CGAAI%2CUAAU%2CKAAM%2CIACtC%2CKAAK%2CMAAO%2CMAAM%2CGAAI%2CUAAU%2CKAAM%2CIACnC%2CuBAGH%2COAAQ%2C2BACJ%2CaAAA%2CCACA%2CeAKJ%2C0BAA2B%2CQACvB%2CSASJ%2CQACI%2CmBAAA%2CCACA%2CiBAAA%2CCACA%2CaAIJ%2COACI%2CiBAAA%2CCACA%2CSAAA%2CCACA%2CeAAA%2CCACA%2CcAIJ%2CUACI%2CkBAAA%2CCACA%2CsBAGJ%2COACI%2CUAAA%2CCACA%2CQAAA%2CCACA%2CSAAA%2CCACA%2CSAWJ%2CGACI%2CqBAAA%2CCACA%2CQAAA%2CCACA%2CUAAA%2CCACA%2CoBAEJ%2CGAAI%2CGACA%2CqBAEJ%2CGACI%2CgBAEJ%2CGACI%2CmBAEJ%2CEAAG%2CIACH%2CEAAG%2CIACC%2CeAAA%2CCACA%2CkBAEJ%2CGACI%2CiBAEJ%2CGACI%2CqBAEJ%2CIACI%2CWAAA%2CCACA%2CeAEJ%2COACI%2CSAEJ%2CMACI%2CgBAAA%2CCACA%2CWAEJ%2CGACI%2CiBAMJ%2COACA%2CMACA%2COACA%2CSACI%2CcAAA%2CCACA%2CQAAA%2CCACA%2CuBAAA%2CCACA%2CuBAEJ%2COACA%2CKAAK%2CgBACL%2CKAAK%2CeACL%2CKAAK%2CgBACD%2CqBAAA%2CCACA%2CgCAAA%2CCACA%2CiBAAA%2CCACA%2CkBAAA%2CCACA%2CyHAAA%2CCACA%2CqBAAA%2CCACA%2CcAAA%2CCACA%2CyBAAA%2CCACA%2CcAAA%2CCACA%2CgBAAA%2CCACA%2CaAAA%2CCACA%2CqBAAA%2CCACA%2C0CAEJ%2CMAAM%2COACN%2CKAAK%2CeAAe%2COACpB%2CKAAK%2CcAAc%2COACnB%2CKAAK%2CeAAe%2COAChB%2CgCAAA%2CCACA%2C0HAEJ%2CMAAM%2COACN%2CKAAK%2CeAAe%2COACpB%2CKAAK%2CcAAc%2COACnB%2CKAAK%2CeAAe%2COACpB%2CMAAM%2CQACN%2CKAAK%2CeAAe%2CQACpB%2CKAAK%2CcAAc%2CQACnB%2CKAAK%2CeAAe%2CQAChB%2CgCAAA%2CCACA%2CiFAEJ%2CKAAK%2CkBACL%2CKAAK%2CeACD%2CUAEJ%2CKAAK%2CgBACD%2C4BAAA%2CCACA%2C8BAAA%2CCACA%2C2BAAA%2CCACA%2CuBAEJ%2CKAAK%2CeAAe%2C4BAChB%2CwBAEJ%2CMAAM%2CmBACN%2CKAAK%2CmBACD%2CQAAA%2CCACA%2CUAEJ%2CKAAK%2CcACL%2CKAAK%2CeACL%2CKAAK%2CaACL%2CKAAK%2CkBACL%2CKAAK%2CgBACL%2CSACI%2CUAAA%2CCACA%2CqBAAA%2CCACA%2CkBAEJ%2CKAAK%2CaAAa%2COAClB%2CKAAK%2CcAAc%2COACnB%2CKAAK%2CYAAY%2COACjB%2CKAAK%2CiBAAiB%2COACtB%2CKAAK%2CeAAe%2COACpB%2CQAAQ%2COACJ%2CWAEJ%2CKAAK%2CcACL%2CKAAK%2CeACL%2CKAAK%2CaACL%2CKAAK%2CkBACL%2CKAAK%2CgBACD%2CYAEJ%2CSACI%2CaAAA%2CCACA%2CgBAAA%2CCACA%2CkBAAA%2CCACA%2CUASJ%2CiBACI%2CUAAA%2CCACA%2CaAAA%2CCACA%2CiBAAA%2CCACA%2CKAAA%2CCACA%2CWAAA%2CCACA%2CUAAA%2CCACA%2CSAAA%2CCACA%2CYAAa%2CuBAEjB%2CgBAAgB%2CKACZ%2CSAAA%2CCACA%2CeAAA%2CCACA%2CaAAA%2CCACA%2CUAEJ%2CgBAAiB%2CIACb%2CeAAA%2CCACA%2CoBAAA%2CCACA%2CSAAA%2CCACA%2CWAAA%2CCACA%2CiBAEJ%2CgBAAiB%2CIACb%2CUAAA%2CCACA%2CkBAEJ%2CgBAAiB%2CGACb%2CaAAA%2CCACA%2CoBAAA%2CCACA%2CWAAA%2CCACA%2CiBAAA%2CCACA%2C8BAAA%2CCACA%2CwDAAA%2CCACA%2CqDAAA%2CCACA%2CiDAEJ%2CgBAAiB%2CEAAC%2COACd%2CgCAAA%2CCACA%2CYAEJ%2CgBAAiB%2CGAAG%2CIAChB%2CoCAAA%2CCACA%2CYAAA%2CCACA%2CUAAA%2CCACA%2CMAAA%2CCACA%2CiBAAA%2CCACA%2CSAAA%2CCACA%2CcAEJ%2CgBAAiB%2CGAAG%2CGAAG%2CIACnB%2CSAAA%2CCACA%2CMAEJ%2CgBAAiB%2CGAAG%2CGAAG%2CGACnB%2CYAEJ%2CgBAAiB%2CGAAG%2CGAAE%2CMAAO%2CIACzB%2CcAMJ%2CaACI%2CcAAA%2CCACA%2CWAAA%2CCACA%2CWAAA%2CCACA%2CQAAA%2CCACA%2CeAAA%2CCACA%2CiBAAA%2CCACA%2CKAAA%2CCACA%2COAAA%2CCACA%2CiBAAA%2CCACA%2CUAAA%2CCACA%2CaAEJ%2CYAAa%2CGACT%2CYAEJ%2CYAAa%2CEAAC%2CQACV%2CeAqBJ%2CmBAnBqC%2CiBACjC%2CaACA%2CgBAAgB%2CQAAS%2CWACrB%2CcAGJ%2CgBAAiB%2CIACb%2CYAAA%2CCACA%2CQAAA%2CCACA%2CgBAAA%2CCACA%2CiCAEJ%2CgBAAiB%2CIACb%2CUAAA%2CCACA%2CaAAA%2CCACA%2CUAAA%2CCACA%2C8BAGR%2CUAAW%2CqBACX%2CUAAW%2CoBACX%2CUAAW%2CkBACP%2CgBAAA%2CCACA%2CgBAEJ%2CmBAAoB%2CeACpB%2CkBAAmB%2CeACnB%2CgBAAiB%2CeACb%2CUAAA%2CCACA%2CUAEJ%2CmBAAoB%2CWACpB%2CkBAAmB%2CWACnB%2CgBAAiB%2CWACb%2CWAAA%2CCACA%2CgBAAA%2CCACA%2CUAOJ%2CoBACI%2CKAAM%2CwBAAN%2CCACA%2C6BAGJ%2CmBAAmB%2COACnB%2CmBAAmB%2CQACnB%2CmBAAmB%2COACf%2CwBAAA%2CCACA%2CiBAAA%2CCACA%2CsCAAA%2CCACA%2CoBAAA%2CCACA%2CaAAA%2CCACA%2CaAAA%2CCACA%2CcAAA%2CCACA%2CgBAAA%2CCACA%2CWAAA%2CCACA%2CQAAA%2CCACA%2CkBAAA%2CCACA%2CsBAAA%2CCACA%2CoBAAA%2CCACA%2COAAA%2CCACA%2CUAAA%2CCACA%2CeAMJ%2CWACI%2CcAAA%2CCACA%2CUAAA%2CCACA%2CmBAEJ%2CYACI%2CcAAA%2CCACA%2CWAAA%2CCACA%2CkBAEJ%2CaACI%2CUAAA%2CCACA%2CaAAA%2CCACA%2CcAMJ%2CMAAM%2CQACN%2CMAAM%2COACN%2CcAAc%2CQACd%2CcAAc%2COACd%2CgBAAgB%2CQAChB%2CgBAAgB%2COAChB%2CYAAY%2CQACZ%2CYAAY%2COACZ%2CaAAa%2CQACb%2CaAAa%2COACb%2CYAAY%2CQACZ%2CYAAY%2COACR%2CQAAS%2CEAAT%2CCACA%2CcAGJ%2CMAAM%2COACN%2CcAAc%2COACd%2CgBAAgB%2COAChB%2CYAAY%2COACZ%2CaAAa%2COACb%2CYAAY%2COACR%2CWAMJ%2CQACI%2CiBAIJ%2COAAQ%2CQACJ%2CeAIJ%2CcAAe%2CgBACX%2CaAWJ%2CQACI%2CiBAEJ%2CQACA%2CSACI%2CaAEJ%2COAAQ%2CSACR%2CWAAY%2CSACR%2CeAEJ%2CcACA%2CeACA%2CeACI%2CiBAEJ%2CYACI%2CUAAA%2CCACA%2CiBAMJ%2CKAAM%2CcAAc%2CcACpB%2CQAAS%2CcAAc%2CcACnB%2CaAMJ%2CgBAAiB%2CGACb%2CqBASJ%2CgBAAiB%2CoBACjB%2CgBAAgB%2CYAAa%2CcACzB%2CaAGJ%2CaAAa%2CYAAa%2CcACtB%2CcAGJ%2CYACI%2CqBAAA%2CCACA%2CmBAAA%2CCACA%2CeAEJ%2CWAAY%2CIAAG%2CqBACX%2CaAAA%2CCACA%2CkBAAA%2CCACA%2CcAEJ%2CiBACI%2CkBAEJ%2CWAAY%2CkBACR%2CkBAEJ%2CUAAW%2CUACP%2CoBAIJ%2CUAAW%2CSAAS%2CEAAE%2CKAClB%2CWAAA%2CCACA%2CWAAA%2CCACA%2CcAEJ%2CUAAW%2CSAAS%2CIACpB%2CUAAW%2CSAAS%2CYAChB%2CSAOJ%2CMACA%2COACA%2COACI%2CeAUJ%2CWACI%2CiBAAA%2CCACA%2CaAAA%2CCACA%2CUAAA%2CCACA%2CUAAA%2CCACA%2CkBAAA%2CCACA%2CiBAAA%2CCACA%2CUAAA%2CCACA%2C0CAAA%2CCACA%2CqBAAA%2CCACA%2CgCAGJ%2CUAAU%2COACN%2CaAAA%2CCACA%2CQAAS%2CEAAT%2CCACA%2CSAAA%2CCACA%2CUAAA%2CCACA%2CwBAAA%2CCACA%2CiBAAA%2CCACA%2CWAAA%2CCACA%2CQAAA%2CCACA%2CgBAAA%2CCACA%2CeAAA%2CCACA%2C0BAAA%2CCACA%2CuBAAA%2CCACA%2CkBAAA%2CCACA%2C0BAEJ%2CIAAI%2CKAAM%2CWAAU%2COAChB%2CWAIJ%2CWACI%2CoBAAA%2CCACA%2CYAEJ%2CUAAW%2CKACP%2CaAAA%2CCACA%2CgBAAA%2CCACA%2CUAAA%2CCACA%2CaAAA%2CCACA%2CcAIJ%2CYACI%2CoBAAA%2CCACA%2CcAAA%2CCACA%2CmBAAA%2CCACA%2CgBAAA%2CCACA%2CYAAa%2CsBAAb%2CCACA%2CsCAGJ%2CkBACI%2CQAAA%2CCACA%2CgBAAA%2CCACA%2CiBAAA%2CCACA%2CeAAA%2CCACA%2CYAAa%2CkBAAb%2CCACA%2CgBAAA%2CCACA%2CuCAIJ%2CWACI%2CiBAAA%2CCACA%2CSAAA%2CCACA%2CeAAA%2CCACA%2CgBAAA%2CCACA%2CqBAAA%2CCACA%2CaAKJ%2CkBACI%2CaAAA%2CCACA%2CQAAS%2CEAAT%2CCACA%2CSAAA%2CCACA%2CUAAA%2CCACA%2CwBAAA%2CCACA%2CiBAAA%2CCACA%2CWAAA%2CCACA%2CQAAA%2CCACA%2CgBAAA%2CCACA%2CeAAA%2CCACA%2C0BAAA%2CCACA%2CuBAAA%2CCACA%2CkBAAA%2CCACA%2C0BAGJ%2CUACI%2CSACI%2C4BAAA%2CCACA%2CkBAAA%2CCACA%2CiBAIR%2CQAnCI%2CiBAAA%2CCACA%2CSAAA%2CCACA%2CeAAA%2CCACA%2CgBAAA%2CCACA%2CqBAAA%2CCACA%2CYAAA%2CCAgCA%2CgCAMJ%2COAAO%2COAhCH%2CaAAA%2CCACA%2CQAAS%2CEAAT%2CCACA%2CSAAA%2CCACA%2CUAAA%2CCACA%2CwBAAA%2CCACA%2CiBAAA%2CCACA%2CWAAA%2CCACA%2CQAAA%2CCACA%2CgBAAA%2CCACA%2CeAAA%2CCACA%2C0BAAA%2CCACA%2CuBAAA%2CCACA%2CkBAAA%2CCACA%2C0BAuBJ%2CYACI%2CSAGJ%2CWAAY%2CGACR%2CqBAGJ%2CaAAc%2CGACV%2CmBAAA%2CCACA%2CeAAA%2CCACA%2CkBAGJ%2CWACI%2CoBAAA%2CCACA%2CgBAAA%2CCACA%2CYAAa%2CsBAAb%2CCACA%2CgBAAA%2CCACA%2CcAGJ%2CUAAW%2CGACP%2CaAAA%2CCACA%2CqBAGJ%2CUAAW%2CEAAC%2COACR%2C0BAGJ%2CWACI%2CiBAAA%2CCACA%2C2BAAA%2CCACA%2CgBAGJ%2CYACI%2CiBAAA%2CCACA%2CKAAA%2CCACA%2COAGJ%2CWACI%2CaAAA%2CCACA%2CiBAGJ%2CUACI%2CaAAA%2CCACA%2CeAAA%2CCACA%2CgBAAA%2CCACA%2CkBAGJ%2CcACI%2CiBAAA%2CCACA%2CKAAA%2CCACA%2COAAA%2CCACA%2CuBAAA%2CCACA%2CiBAGJ%2CiBACI%2CaAAA%2CCACA%2CiBAGJ%2CcACI%2CaAAA%2CCACA%2CgBAAA%2CCACA%2CkBAQJ%2CcAAe%2COACX%2CYAAA%2CCACA%2CkBAAA%2CCACA%2CiBAIJ%2CcAAe%2CMAAK%2COAChB%2CaAIJ%2CcAAe%2CcACX%2CcAAA%2CCACA%2CkBAGJ%2CYAAa%2CKACT%2CgBAAA%2CCACA%2CaAAA%2CCACA%2CcAAA%2CCACA%2CaAAA%2CCACA%2CWAAA%2CCACA%2CWAAY%2CoDAAZ%2CCACA%2CuBAAA%2CCACA%2CSAAA%2CCACA%2C6BAGJ%2CcAAe%2CaACX%2CoBAAA%2CCACA%2CiBAIJ%2CaAAc%2CKACV%2CaAAA%2CCACA%2CcAAA%2CCACA%2CaAAA%2CCACA%2CYAIJ%2CaACI%2CiBAAA%2CCACA%2CiBAAA%2CCACA%2CkBAAA%2CCACA%2C6BAGJ%2CYAAa%2CIACT%2CgBAAA%2CCACA%2CSAGJ%2CYAAa%2CGACT%2CaAAA%2CCACA%2CgBAAA%2CCACA%2CkBAIJ%2CYAAa%2CSACT%2CkBAAA%2CCACA%2CmBAGJ%2CYAAa%2CQAAQ%2CGACjB%2CqBAQJ%2CYAAa%2CQACT%2CiBAAA%2CCACA%2CQAAA%2CCACA%2COAAA%2CCACA%2CYAGJ%2CYAAa%2COAAO%2CGAChB%2CgBAAA%2CCACA%2CcAAA%2CCACA%2C6BAAA%2CCACA%2CaAAA%2CCACA%2CqBAGJ%2CYAAa%2COAAO%2CEAAC%2COACjB%2CcAUJ%2CKAAM%2COACF%2CQAAA%2CCACA%2CiBAGJ%2CKAAM%2CcACF%2CcAAA%2CCACA%2CiBAIJ%2CcACI%2CgBAEJ%2CaAAc%2CGACV%2CoBAAA%2CCACA%2CeAAA%2CCACA%2CYAAA%2CCACA%2CYAEJ%2CWAAY%2CEAAC%2COAAQ%2CaAAc%2CEAAC%2COAChC%2CcAGJ%2CeACI%2CSAAA%2CCACA%2CeAAA%2CCACA%2CgBAAA%2CCACA%2CoBAGJ%2CqBAAsB%2COAClB%2CUAAA%2CCACA%2CqBAGJ%2CmBACI%2CSAAA%2CCACA%2CWAAA%2CCACA%2CYAAa%2CsBAAb%2CCACA%2CgBAAA%2CCACA%2CaAAA%2CCACA%2CaAGJ%2C2BACI%2CUAAA%2CCACA%2CgBAGJ%2CYAAa%2CSACT%2CaAAA%2CCACA%2CUAAA%2CCACA%2CgBAAA%2CCACA%2CeAAA%2CCACA%2CoBAAA%2CCACA%2CYAAA%2CCACA%2CwBAAA%2CCACA%2CoBAAA%2CCACA%2C2BAAA%2CCACA%2CYAAa%2CsBAAb%2CCACA%2CgBAAA%2CCACA%2CcAIJ%2CaACI%2CSAAA%2CCACA%2CeAAA%2CCACA%2CgBAAA%2CCACA%2CmBAAA%2CCACA%2CYAAa%2CsBAAb%2CCACA%2CgBAAA%2CCACA%2CcAGJ%2CYAAa%2CIACT%2CiBAGJ%2CYAAa%2COACT%2CUAAA%2CCACA%2CSAAA%2CCACA%2CkBAGJ%2CeACI%2CgBAAA%2CCACA%2CeAAA%2CCACA%2CoBAAA%2CCACA%2CYAAA%2CCACA%2CwBAAA%2CCACA%2CoBAAA%2CCACA%2CkBAAA%2CCACA%2C4BAGJ%2CcAAc%2COAAQ%2CYAAa%2CQAAO%2COACtC%2CqBAGJ%2CKAAM%2COAAQ%2CaACV%2CSAAA%2CCACA%2CeAAA%2CCACA%2CaAAA%2CCACA%2CSAAA%2CCACA%2CYAAa%2CsBAAb%2CCACA%2CaAAA%2CCACA%2CkBAEJ%2CKAAM%2COAAQ%2CYAAa%2CIACvB%2CgBAAA%2CCACA%2CkBAAA%2CCACA%2CkBAAA%2CCACA%2CaAAA%2CCACA%2CqBAAA%2CCACA%2CaAAA%2CCACA%2CUAOJ%2CYACI%2CiBAAA%2CCACA%2CSAAA%2CCACA%2CeAAA%2CCACA%2CgBAAA%2CCACA%2CYAAa%2CsBAAb%2CCACA%2CgBAAA%2CCACA%2CaAAA%2CCACA%2CkBAGJ%2CWAAY%2CGACR%2CcAIJ%2CaACA%2CaACI%2CiBAAA%2CCACA%2CoBAAA%2CCACA%2CcAAA%2CCACA%2CwBAAA%2CCACA%2CoBAAA%2CCACA%2CkBAAA%2CCACA%2C4BAGJ%2CaACI%2CQAGJ%2CaACI%2CoBAAA%2CCACA%2CcAGJ%2CaACI%2COAGJ%2CYAAY%2COACZ%2CYAAY%2COACR%2CqBAQJ%2CaACI%2CiBAAA%2CCACA%2CQAAA%2CCACA%2CcAAA%2CCACA%2C4BAAA%2CCACA%2CYAAa%2CsBAAb%2CCACA%2CgBAAA%2CCACA%2CiBAAA%2CCACA%2CaAAA%2CCACA%2CiBAAA%2CCACA%2CmBAGJ%2CYAAa%2CGACT%2CaAAA%2CCACA%2C0BAGJ%2CYAAa%2CEAAC%2COACV%2CcAGJ%2CUAAW%2CaACP%2CeAAA%2CCACA%2CqBAGJ%2CUAAW%2CYAAW%2COAClB%2CqBAGJ%2CUAAW%2CYAAW%2CQAClB%2CcAAA%2CCACA%2CmBAIJ%2CWACI%2CUAAA%2CCACA%2CWAAA%2CCACA%2CiBAAA%2CCACA%2CSAAA%2CCACA%2CQAAA%2CCACA%2CiBAAA%2CCACA%2CwBAAA%2CCACA%2CiBAAA%2CCACA%2CkBAAA%2CCACA%2CkBAAA%2CCACA%2CeAAA%2CCACA%2C0BAIJ%2CUAAU%2CQACN%2CaAAA%2CCACA%2CcAAA%2CCACA%2CiBAAA%2CCACA%2COAAA%2CCACA%2CQAAA%2CCACA%2CgBAAA%2CCACA%2C2BAIJ%2CUAAU%2COACN%2CqCAAA%2CCACA%2C2BAGJ%2CUAAU%2CMAAM%2CQACZ%2CcAIJ%2CSACI%2CSAAA%2CCACA%2CoBAAA%2CCACA%2CuBAAA%2CCACA%2CiBAAA%2CCACA%2CSAAA%2CCACA%2CUAAA%2CCACA%2C2BAAA%2CCACA%2CgBAAA%2CCACA%2CeAAA%2CCACA%2CiBAAA%2CCACA%2CkBAAA%2CCACA%2CkBAAA%2CCACA%2CoCAAA%2CCACA%2C4CAIJ%2CQAAQ%2COACJ%2CQAAQ%2CEAAR%2CCACA%2C0BAAA%2CCACA%2CkBAAA%2CCACA%2CgCAAA%2CCACA%2CaAAA%2CCACA%2CiBAAA%2CCACA%2CWAAA%2CCACA%2CQAAA%2CCACA%2CgBAAA%2CCACA%2CWAAA%2CCACA%2CQAIJ%2CUAAU%2CMAAO%2CUACb%2CSAAA%2CCACA%2CUAgEJ%2CwBAxD0C%2CiBAEtC%2CWACI%2CcAGJ%2CWACI%2C6BAAA%2CCACA%2C0BAAA%2CCACA%2CqBAAA%2CCACA%2CWAAA%2CCACA%2CgBAAA%2CCACA%2CcAEJ%2CYACI%2CcAAA%2CCACA%2CoBAGJ%2CkBACI%2CgBAAA%2CCACA%2CkBAGJ%2CMACI%2CeAAA%2CCACA%2CkBAGJ%2CcAAe%2COACX%2CoBAGJ%2CcAAe%2CcACX%2CeAGJ%2CGACI%2CgBAAA%2CCACA%2CiBAGJ%2CGACI%2CiBAGJ%2CGACI%2CiBAGJ%2CGACI%2CkBA2GR%2CwBAjG0C%2CiBAEtC%2CUAAW%2CKACP%2CgBAGJ%2COACA%2CYACI%2CUAAA%2CCACA%2CgBAAA%2CCACA%2CkBAGJ%2CMACI%2CUAAA%2CCACA%2CgBAAA%2CCACA%2CiBAAA%2CCACA%2CeAAA%2CCACA%2CkBAGJ%2CWACI%2CcAGJ%2CYACI%2CeAGJ%2CkBACI%2CiBAIJ%2CGAAI%2CGACA%2CcAAA%2CCACA%2CiBAAA%2CCACA%2CoBAGJ%2CGACI%2CiBAGJ%2CGACI%2CiBAGJ%2CcAAe%2COACX%2CiBAGJ%2CcAAe%2CcACX%2CeAGJ%2CWACI%2CiBAGJ%2CaACI%2CcAAA%2CCACA%2CkBAGJ%2CYAAa%2CSACT%2CiBAAA%2CCACA%2CoBAAA%2CCACA%2CiCAGJ%2CYAAa%2CQACT%2CeAAA%2CCACA%2CWAGJ%2CYAAa%2COAAO%2CGAChB%2C8BAGJ%2CaACA%2CaACI%2CeAAA%2CCACA%2CcAGJ%2CaACI%2CcAGJ%2CaACI%2CeAAA%2CCACA%22%7D */
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
-
+}
 /* ==========================================================================
-   HTML5 display definitions
+   End of file. Media queries should be the last thing here. Do not add stuff
+   below this point, or it will probably fuck everything up.
    ========================================================================== */
-
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary
-{
-    display: block;
-}
-
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
-
-audio,
-canvas,
-video
-{
-    display: inline-block;
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-
-audio:not([controls])
-{
-    display: none;
-
-    height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9.
- * Hide the `template` element in IE, Safari, and Firefox < 22.
- */
-
-[hidden],
-template
-{
-    display: none;
-}
-
-/* ==========================================================================
-   Base
-   ========================================================================== */
-
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-
-html
-{
-    font-family: sans-serif; /* 1 */
-
-        -ms-text-size-adjust: 100%; /* 2 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-
-body
-{
-    margin: 0;
-}
-
-/* ==========================================================================
-   Links
-   ========================================================================== */
-
-/**
- * Remove the gray background color from active links in IE 10.
- */
-
-a
-{
-    background: transparent;
-}
-
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-
-a:focus
-{
-    outline: thin dotted;
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-
-a:active,
-a:hover
-{
-    outline: 0;
-}
-
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-
-h1
-{
-    font-size: 2em;
-
-    margin: .67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
-
-abbr[title]
-{
-    border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
-
-b,
-strong
-{
-    font-weight: bold;
-}
-
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
-
-dfn
-{
-    font-style: italic;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-
-hr
-{
-    -moz-box-sizing: content-box;
-         box-sizing: content-box;
-    height: 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-
-mark
-{
-    color: #000;
-    background: #ff0;
-}
-
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-
-code,
-kbd,
-pre,
-samp
-{
-    font-family: monospace, serif;
-    font-size: 1em;
-}
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-
-pre
-{
-    white-space: pre-wrap;
-}
-
-/**
- * Set consistent quote types.
- */
-
-q
-{
-    quotes: '\201C' '\201D' '\2018' '\2019';
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-
-small
-{
-    font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-
-sub,
-sup
-{
-    font-size: 75%;
-    line-height: 0;
-
-    position: relative;
-
-    vertical-align: baseline;
-}
-
-sup
-{
-    top: -.5em;
-}
-
-sub
-{
-    bottom: -.25em;
-}
-
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
-
-img
-{
-    border: 0;
-}
-
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-
-svg:not(:root)
-{
-    overflow: hidden;
-}
-
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-
-figure
-{
-    margin: 0;
-}
-
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-
-/**
- * Define consistent border, margin, and padding.
- */
-
-fieldset
-{
-    margin: 0 2px;
-    padding: .35em .625em .75em;
-
-    border: 1px solid #c0c0c0;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-
-legend
-{
-    padding: 0; /* 2 */
-
-    border: 0; /* 1 */
-}
-
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
-
-button,
-input,
-select,
-textarea
-{
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 2 */
-
-    margin: 0; /* 3 */
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-
-button,
-input
-{
-    line-height: normal;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
-
-button,
-select
-{
-    text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-
-button,
-html input[type='button'], /* 1 */
-input[type='reset'],
-input[type='submit']
-{
-    cursor: pointer; /* 3 */
-
-    -webkit-appearance: button; /* 2 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-
-button[disabled],
-html input[disabled]
-{
-    cursor: default;
-}
-
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-
-input[type='checkbox'],
-input[type='radio']
-{
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-
-input[type='search']
-{
-    -webkit-box-sizing: content-box; /* 2 */
-       -moz-box-sizing: content-box;
-            box-sizing: content-box;
-
-    -webkit-appearance: textfield; /* 1 */
-}
-
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-decoration
-{
-    -webkit-appearance: none;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-
-button::-moz-focus-inner,
-input::-moz-focus-inner
-{
-    padding: 0;
-
-    border: 0;
-}
-
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-
-textarea
-{
-    overflow: auto; /* 1 */
-
-    vertical-align: top; /* 2 */
-}
-
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-
-/**
- * Remove most spacing between table cells.
- */
-
-table
-{
-    border-spacing: 0;
-    border-collapse: collapse;
-}

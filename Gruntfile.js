@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
   	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
+  	require('time-grunt')(grunt);
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		banner: '/*\n' +
@@ -9,7 +10,7 @@ module.exports = function(grunt) {
 				'  Author URI:       http://lacymorrow.com\n' +
 				'  Description:      <%= pkg.description %>\n' +
 				'  Version:          <%= pkg.version%>\n' + 
-				'  License:          GNU General Public License\n' +
+				'  License:          MIT License\n' +
 				'  License URI:      license.txt\n' +
 				'  Text Domain:      casper\n' +
 				'  Domain Path:      /languages/\n' +
@@ -28,17 +29,13 @@ module.exports = function(grunt) {
 				src: '<%= concat.casper.dest %>'
 		    },
 		},
-		clean: {
-			casper: '<%= concat.casper.dest %>',
-			src: 'src/css/style.css'
-		},
 		concat: {
 			options: {
 				banner: '<%= banner %>\n',
 				stripBanners: true
 			},
 			casper: {
-				src: ['src/css/style.css', 'src/css/**/*.css'],
+				src: ['css/style.css', 'src/css/**/*.css'],
 				dest: 'css/style.css'
 			}
 		},
@@ -88,14 +85,8 @@ module.exports = function(grunt) {
 		},
 		less: {
 			casper: {
-				options: {
-					compress: true,
-					yuicompress: true,
-					optimization: 2,
-					sourceMap: true
-				},
 				files: {
-					"src/css/style.css": ["src/css/style.less", "src/css/**/*.less"]
+					"css/style.css": ["src/less/style.less", "src/less/**/*.less"]
 				}
 			}
 		},
@@ -123,6 +114,6 @@ module.exports = function(grunt) {
 	});
 	grunt.registerTask('js', [ /* 'jshint', */ 'uglify']);
 	grunt.registerTask('css', ['less', 'concat', 'csscomb', /* 'csslint', */ 'autoprefixer', 'cssmin']);
-	grunt.registerTask('default', ['clean', 'css', 'js', 'imagemin']);
+	grunt.registerTask('default', ['css', 'js', 'imagemin']);
 
 };
