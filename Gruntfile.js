@@ -103,7 +103,7 @@ module.exports = function(grunt) {
 			options: {
 				livereload: true,
 			},
-		    styles: {
+		    casper: {
 		    	files: ['Gruntfile.js', 'src/**/*'],
 		    	tasks: ['default'],
 		    	options: {

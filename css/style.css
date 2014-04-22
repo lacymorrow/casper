@@ -28,7 +28,7 @@
     9.  Media Queries (Tablet)
     10. Media Queries (Mobile)
 
- */
+*/
 /* ==========================================================================
    0. Includes - Ground zero
    ========================================================================== */
@@ -1930,7 +1930,7 @@ body.home .site-head:after
     overflow: hidden;
 
     width: 30%;
-    height: 200px;
+    height: 260px;
     padding: 2rem 1.5%;
 }
 .search-submit
