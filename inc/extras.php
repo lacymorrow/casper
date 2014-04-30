@@ -87,3 +87,20 @@ function casper_setup_author() {
 	}
 }
 add_action( 'wp', 'casper_setup_author' );
+
+/**
+ * Get a social link URL set in the theme customizer.
+ *
+ * @param string $name Social network name.
+ * @return string URL.
+ */
+function casper_social_link( $name ) {
+	$link = get_theme_mod( 'casper_social_' . $name );
+
+	// Check if mail is a URL instead of a email address.
+	if ( false != $link && 'mail' == $name && substr( $link, 0, 4 ) != 'http' ) {
+		$link = 'mailto:' . $link;
+	}
+
+	return $link;
+}
