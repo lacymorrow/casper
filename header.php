@@ -45,53 +45,53 @@
             <?php endif; ?>
 
             <div class="social-icons">
-                <?php if ( false != get_theme_mod( 'casper_social_youtube')) { ?>
-                    <a class="icon-youtube" href="<?php echo get_theme_mod( 'casper_social_youtube'); ?>">
+                <?php if ( false != casper_social_link( 'youtube')) { ?>
+                    <a class="icon-youtube" href="<?php echo casper_social_link( 'youtube'); ?>">
                         <span class="hidden"><?php _e( 'Youtube', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
-                <?php if ( false != get_theme_mod( 'casper_social_tumblr')) { ?>
-                    <a class="icon-tumblr" href="<?php echo get_theme_mod( 'casper_social_tumblr'); ?>">
+                <?php if ( false != casper_social_link( 'tumblr')) { ?>
+                    <a class="icon-tumblr" href="<?php echo casper_social_link( 'tumblr'); ?>">
                         <span class="hidden"><?php _e( 'Tumblr', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
-                <?php if ( false != get_theme_mod( 'casper_social_google')) { ?>
-                    <a class="icon-google-plus" href="<?php echo get_theme_mod( 'casper_social_google'); ?>">
+                <?php if ( false != casper_social_link( 'google')) { ?>
+                    <a class="icon-google-plus" href="<?php echo casper_social_link( 'google'); ?>">
                         <span class="hidden"><?php _e( 'Google+', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
-                <?php if ( false != get_theme_mod( 'casper_social_facebook')) { ?>
-                    <a class="icon-facebook" href="<?php echo get_theme_mod( 'casper_social_facebook'); ?>">
+                <?php if ( false != casper_social_link( 'facebook')) { ?>
+                    <a class="icon-facebook" href="<?php echo casper_social_link( 'facebook'); ?>">
                         <span class="hidden"><?php _e( 'Facebook', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
-                <?php if ( false != get_theme_mod( 'casper_social_twitter')) { ?>
-                    <a class="icon-twitter" href="<?php echo get_theme_mod( 'casper_social_twitter' ); ?>">
+                <?php if ( false != casper_social_link( 'twitter')) { ?>
+                    <a class="icon-twitter" href="<?php echo casper_social_link( 'twitter' ); ?>">
                         <span class="hidden"><?php _e( 'Twitter', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
-                <?php if ( false != get_theme_mod( 'casper_social_website')) { ?>
-                    <a class="icon-home" href="<?php echo get_theme_mod( 'casper_social_website'); ?>">
+                <?php if ( false != casper_social_link( 'website')) { ?>
+                    <a class="icon-home" href="<?php echo casper_social_link( 'website'); ?>">
                         <span class="hidden"><?php _e( 'Home', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
-                <?php if ( false != get_theme_mod( 'casper_social_mail')) { ?>
-                    <a class="icon-envelope" href="mailto:<?php echo get_theme_mod( 'casper_social_mail'); ?>">
+                <?php if ( false != casper_social_link( 'mail')) { ?>
+                    <a class="icon-envelope" href="<?php echo casper_social_link( 'mail'); ?>">
                         <span class="hidden"><?php _e( 'Email', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
-                <?php if ( false != get_theme_mod( 'casper_social_linkedin')) { ?>
-                    <a class="icon-linkedin" href="<?php echo get_theme_mod( 'casper_social_linkedin'); ?>">
+                <?php if ( false != casper_social_link( 'linkedin')) { ?>
+                    <a class="icon-linkedin" href="<?php echo casper_social_link( 'linkedin'); ?>">
                         <span class="hidden"><?php _e( 'LinkedIn', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
-                <?php if ( false != get_theme_mod( 'casper_social_github')) { ?>
-                    <a class="icon-github" href="<?php echo get_theme_mod( 'casper_social_github'); ?>">
+                <?php if ( false != casper_social_link( 'github')) { ?>
+                    <a class="icon-github" href="<?php echo casper_social_link( 'github'); ?>">
                         <span class="hidden"><?php _e( 'GitHub', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
-                <?php if ( false != get_theme_mod( 'casper_social_dribbble')) { ?>
-                    <a class="icon-dribbble" href="<?php echo get_theme_mod( 'casper_social_dribbble'); ?>">
+                <?php if ( false != casper_social_link( 'dribbble')) { ?>
+                    <a class="icon-dribbble" href="<?php echo casper_social_link( 'dribbble'); ?>">
                         <span class="hidden"><?php _e( 'Dribbble', 'casper' ); ?></span>
                     </a>
                 <?php } ?>
