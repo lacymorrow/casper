@@ -221,14 +221,28 @@ function casper_customize_register( $wp_customize ) {
 	        $wp_customize,
 	        'casper_custom_meta',
 	        array(
-	            'label' => 'Custom meta information (tags)',
+	            'label' => 'Custom meta tags',
 	            'section' => 'casper_custom',
-	            'settings' => 'casper_custom_meta'
+	            'settings' => 'casper_custom_meta',
+	            'sanitize_callback' => 'casper_sanitize_meta'
 	        )
 	    )
 	);
-	$wp_customize->add_setting('casper_custom_footer', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_custom_footer', array('section' => 'casper_custom', 'label' => 'Custom footer', 'type' => 'text'));
+	// Custom footer
+	$wp_customize->add_setting( 'casper_custom_footer' );
+	
+	$wp_customize->add_control(
+	    new Casper_textarea_control(
+	        $wp_customize,
+	        'casper_custom_footer',
+	        array(
+	            'label' => 'Custom footer',
+	            'section' => 'casper_custom',
+	            'settings' => 'casper_custom_footer',
+	            'sanitize_callback' => 'casper_sanitize_footer'
+	        )
+	    )
+	);
 
 	/* ==========================================================================
     Social Icons
@@ -242,25 +256,25 @@ function casper_customize_register( $wp_customize ) {
 	    )
 	);
 	$wp_customize->add_setting('casper_social_dribbble', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_social_dribbble', array('section' => 'casper_social', 'label' => 'Dribbble', 'type' => 'text'));
+	$wp_customize->add_control('casper_social_dribbble', array('section' => 'casper_social', 'label' => 'Dribbble', 'type' => 'text', 'sanitize_callback' => 'casper_sanitize_uri'));
 	$wp_customize->add_setting('casper_social_facebook', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_social_facebook', array('section' => 'casper_social', 'label' => 'Facebook', 'type' => 'text'));
+	$wp_customize->add_control('casper_social_facebook', array('section' => 'casper_social', 'label' => 'Facebook', 'type' => 'text', 'sanitize_callback' => 'casper_sanitize_uri'));
 	$wp_customize->add_setting('casper_social_github', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_social_github', array('section' => 'casper_social', 'label' => 'GitHub', 'type' => 'text'));
+	$wp_customize->add_control('casper_social_github', array('section' => 'casper_social', 'label' => 'GitHub', 'type' => 'text', 'sanitize_callback' => 'casper_sanitize_uri'));
 	$wp_customize->add_setting('casper_social_google', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_social_google', array('section' => 'casper_social', 'label' => 'Google+', 'type' => 'text'));
+	$wp_customize->add_control('casper_social_google', array('section' => 'casper_social', 'label' => 'Google+', 'type' => 'text', 'sanitize_callback' => 'casper_sanitize_uri'));
 	$wp_customize->add_setting('casper_social_linkedin', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_social_linkedin', array('section' => 'casper_social', 'label' => 'LinkedIn', 'type' => 'text'));
+	$wp_customize->add_control('casper_social_linkedin', array('section' => 'casper_social', 'label' => 'LinkedIn', 'type' => 'text', 'sanitize_callback' => 'casper_sanitize_uri'));
 	$wp_customize->add_setting('casper_social_mail', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_social_mail', array('section' => 'casper_social', 'label' => 'Email', 'type' => 'text'));
+	$wp_customize->add_control('casper_social_mail', array('section' => 'casper_social', 'label' => 'Email', 'type' => 'text', 'sanitize_callback' => 'casper_sanitize_email'));
 	$wp_customize->add_setting('casper_social_tumblr', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_social_tumblr', array('section' => 'casper_social', 'label' => 'Tumblr', 'type' => 'text'));
+	$wp_customize->add_control('casper_social_tumblr', array('section' => 'casper_social', 'label' => 'Tumblr', 'type' => 'text', 'sanitize_callback' => 'casper_sanitize_uri'));
 	$wp_customize->add_setting('casper_social_twitter', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_social_twitter', array('section' => 'casper_social', 'label' => 'Twitter', 'type' => 'text'));
+	$wp_customize->add_control('casper_social_twitter', array('section' => 'casper_social', 'label' => 'Twitter', 'type' => 'text', 'sanitize_callback' => 'casper_sanitize_uri'));
 	$wp_customize->add_setting('casper_social_website', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_social_website', array('section' => 'casper_social', 'label' => 'Website', 'type' => 'text'));
+	$wp_customize->add_control('casper_social_website', array('section' => 'casper_social', 'label' => 'Website', 'type' => 'text', 'sanitize_callback' => 'casper_sanitize_uri'));
 	$wp_customize->add_setting('casper_social_youtube', array('transport' => 'refresh'));
-	$wp_customize->add_control('casper_social_youtube', array('section' => 'casper_social', 'label' => 'Youtube', 'type' => 'text'));
+	$wp_customize->add_control('casper_social_youtube', array('section' => 'casper_social', 'label' => 'Youtube', 'type' => 'text', 'sanitize_callback' => 'casper_sanitize_uri'));
 }
 add_action( 'customize_register', 'casper_customize_register' );
 
@@ -271,3 +285,47 @@ function casper_customize_preview_js() {
 	wp_enqueue_script( 'casper_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'jquery', 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'casper_customize_preview_js' );
+
+/**
+ * Sanitize URIs
+ */
+function casper_sanitize_uri($uri){
+	if('' === $uri){
+		return '';
+	}
+	return esc_url($uri);
+}
+
+/**
+ * Sanitize email/uri
+ */
+function casper_sanitize_email($uri){
+	if('' === $uri){
+		return '';
+	}
+	if (substr( $uri, 0, 4 ) != 'http' && strpos($uri, '@') === false) {
+		$uri = 'mailto:' . $uri;
+	}
+	return sanitize_email($uri);
+}
+
+/**
+ * Sanitize meta
+ */
+function casper_sanitize_meta($content){
+	$allowed = array('meta' => array());
+	if('' === $uri){
+		return '';
+	}
+	return wp_kses($content, $allowed);
+}
+
+/**
+ * Sanitize footer
+ */
+function casper_sanitize_footer($content){
+	if('' === $uri){
+		return '';
+	}
+	return wp_kses_allowed_html($content);
+}
