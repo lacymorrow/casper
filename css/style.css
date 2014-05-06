@@ -1350,6 +1350,10 @@ textarea
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+.sticky
+{
+    content: '';
+}
 .hentry
 {
     margin: 0 0 1.5em;
@@ -1391,6 +1395,10 @@ textarea
 {
     word-wrap: break-word;
 }
+.bypostauthor
+{
+    content: '';
+}
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
@@ -1431,6 +1439,10 @@ textarea
 .site-main .gallery
 {
     margin-bottom: 1.5em;
+}
+.gallery-caption
+{
+    content: '';
 }
 .site-main .gallery a img
 {
