@@ -14,8 +14,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="HandheldFriendly" content="True" />
 <meta name="MobileOptimized" content="320" />
-<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
-<meta property="og:type" content="article" />
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 

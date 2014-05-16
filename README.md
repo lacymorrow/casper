@@ -34,6 +34,6 @@ Many thanks to the [Ghost](http://ghost.org) & [WordPress](http://wordpress.org)
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Lacy Morrow](http://lacymorrow.com)
+[GPL v2.0](http://www.gnu.org/licenses/gpl-2.0.html) © [Lacy Morrow](http://lacymorrow.com)
 
-All assets licensed under the [MIT License](http://opensource.org/licenses/MIT) a similar GPL-compatible license.
+All assets licensed under a GPL-compatible license.

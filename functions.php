@@ -5,13 +5,6 @@
  * @package Casper
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
 if ( ! function_exists( 'casper_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -21,6 +14,13 @@ if ( ! function_exists( 'casper_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function casper_setup() {
+	/**
+	 * Set the content width based on the theme's design and stylesheet.
+	 */
+	if ( ! isset( $content_width ) ) {
+		$content_width = 640; /* pixels */
+	}
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.

@@ -10,8 +10,8 @@ module.exports = function(grunt) {
 				'  Author URI:       http://lacymorrow.com\n' +
 				'  Description:      <%= pkg.description %>\n' +
 				'  Version:          <%= pkg.version%>\n' + 
-				'  License:          MIT License\n' +
-				'  License URI:      license.txt\n' +
+				'  License:          GNU General Public License v2.0\n' +
+				'  License URI:      http://www.gnu.org/licenses/gpl-2.0.html\n' +
 				'  Text Domain:      casper\n' +
 				'  Domain Path:      /languages/\n' +
 				'  Tags:             responsive-layout, black, white, one-column, fluid-layout, custom-header, custom-menu, editor-style\n' +
@@ -65,11 +65,11 @@ module.exports = function(grunt) {
 		imagemin: {
 		    casper: {
 		        files: [{
-		            expand: true,
-		            cwd: 'src/img/',
-		            src: ['**/*.{png,jpg,gif}'],
-		            dest: 'img/'
-		        }]
+					expand: true,                  // Enable dynamic expansion
+					cwd: 'src/img/',               // Src matches are relative to this path
+					src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+					dest: 'img/'                   // Destination path prefix
+				}]
 		    }
 		},
 		jshint: {
