@@ -157,6 +157,7 @@ function casper_customizer_head() {
         	body:not(.home) #masthead{ height: auto; border: none; }
         	body:not(.home) .blog-title, body:not(.home) .blog-description { display: none; }
         	body:not(.home) .inner { padding-top: 1em; }
+        	body:not(.home) .main-navigation { position: relative; }
         <?php } ?>
 		
 		<?php if( get_theme_mod( 'casper_link_color' )) { ?> 
