@@ -1090,6 +1090,10 @@ textarea
 
     color: white;
 }
+.main-navigation div
+{
+    overflow: hidden;
+}
 .main-navigation > div
 {
     width: 80%;
@@ -1102,6 +1106,7 @@ textarea
     font-size: 1.2rem;
 
     float: right;
+    overflow: hidden;
 
     margin: 0 4rem 0 4rem;
     padding: 0;
