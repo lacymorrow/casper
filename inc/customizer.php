@@ -214,7 +214,7 @@ function casper_customize_register( $wp_customize ) {
 	    )
 	);
 	// Custom meta
-	$wp_customize->add_setting( 'casper_custom_meta' );
+	$wp_customize->add_setting( 'casper_custom_meta' , array( 'sanitize_callback' => 'casper_sanitize_meta' ));
  
 	$wp_customize->add_control(
 	    new Casper_textarea_control(
@@ -223,13 +223,12 @@ function casper_customize_register( $wp_customize ) {
 	        array(
 	            'label' => 'Custom meta tags',
 	            'section' => 'casper_custom',
-	            'settings' => 'casper_custom_meta',
-	            'sanitize_callback' => 'casper_sanitize_meta'
+	            'settings' => 'casper_custom_meta'
 	        )
 	    )
 	);
 	// Custom footer
-	$wp_customize->add_setting( 'casper_custom_footer' );
+	$wp_customize->add_setting( 'casper_custom_footer' , array( 'sanitize_callback' => 'casper_sanitize_footer' ));
 	
 	$wp_customize->add_control(
 	    new Casper_textarea_control(
@@ -238,8 +237,7 @@ function casper_customize_register( $wp_customize ) {
 	        array(
 	            'label' => 'Custom footer',
 	            'section' => 'casper_custom',
-	            'settings' => 'casper_custom_footer',
-	            'sanitize_callback' => 'casper_sanitize_footer'
+	            'settings' => 'casper_custom_footer'
 	        )
 	    )
 	);
