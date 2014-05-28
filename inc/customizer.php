@@ -312,7 +312,7 @@ function casper_sanitize_email($uri){
  */
 function casper_sanitize_meta($content){
 	$allowed = array('meta' => array());
-	if('' === $uri){
+	if('' === $content){
 		return '';
 	}
 	return wp_kses($content, $allowed);
@@ -322,7 +322,7 @@ function casper_sanitize_meta($content){
  * Sanitize footer
  */
 function casper_sanitize_footer($content){
-	if('' === $uri){
+	if('' === $content){
 		return '';
 	}
 	return wp_kses_allowed_html($content);
