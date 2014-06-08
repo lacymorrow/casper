@@ -394,6 +394,10 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /* Centres vertically yo. (IE8+) */
+.vertical-row {
+    display: table-row;
+}
+
 .vertical {
     display: table-cell;
     vertical-align: middle;
@@ -560,13 +564,9 @@ textarea {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-    clear: both;
-    display: block;
-    position: relative;
-    top: 0;
+    padding: 5px;
     color: white;
     width: 100%;
-    z-index: 2;
     font-family: 'Open Sans', sans-serif;
     div {
         overflow: hidden;

@@ -861,6 +861,10 @@ margin on the iframe, cause it breaks stuff. */
     padding-bottom: 1em;
 }
 /* Centres vertically yo. (IE8+) */
+.vertical-row
+{
+    display: table-row;
+}
 .vertical
 {
     display: table-cell;
@@ -1079,14 +1083,8 @@ textarea
 {
     font-family: 'Open Sans', sans-serif;
 
-    position: relative;
-    z-index: 2;
-    top: 0;
-
-    display: block;
-    clear: both;
-
     width: 100%;
+    padding: 5px;
 
     color: white;
 }
