@@ -76,7 +76,7 @@
                         </a>
                     <?php } ?>
                     <?php if ( false != get_theme_mod( 'casper_social_mail')) { ?>
-                        <a class="icon-envelope" href="mailto:<?php echo esc_url( get_theme_mod( 'casper_social_mail') ); ?>">
+                        <a class="icon-envelope" href="<?php echo esc_url( 'mailto:' . get_theme_mod( 'casper_social_mail') ); ?>">
                             <span class="hidden"><?php _e( 'Email', 'casper' ); ?></span>
                         </a>
                     <?php } ?>
