@@ -1214,6 +1214,15 @@ textarea
 
         border-bottom: 1px solid #444;
     }
+    .widget-area aside
+    {
+        float: none;
+        
+        width: auto;
+        height: auto;
+        
+        padding: 0;
+    }
 }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
@@ -2250,6 +2259,10 @@ body.home .site-head:after
     h4
     {
         font-size: 2.8rem;
+    }
+    .widget-area aside
+    {
+        width: 47%;
     }
 }
 /* ==========================================================================
