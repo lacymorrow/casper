@@ -1214,15 +1214,6 @@ textarea
 
         border-bottom: 1px solid #444;
     }
-    .widget-area aside
-    {
-        float: none;
-        
-        width: auto;
-        height: auto;
-        
-        padding: 0;
-    }
 }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
@@ -2369,6 +2360,15 @@ body.home .site-head:after
         font-size: 1.1rem;
 
         margin-top: 6rem;
+    }
+    .widget-area aside
+    {
+        float: none;
+        
+        width: auto;
+        height: auto;
+        
+        padding: 0;
     }
 }
 /* ==========================================================================
