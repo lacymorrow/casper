@@ -4,7 +4,7 @@
   Author:           Lacy Morrow <me@lacymorrow.com>
   Author URI:       http://lacymorrow.com
   Description:      A port of Ghost's Casper theme to WordPress
-  Version:          1.0.7
+  Version:          1.0.8
   License:          GNU General Public License v2.0
   License URI:      http://www.gnu.org/licenses/gpl-2.0.html
   Text Domain:      casper
@@ -435,19 +435,35 @@ table
     src: url('fonts/fa.eot?#iefix') format('embedded-opentype'), url('fonts/fa.woff') format('woff'), url('fonts/fa.ttf') format('truetype'), url('fonts/fa.svg#icons') format('svg');
 }
 /* Apply these base styles to all icons */
+.icon-github-alt:before,
+.icon-youtube-play:before,
+.icon-stack-overflow:before,
+.icon-bitbucket:before,
+.icon-bitbucket-square:before,
+.icon-vimeo-square:before,
+.icon-behance:before,
+.icon-spotify:before,
+.icon-deviantart:before,
+.icon-soundcloud:before,
+.icon-vine:before,
+.icon-codepen:before,
+.icon-jsfiddle:before,
+.icon-send:before,
 .icon-ghost:before,
 .icon-feed:before,
 .icon-twitter:before,
-.icon-google-plus:before,
-.icon-facebook:before,
 .icon-home:before,
 .icon-menu:before,
+.icon-facebook:before,
 .icon-github:before,
+.icon-instagram:before,
+.icon-google-plus:before,
 .icon-envelope:before,
 .icon-linkedin:before,
 .icon-youtube:before,
 .icon-tumblr:before,
-.icon-dribbble:before
+.icon-dribbble:before,
+.icon-flickr:before
 {
     font-family: 'icons';
     font-weight: normal;
@@ -464,6 +480,62 @@ table
 }
 /* Each icon is created by inserting the corret character into the 
    content of the :before pseudo element. Like a boss. */
+.icon-github-alt:before
+{
+    content: '\f113';
+}
+.icon-youtube-play:before
+{
+    content: '\f16a';
+}
+.icon-stack-overflow:before
+{
+    content: '\f16c';
+}
+.icon-bitbucket:before
+{
+    content: '\f171';
+}
+.icon-bitbucket-square:before
+{
+    content: '\f172';
+}
+.icon-vimeo-square:before
+{
+    content: '\f194';
+}
+.icon-behance:before
+{
+    content: '\f1b4';
+}
+.icon-spotify:before
+{
+    content: '\f1bc';
+}
+.icon-deviantart:before
+{
+    content: '\f1bd';
+}
+.icon-soundcloud:before
+{
+    content: '\f1be';
+}
+.icon-vine:before
+{
+    content: '\f1ca';
+}
+.icon-codepen:before
+{
+    content: '\f1cb';
+}
+.icon-jsfiddle:before
+{
+    content: '\f1cc';
+}
+.icon-send:before
+{
+    content: '\f1d8';
+}
 .icon-ghost:before
 {
     content: '\e000';
@@ -474,14 +546,10 @@ table
 }
 .icon-twitter:before
 {
-    font-size: 1.1em;
-
     content: '\e002';
 }
 .icon-home:before
 {
-    font-size: 1.1em;
-
     content: '\e600';
 }
 .icon-menu:before
@@ -494,9 +562,11 @@ table
 }
 .icon-github:before
 {
-    font-size: 1.1em;
-
     content: '\e603';
+}
+.icon-instagram:before
+{
+    content: '\e604';
 }
 .icon-google-plus:before
 {
@@ -520,9 +590,11 @@ table
 }
 .icon-dribbble:before
 {
-    font-size: 1.1em;
-
     content: '\e60a';
+}
+.icon-flickr:before
+{
+    content: '\e60b';
 }
 /* ==========================================================================
    2. General - Setting up some base styles
@@ -1084,13 +1156,9 @@ textarea
     font-family: 'Open Sans', sans-serif;
 
     width: 100%;
-    padding: 5px 0;
+    padding: 5px;
 
     color: white;
-}
-.main-navigation div
-{
-    overflow: hidden;
 }
 .main-navigation > div
 {
@@ -1104,7 +1172,6 @@ textarea
     font-size: 1.2rem;
 
     float: right;
-    overflow: hidden;
 
     margin: 0 4rem 0 4rem;
     padding: 0;
@@ -1140,22 +1207,15 @@ textarea
 {
     position: absolute;
     z-index: 99999;
-    top: 1.5em;
+    top: 100%;
     left: 0;
 
     display: none;
-    float: left;
-
-    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
 }
 .main-navigation ul ul ul
 {
     top: 0;
     left: 100%;
-}
-.main-navigation ul ul a
-{
-    width: 200px;
 }
 .main-navigation ul li:hover > ul
 {
@@ -1774,6 +1834,7 @@ body.home .site-head:after
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+    padding: 1em;
 }
 /* The author credit area after the post */
 .post-footer
@@ -2251,10 +2312,6 @@ body.home .site-head:after
     {
         font-size: 2.8rem;
     }
-    .widget-area aside
-    {
-        width: 47%;
-    }
 }
 /* ==========================================================================
    10. Media Queries - Smaller than 500px
@@ -2360,15 +2417,6 @@ body.home .site-head:after
         font-size: 1.1rem;
 
         margin-top: 6rem;
-    }
-    .widget-area aside
-    {
-        float: none;
-        
-        width: auto;
-        height: auto;
-        
-        padding: 0;
     }
 }
 /* ==========================================================================

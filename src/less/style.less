@@ -43,19 +43,36 @@
 }
 
 /* Apply these base styles to all icons */
-.icon-ghost:before, 
-.icon-feed:before, 
-.icon-twitter:before, 
-.icon-google-plus:before, 
-.icon-facebook:before,
+.icon-github-alt:before,
+.icon-youtube-play:before,
+.icon-stack-overflow:before,
+.icon-bitbucket:before,
+.icon-bitbucket-square:before,
+.icon-vimeo-square:before,
+.icon-behance:before,
+.icon-spotify:before,
+.icon-deviantart:before,
+.icon-soundcloud:before,
+.icon-vine:before,
+.icon-codepen:before,
+.icon-jsfiddle:before,
+.icon-send:before,
+.icon-ghost:before,
+.icon-feed:before,
+.icon-twitter:before,
 .icon-home:before,
 .icon-menu:before,
+.icon-facebook:before,
 .icon-github:before,
+.icon-instagram:before,
+.icon-google-plus:before,
 .icon-envelope:before,
 .icon-linkedin:before,
 .icon-youtube:before,
 .icon-tumblr:before,
-.icon-dribbble:before{
+.icon-dribbble:before,
+.icon-flickr:before,
+{
     font-family: 'icons';
     speak: none;
     font-style: normal;
@@ -70,6 +87,48 @@
 
 /* Each icon is created by inserting the corret character into the 
    content of the :before pseudo element. Like a boss. */
+.icon-github-alt:before {
+    content: "\f113";
+}
+.icon-youtube-play:before {
+    content: "\f16a";
+}
+.icon-stack-overflow:before {
+    content: "\f16c";
+}
+.icon-bitbucket:before {
+    content: "\f171";
+}
+.icon-bitbucket-square:before {
+    content: "\f172";
+}
+.icon-vimeo-square:before {
+    content: "\f194";
+}
+.icon-behance:before {
+    content: "\f1b4";
+}
+.icon-spotify:before {
+    content: "\f1bc";
+}
+.icon-deviantart:before {
+    content: "\f1bd";
+}
+.icon-soundcloud:before {
+    content: "\f1be";
+}
+.icon-vine:before {
+    content: "\f1ca";
+}
+.icon-codepen:before {
+    content: "\f1cb";
+}
+.icon-jsfiddle:before {
+    content: "\f1cc";
+}
+.icon-send:before {
+    content: "\f1d8";
+}
 .icon-ghost:before {
     content: "\e000";
 }
@@ -78,11 +137,9 @@
 }
 .icon-twitter:before {
     content: "\e002";
-    font-size: 1.1em;
 }
 .icon-home:before {
     content: "\e600";
-    font-size: 1.1em;
 }
 .icon-menu:before {
     content: "\e601";
@@ -92,7 +149,9 @@
 }
 .icon-github:before {
     content: "\e603";
-    font-size: 1.1em;
+}
+.icon-instagram:before {
+    content: "\e604";
 }
 .icon-google-plus:before {
     content: "\e605";
@@ -111,7 +170,9 @@
 }
 .icon-dribbble:before {
     content: "\e60a";
-    font-size: 1.1em;
+}
+.icon-flickr:before {
+    content: "\e60b";
 }
 
 
@@ -568,9 +629,6 @@ textarea {
     color: white;
     width: 100%;
     font-family: 'Open Sans', sans-serif;
-    div {
-        overflow: hidden;
-    }
 }
 .main-navigation>div {
     width: 80%;
@@ -584,7 +642,6 @@ textarea {
     padding: 0;
     float: right;
     font-size: 1.2rem;
-    overflow: hidden;
 }
 .main-navigation li {
     float: left;
@@ -605,20 +662,15 @@ textarea {
     color: white;
 }
 .main-navigation ul ul {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     display: none;
-    float: left;
     left: 0;
     position: absolute;
-    top: 1.5em;
+    top: 100%;
     z-index: 99999;
 }
 .main-navigation ul ul ul {
     left: 100%;
     top: 0;
-}
-.main-navigation ul ul a {
-    width: 200px;
 }
 .main-navigation ul li:hover > ul {
     display: block;

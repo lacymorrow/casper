@@ -26,7 +26,7 @@ function casper_paging_nav() {
 			<?php if ( get_next_posts_link() ) : ?>
 			<div class="older-posts"><?php next_posts_link( __( 'Older Posts <span class="meta-nav">&rarr;</span>', 'casper' ) ); ?></div>
 			<?php endif; ?>
-				<div class="page-number"><?php  echo 'Page '.$paged.' of '.$wp_query->max_num_pages; ?></div>
+				<div class="page-number"><?php printf( __( 'Page', 'casper' ).' %1$s '.__( 'of', 'casper' ).' %2$s', $paged, $wp_query->max_num_pages; ); ?></div>
 			<?php if ( get_previous_posts_link() ) : ?>
 			<div class="newer-posts"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Newer Posts', 'casper' ) ); ?></div>
 			<?php endif; ?>

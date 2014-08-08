@@ -55,6 +55,11 @@
                             <span class="hidden"><?php _e( 'Tumblr', 'casper' ); ?></span>
                         </a>
                     <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_instagram')) { ?>
+                        <a class="icon-instagram" href="<?php echo esc_url( get_theme_mod( 'casper_social_instagram') ); ?>">
+                            <span class="hidden"><?php _e( 'Instagram', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
                     <?php if ( false != get_theme_mod( 'casper_social_google')) { ?>
                         <a class="icon-google-plus" href="<?php echo esc_url( get_theme_mod( 'casper_social_google') ); ?>">
                             <span class="hidden"><?php _e( 'Google+', 'casper' ); ?></span>
@@ -86,8 +91,23 @@
                         </a>
                     <?php } ?>
                     <?php if ( false != get_theme_mod( 'casper_social_github')) { ?>
-                        <a class="icon-github" href="<?php echo esc_url( get_theme_mod( 'casper_social_github') ); ?>">
+                        <a class="icon-github-alt" href="<?php echo esc_url( get_theme_mod( 'casper_social_github') ); ?>">
                             <span class="hidden"><?php _e( 'GitHub', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_bitbucket')) { ?>
+                        <a class="icon-bitbucket" href="<?php echo esc_url( get_theme_mod( 'casper_social_bitbucket') ); ?>">
+                            <span class="hidden"><?php _e( 'Bitbucket', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_stack')) { ?>
+                        <a class="icon-stack-overflow" href="<?php echo esc_url( get_theme_mod( 'casper_social_stack') ); ?>">
+                            <span class="hidden"><?php _e( 'Stack Overflow', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_bitbucket')) { ?>
+                        <a class="icon-bitbucket" href="<?php echo esc_url( get_theme_mod( 'casper_social_bitbucket') ); ?>">
+                            <span class="hidden"><?php _e( 'Bitbucket', 'casper' ); ?></span>
                         </a>
                     <?php } ?>
                     <?php if ( false != get_theme_mod( 'casper_social_dribbble')) { ?>

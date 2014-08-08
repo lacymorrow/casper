@@ -189,7 +189,7 @@ msgid "Pages:"
 msgstr ""
 
 #: content.php:14
-msgid "on %1$s"
+msgid "on "
 msgstr ""
 
 #: content.php:34
@@ -231,34 +231,46 @@ msgid "Tumblr"
 msgstr ""
 
 #: header.php:60
-msgid "Google+"
+msgid "Instagram"
 msgstr ""
 
 #: header.php:65
-msgid "Facebook"
+msgid "Google+"
 msgstr ""
 
 #: header.php:70
-msgid "Twitter"
+msgid "Facebook"
 msgstr ""
 
 #: header.php:75
-msgid "Home"
+msgid "Twitter"
 msgstr ""
 
 #: header.php:80
-msgid "Email"
+msgid "Home"
 msgstr ""
 
 #: header.php:85
-msgid "LinkedIn"
+msgid "Email"
 msgstr ""
 
 #: header.php:90
-msgid "GitHub"
+msgid "LinkedIn"
 msgstr ""
 
 #: header.php:95
+msgid "GitHub"
+msgstr ""
+
+#: header.php:100
+msgid "Bitbucket"
+msgstr ""
+
+#: header.php:105
+msgid "Stack Overflow"
+msgstr ""
+
+#: header.php:110
 msgid "Dribbble"
 msgstr ""
 
@@ -296,6 +308,14 @@ msgstr ""
 
 #: inc/template-tags.php:27
 msgid "Older Posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:29
+msgid "Page"
+msgstr ""
+
+#: inc/template-tags.php:29
+msgid "of"
 msgstr ""
 
 #: inc/template-tags.php:31
