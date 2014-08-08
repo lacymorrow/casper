@@ -105,11 +105,6 @@
                             <span class="hidden"><?php _e( 'Stack Overflow', 'casper' ); ?></span>
                         </a>
                     <?php } ?>
-                    <?php if ( false != get_theme_mod( 'casper_social_bitbucket')) { ?>
-                        <a class="icon-bitbucket" href="<?php echo esc_url( get_theme_mod( 'casper_social_bitbucket') ); ?>">
-                            <span class="hidden"><?php _e( 'Bitbucket', 'casper' ); ?></span>
-                        </a>
-                    <?php } ?>
                     <?php if ( false != get_theme_mod( 'casper_social_dribbble')) { ?>
                         <a class="icon-dribbble" href="<?php echo esc_url( get_theme_mod( 'casper_social_dribbble') ); ?>">
                             <span class="hidden"><?php _e( 'Dribbble', 'casper' ); ?></span>
