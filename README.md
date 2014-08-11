@@ -7,6 +7,8 @@ Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPr
 
 ### [Demo](http://lacymorrow.com/projects/casper/)
 
+### [Download Casper from the WordPress.org Theme Directory](http://wordpress.org/themes/casper)
+
 ## Usage
 
 Download the [zip](https://github.com/lacymorrow/casper-wp/archive/master.zip) package of the theme and install either automatically through the WordPress Dashboard > Appearance tab, or by uploading the `casper-wp` folder to your WordPress/wp-content/themes directory.
