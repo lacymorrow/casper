@@ -16,19 +16,10 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:19
+#: 404.php:20
 msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-
-#: 404.php:27
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-#: 404.php:44
-msgid "Try looking in the monthly archives. %1$s"
+"We tried searching for what you were looking for, but didn&apos;t find "
+"anything. Please use the search form below."
 msgstr ""
 
 #: archive.php:27
