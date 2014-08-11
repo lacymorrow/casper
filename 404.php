@@ -17,7 +17,7 @@ get_header();
 
 				<div class="page-content">
 					<img class="alignright" src="<?php echo get_template_directory_uri(); ?>/img/404-ghost@2x.png" width="96" height="150">
-					<p><?php _e( 'We tried searching for what you were looking for, but didn&apos;t find anything. Please use the search form below.'); ?></p>
+					<p><?php _e( 'We tried searching for what you were looking for, but didn&apos;t find anything. Please use the search form below.', 'casper'); ?></p>
 					
 					<p><?php get_search_form(); ?></p>
 
