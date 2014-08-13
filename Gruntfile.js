@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 		banner: '/*\n' +
 				'  Theme Name:       <%= pkg.name%>\n' +
 				'  Theme URI:        <%= pkg.homepage %>\n' +
-				'  Author:           <%= pkg.author %>\n' +
+				'  Author:           Lacy Morrow\n' +
 				'  Author URI:       http://lacymorrow.com\n' +
 				'  Description:      <%= pkg.description %>\n' +
 				'  Version:          <%= pkg.version%>\n' + 
