@@ -61,6 +61,9 @@ function casper_setup() {
 		'comment-form',
 		'gallery',
 	) );
+
+	// Enable automatic theme updates
+	add_filter( 'auto_update_theme', '__return_true' );
 }
 endif; // casper_setup
 add_action( 'after_setup_theme', 'casper_setup' );

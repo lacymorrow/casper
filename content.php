@@ -21,7 +21,9 @@
 			$large_url = wp_get_attachment_image_src($image_id,'large', true);
 		?>
 
-        	<img data-src='<480:<?php echo $thumb_url[0]; ?>, <768:<?php echo $medium_url[0]; ?>, >768:<?php echo $large_url[0]; ?>' />
+        	<div class="post-image">
+        		<img data-src='<480:<?php echo $thumb_url[0]; ?>, <768:<?php echo $medium_url[0]; ?>, >768:<?php echo $large_url[0]; ?>' />
+			</div>
 			<noscript><?php the_post_thumbnail('thumbnail'); ?></noscript>
 	    <?php } ?> 
     </header>
