@@ -86,7 +86,8 @@ module.exports = function(grunt) {
 		less: {
 			casper: {
 				files: {
-					"css/style.css": ["src/less/style.less", "src/less/**/*.less"]
+					"css/style.css": ["src/less/style.less"],
+					"rtl.css": ["src/less/rtl.less"]
 				}
 			}
 		},
