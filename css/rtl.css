@@ -3,8 +3,7 @@
    ========================================================================== */
 /*
 
-    0.  Includes
-    1.  Icons
+    1.  fonts
     2.  General
     3.  Utilities
     4.  General
@@ -16,6 +15,9 @@
     10. Media Queries (Mobile)
 
 */
+/* ==========================================================================
+   1. fonts
+   ========================================================================== */
 @font-face {
   font-family: 'GESSTwoMedium';
   src: url('fonts/ge-ss-med.eot');
@@ -28,7 +30,7 @@ html {
   directory: rtl;
 }
 body {
-  font-family: tahoma, serif;
+  font-family: 'Segoe UI', tahoma, sans-serif;
   font-size: 2.0rem;
   line-height: 1.6em;
 }
@@ -38,241 +40,37 @@ h3,
 h4,
 h5,
 h6 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0;
   font-family: 'GESSTwoMedium', sans-serif;
 }
 h1 {
-  font-size: 5rem;
-  line-height: 1.2em;
-  letter-spacing: -2px;
-  text-indent: -3px;
+  letter-spacing: 0px;
+  text-indent: 0px;
 }
 h2 {
-  font-size: 4rem;
-  line-height: 1.2em;
-  letter-spacing: -1px;
-  text-indent: -2px;
-}
-h3 {
-  font-size: 3.5rem;
-}
-h4 {
-  font-size: 3rem;
-}
-h5 {
-  font-size: 2.5rem;
-}
-h6 {
-  font-size: 2rem;
-}
-a {
-  color: #4a4a4a;
-  transition: color ease 0.3s;
-}
-a:hover {
-  color: #57A3E8;
-}
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  color: #50585D;
-}
-p,
-ul,
-ol,
-dl {
-  margin: 1.6em 0;
-}
-ol ol,
-ul ul,
-ul ol,
-ol ul {
-  margin: 0.4em 0;
+  letter-spacing: 0px;
+  text-indent: 0px;
 }
 dl dt {
-  float: left;
-  width: 180px;
-  overflow: hidden;
-  clear: left;
-  text-align: right;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-weight: bold;
-  margin-bottom: 1em;
+  float: right;
+  clear: right;
+  text-align: left;
 }
 dl dd {
-  margin-left: 200px;
-  margin-bottom: 1em;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #efefef;
-  margin: 3.2em 0;
-  padding: 0;
+  margin-left: 0;
+  margin-right: 200px;
 }
 blockquote {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 1.6em 0 1.6em -2.2em;
-  padding: 0 0 0 1.6em;
-  border-left: #4a4a4a 0.4em solid;
-}
-blockquote p {
-  margin: 0.8em 0;
-  font-style: italic;
+  margin: 1.6em -2.2em 1.6em 0;
+  padding: 0 1.6em 0 0;
+  border-right: #4a4a4a 0.4em solid;
+  border-left: 0;
 }
 blockquote small {
-  display: inline-block;
-  margin: 0.8em 0 0.8em 1.5em;
-  font-size: 0.9em;
-  color: #ccc;
-}
-blockquote small:before {
-  content: '\2014 \00A0';
-}
-blockquote cite {
-  font-weight: bold;
-}
-blockquote cite a {
-  font-weight: normal;
-}
-mark {
-  background-color: #ffc336;
-}
-code,
-tt {
-  padding: 1px 3px;
-  font-family: Inconsolata, monospace, sans-serif;
-  font-size: 0.85em;
-  white-space: pre-wrap;
-  border: 1px solid #E3EDF3;
-  background: #F7FAFB;
-  border-radius: 2px;
-}
-pre {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 1.6em 0;
-  border: 1px solid #E3EDF3;
-  width: 100%;
-  padding: 10px;
-  font-family: Inconsolata, monospace, sans-serif;
-  font-size: 0.9em;
-  white-space: pre;
-  overflow: auto;
-  background: #F7FAFB;
-  border-radius: 3px;
-}
-pre code,
-tt {
-  font-size: inherit;
-  white-space: -moz-pre-wrap;
-  white-space: pre-wrap;
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-kbd {
-  display: inline-block;
-  margin-bottom: 0.4em;
-  padding: 1px 8px;
-  border: #ccc 1px solid;
-  color: #666;
-  text-shadow: #fff 0 1px 0;
-  font-size: 0.9em;
-  font-weight: bold;
-  background: #f4f4f4;
-  border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #ffffff inset;
-}
-table {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 1.6em 0;
-  width: 100%;
-  max-width: 100%;
-  background-color: transparent;
+  margin: 0.8em 1.5em 0.8em 0;
 }
 table th,
 table td {
-  padding: 8px;
-  line-height: 20px;
-  text-align: left;
-  vertical-align: top;
-  border-top: 1px solid #efefef;
-}
-table th {
-  color: #000;
-}
-table caption + thead tr:first-child th,
-table caption + thead tr:first-child td,
-table colgroup + thead tr:first-child th,
-table colgroup + thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-  border-top: 0;
-}
-table tbody + tbody {
-  border-top: 2px solid #efefef;
-}
-table table table {
-  background-color: #fff;
-}
-table tbody > tr:nth-child(odd) > td,
-table tbody > tr:nth-child(odd) > th {
-  background-color: #f6f6f6;
-}
-table.plain tbody > tr:nth-child(odd) > td,
-table.plain tbody > tr:nth-child(odd) > th {
-  background: transparent;
-}
-iframe,
-.fluid-width-video-wrapper {
-  display: block;
-  margin: 1.6em 0;
-}
-/* When a video is inside the fitvids wrapper, drop the
-margin on the iframe, cause it breaks stuff. */
-.fluid-width-video-wrapper iframe {
-  margin: 0;
-}
-/* ==========================================================================
-   3. Utilities - These things get used a lot
-   ========================================================================== */
-/* Hides shit */
-.hidden {
-  text-indent: -9999px;
-  visibility: hidden;
-  display: none;
-}
-/* Creates a responsive wrapper that makes our content scale nicely */
-.inner {
-  position: relative;
-  width: 80%;
-  max-width: 700px;
-  margin: 0 auto;
-  padding-bottom: 1em;
-}
-/* Centres vertically yo. (IE8+) */
-.vertical-row {
-  display: table-row;
-}
-.vertical {
-  display: table-cell;
-  vertical-align: middle;
-}
-.clear {
-  clear: both;
-  height: 0;
-  padding: 0;
-  margin: 0;
+  text-align: right;
 }
 /* ==========================================================================
    WP styles
@@ -280,157 +78,22 @@ margin on the iframe, cause it breaks stuff. */
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
-hr {
-  background-color: #ccc;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em;
-}
 ul,
 ol {
-  margin: 0 0 1.5em 3em;
-}
-ul {
-  list-style: disc;
-}
-ol {
-  list-style: decimal;
+  margin: 0 3em 1.5em 0;
 }
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em;
-}
-dt {
-  font-weight: bold;
-}
-dd {
-  margin: 0 1.5em 1.5em;
-}
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */
-}
-figure {
-  margin: 0;
-}
-table {
-  margin: 0 0 1.5em;
-  width: 100%;
-}
-th {
-  font-weight: bold;
+  margin-left: 0;
+  margin-right: 1.5em;
 }
 /*--------------------------------------------------------------
 4.0 Forms
 --------------------------------------------------------------*/
-button,
-input,
-select,
 textarea {
-  font-size: 100%;
-  /* Corrects font size not being inherited in all browsers */
-  margin: 0;
-  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-  vertical-align: baseline;
-  /* Improves appearance and consistency in all browsers */
-  *vertical-align: middle;
-  /* Improves appearance and consistency in IE6/IE7 */
-}
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  border: 1px solid #ccc;
-  border-color: #ccc #ccc #bbb #ccc;
-  border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-  /* Improves usability and consistency of cursor style between image-type 'input' and others */
-  -webkit-appearance: button;
-  /* Corrects inability to style clickable 'input' types in iOS */
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 1;
-  padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa #bbb;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-}
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-  border-color: #aaa #bbb #bbb #bbb;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-input[type="checkbox"],
-input[type="radio"] {
-  padding: 0;
-  /* Addresses excess padding in IE8/9 */
-}
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* Addresses appearance set to searchfield in S5, Chrome */
-  -webkit-box-sizing: content-box;
-  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-decoration {
-  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-  -webkit-appearance: none;
-}
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
-  border: 0;
-  padding: 0;
-}
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-  color: #111;
-}
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-  padding: 3px;
-}
-textarea {
-  overflow: auto;
-  /* Removes default vertical scrollbar in IE6/7/8/9 */
+  padding-right: 0;
   padding-left: 3px;
-  vertical-align: top;
-  /* Improves readability and alignment in all browsers */
   width: 98%;
 }
 /*--------------------------------------------------------------
@@ -440,141 +103,49 @@ textarea {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  padding: 5px;
-  color: white;
-  width: 100%;
-  font-family: 'Open Sans', sans-serif;
-}
-.main-navigation > div {
-  width: 80%;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0;
+  font-family: 'GESSTwoMedium', tahoma, sans-serif;
 }
 .main-navigation ul {
-  list-style: none;
-  margin: 0 4rem 0 4rem;
-  padding: 0;
-  float: right;
-  font-size: 1.2rem;
+  float: left;
 }
 .main-navigation li {
-  float: left;
-  position: relative;
-}
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  padding: 12px 20px;
-  background-color: rgba(0, 0, 0, 0);
-  -webkit-transition: color 0.3s ease, background 0.3s ease;
-  -moz-transition: color 0.3s ease, background 0.3s ease;
-  transition: color 0.3s ease, background 0.3s ease;
-}
-.main-navigation a:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
+  float: right;
 }
 .main-navigation ul ul {
-  display: none;
-  left: 0;
-  position: absolute;
-  top: 100%;
-  z-index: 99999;
+  left: auto;
+  right: 0;
 }
 .main-navigation ul ul ul {
-  left: 100%;
+  left: auto;
+  right: 100%;
   top: 0;
-}
-.main-navigation ul li:hover > ul {
-  display: block;
 }
 /* Small menu */
 .menu-toggle {
-  cursor: pointer;
-  font-size: 0;
-  height: 48px;
-  margin: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-align: center;
-  width: 48px;
-  display: none;
-}
-.menu-toggle a {
-  padding: 5px;
-}
-.menu-toggle a:before {
-  font-size: 3rem;
-}
-@media screen and (max-width: 600px) {
-  .menu-toggle,
-  .main-navigation.toggled .nav-menu {
-    display: block;
-  }
-  .main-navigation ul {
-    display: none;
-    margin: 0;
-    font-size: 1.8rem;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  .main-navigation li {
-    float: none;
-    margin: 0 auto;
-    width: 100%;
-    border-bottom: 1px solid #444;
-  }
-}
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
+  right: auto;
+  left: 0;
 }
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
-  float: left;
+  float: right;
   width: 50%;
 }
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
-  float: right;
+  float: left;
   text-align: right;
   width: 50%;
 }
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
-/* Text meant only for screen readers */
-.screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-}
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  color: #21759b;
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-  /* Above WP toolbar */
+  left: auto;
+  right: 5px;
 }
 /*--------------------------------------------------------------
 7.0 Alignments
@@ -597,791 +168,132 @@ textarea {
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-  content: '';
-  display: table;
-}
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-  clear: both;
-}
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-}
-/* Make sure select elements fit in widgets */
-.widget select {
-  max-width: 100%;
-}
-/* Search widget */
-.widget_search .search-submit {
-  display: none;
-}
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
-.sticky {
-  content: "";
-}
-.hentry {
-  margin: 0 0 1.5em;
-}
-.byline,
-.updated {
-  display: none;
-}
-.single .byline,
-.group-blog .byline {
-  display: inline;
-}
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
-}
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-  display: none;
-}
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
-.comment-content a {
-  word-wrap: break-word;
-}
-.bypostauthor {
-  content: '';
-}
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none;
-}
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-.infinity-end.neverending .site-footer {
-  display: block;
-}
-.wp-caption {
-  border: 1px solid #ccc;
-  margin-bottom: 1.5em;
-  max-width: 100%;
-}
-.wp-caption img[class*="wp-image-"] {
-  display: block;
-  margin: 1.2% auto 0;
-  max-width: 98%;
-}
-.wp-caption-text {
-  text-align: center;
-}
-.wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
-}
-.site-main .gallery {
-  margin-bottom: 1.5em;
-}
-.gallery-caption {
-  content: '';
-}
-.site-main .gallery a img {
-  border: none;
-  height: auto;
-  max-width: 90%;
-}
-.site-main .gallery dd,
-.site-main .gallery figcaption {
-  margin: 0;
-}
-/* Make sure embeds and iframes fit their containers */
-embed,
-iframe,
-object {
-  max-width: 100%;
-}
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
-/* Big cover image on the home page */
-.site-head {
-  position: relative;
-  display: table;
-  width: 100%;
-  height: 60%;
-  margin-bottom: 5rem;
-  text-align: center;
-  color: #fff;
-  background: #303538 no-repeat center center;
-  background-size: cover;
-  border-bottom: #EBF2F6 1px solid;
-}
-.site-head:after {
-  display: block;
-  content: "";
-  width: 7px;
-  height: 7px;
-  border: #E7EEF2 1px solid;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  margin-left: -5px;
-  background: #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  box-shadow: #fff 0 0 0 5px;
-}
-body.home .site-head:after {
-  z-index: -3;
-}
-/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
-.blog-logo {
-  text-decoration: none;
-  color: white;
-}
-.blog-logo img {
-  display: block;
-  max-height: 120px;
-  width: auto;
-  margin: 0 auto;
-  line-height: 0;
-}
 /* The details of your blog. Defined in ghost/settings/ */
-.blog-title {
-  margin: 10px 0 10px 0;
-  font-size: 5rem;
-  letter-spacing: -1px;
-  font-weight: bold;
-  font-family: 'Open Sans', sans-serif;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-}
+.blog-title,
 .blog-description {
-  margin: 0;
-  font-size: 1.8rem;
-  line-height: 1.5em;
-  font-weight: 300;
-  font-family: 'Noto Serif', serif;
-  letter-spacing: 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-}
-/* Every post, on every page, gets this style on its <article> tag */
-.post-wrap {
-  position: relative;
-  width: 80%;
-  max-width: 700px;
-  margin: 4rem auto;
-  word-break: break-word;
-  hyphens: auto;
-}
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-.circle-in-border {
-  display: block;
-  content: "";
-  width: 7px;
-  height: 7px;
-  border: #E7EEF2 1px solid;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  margin-left: -5px;
-  background: #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  box-shadow: #fff 0 0 0 5px;
-}
-.error-404 article {
-  border-top: #EBF2F6 1px solid;
-  margin-bottom: 20px;
-  padding-top: 20px;
-}
-.hentry {
-  position: relative;
-  width: 80%;
-  max-width: 700px;
-  margin: 4rem auto;
-  word-break: break-word;
-  hyphens: auto;
-  border-bottom: #EBF2F6 1px solid;
-}
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-.hentry:after {
-  display: block;
-  content: "";
-  width: 7px;
-  height: 7px;
-  border: #E7EEF2 1px solid;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  margin-left: -5px;
-  background: #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  box-shadow: #fff 0 0 0 5px;
-}
-.post-title {
-  margin: 0;
-}
-.post-title a {
-  text-decoration: none;
-}
-.post-excerpt p {
-  margin: 1.6rem 0 0 0;
-  font-size: 0.9em;
-  line-height: 1.6em;
+  letter-spacing: 0px;
+  font-family: 'GESSTwoMedium', tahoma, sans-serif;
 }
 .post-meta {
-  display: inline-block;
-  margin: 0 0 5px 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5rem;
-  color: #9EABB3;
-}
-.post-meta a {
-  color: #9EABB3;
-  text-decoration: none;
-}
-.post-meta a:hover {
-  text-decoration: underline;
+  font-family: 'GESSTwoMedium', tahoma, sans-serif;
+  word-break: initial;
 }
 .user-meta {
-  position: relative;
-  padding: 0.3rem 40px 0 100px;
-  min-height: 77px;
+  padding: 0.3rem 100px 0 40px;
 }
 .user-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.user-name {
-  display: block;
-  font-weight: bold;
-}
-.user-bio {
-  display: block;
-  max-width: 440px;
-  font-size: 1.4rem;
-  line-height: 1.5em;
+  left: auto;
+  right: 0;
 }
 .publish-meta {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 4.3rem 0 4rem 0;
-  text-align: right;
-}
-.publish-heading {
-  display: block;
-  font-weight: bold;
-}
-.publish-date {
-  display: block;
-  font-size: 1.4rem;
-  line-height: 1.5em;
+  right: auto;
+  left: 0;
+  text-align: left;
 }
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
-/* Tweak the .post wrapper style */
-.post-template .post {
-  margin-top: 0;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-/* Kill that stylish little circle that was on the border, too */
-.post-template .post:after {
-  display: none;
-}
-/* Insert some mad padding up in the header for better spacing */
-.post-template .post-header {
-  padding: 60px 0;
-  text-align: center;
-}
-.post-header img {
-  padding-top: 1rem;
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
-  height: auto;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
-  transition: opacity ease 0.6s;
-}
-.post-template .blog-title {
-  display: inline-block;
-  padding: 2.5rem 0;
-}
-/* Keep large images within the bounds of the post-width */
-.post-content img {
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
-  height: auto;
-  padding: 1em;
-}
-/* The author credit area after the post */
-.post-footer {
-  position: relative;
-  margin: 4rem 0 0 0;
-  padding: 4rem 0 0 0;
-  border-top: #EBF2F6 1px solid;
-}
-.post-footer h4 {
-  font-size: 1.8rem;
-  margin: 0;
-}
-.post-footer p {
-  margin: 1rem 0;
-  font-size: 1.4rem;
-  line-height: 1.6em;
-}
 /* Create some space to the right for the share links */
 .post-footer .author {
-  margin-right: 180px;
-  margin-bottom: 3rem;
-}
-.post-footer .author a {
-  text-decoration: none;
+  margin-right: 0;
+  margin-left: 180px;
 }
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
 .post-footer .share {
-  position: absolute;
-  top: 4rem;
-  right: 0;
-  width: 140px;
+  right: auto;
+  left: 0;
 }
 .post-footer .share a {
-  font-size: 1.8rem;
-  display: inline;
-  margin: 1.4rem 0 1.6rem 1.6rem;
-  color: #BBC7CC;
-  text-decoration: none;
-}
-.post-footer .share a:hover {
-  color: #50585D;
+  margin: 1.4rem 1.6rem 1.6rem 0;
 }
 /* ==========================================================================
    6. Third Party Elements - Embeds from other services
    ========================================================================== */
 /* Github */
-.gist table {
-  margin: 0;
-  font-size: 1.4rem;
-}
-.gist .line-number {
-  min-width: 25px;
-  font-size: 1.1rem;
-}
-/* Social links */
-.social-icons {
-  margin-top: 15px;
-}
-.social-icons a {
-  text-decoration: none;
-  font-size: 1.3em;
-  margin: 0 5px;
-  color: white;
-}
-.blog-title a:hover,
-.social-icons a:hover {
-  color: #57A3E8;
-}
-/* Comments */
-.comments-area {
-  width: 80%;
-  max-width: 700px;
-  margin: 4rem auto;
-  padding-bottom: 4rem;
-}
-.comment-form-comment label {
-  width: 100%;
-  display: inline-block;
-}
 .form-allowed-tags {
-  width: 80%;
-  float: right;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3rem;
-  color: #9EABB3;
-  margin: -1rem;
-}
-.comment-subscription-form {
-  clear: both;
-  margin-top: 1rem;
+  float: left;
+  font-family: 'Segoe UI', tahoma, sans-serif;
 }
 .form-submit #submit {
-  max-width: 18%;
-  float: left;
-  border-width: 3px;
-  background: none;
-  display: inline-block;
-  padding: 15px;
-  border: #EBF2F6 2px solid;
-  text-decoration: none;
-  transition: border ease 0.3s;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3rem;
-  color: #9EABB3;
+  float: right;
+  font-family: 'GESSTwoMedium', tahoma, sans-serif;
 }
 /* Main widget wrapper */
 .widget-area {
-  width: 80%;
-  max-width: 700px;
-  margin: 4rem auto;
-  padding-bottom: 4rem;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3rem;
-  color: #9EABB3;
-}
-.widget-area h1 {
-  font-size: 2.5rem;
+  font-family: 'Segoe UI', tahoma, sans-serif;
 }
 .widget-area aside {
-  float: left;
-  width: 30%;
-  height: 260px;
-  padding: 2rem 1.5%;
-  overflow: hidden;
-}
-.search-submit {
-  border-width: 3px;
-  background: none;
-  display: inline-block;
-  padding: 15px;
-  border: #EBF2F6 2px solid;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: border ease 0.3s;
-}
-.search-submit:hover,
-.form-submit #submit:hover {
-  border-color: #9EABB3;
+  float: right;
 }
 #main > header.page-header {
-  width: 80%;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  color: #9EABB3;
-  text-align: center;
-}
-#main > header.page-header > h1 {
-  font-size: 1.3rem;
-  font-weight: normal;
-  line-height: normal;
-  text-indent: 0;
-  letter-spacing: normal;
-  margin: 0 4rem;
-  padding: 0;
+  font-family: 'Segoe UI', tahoma, sans-serif;
 }
 /* ==========================================================================
    7. Pagination - Tools to let you flick between pages
    ========================================================================== */
 /* The main wrapper for our pagination links */
 .pagination {
-  position: relative;
-  width: 80%;
-  max-width: 700px;
-  margin: 4rem auto;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3rem;
-  color: #9EABB3;
-  text-align: center;
-}
-.pagination a {
-  color: #9EABB3;
-}
-/* Push the previous/next links out to the left/right */
-.older-posts,
-.newer-posts {
-  position: absolute;
-  display: inline-block;
-  padding: 0 15px;
-  border: #EBF2F6 2px solid;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: border ease 0.3s;
+  font-family: 'Segoe UI', tahoma, sans-serif;
 }
 .older-posts {
-  right: 0;
-}
-.page-number {
-  display: inline-block;
-  padding: 2px 0;
-}
-.newer-posts {
+  right: auto;
   left: 0;
 }
-.older-posts:hover,
-.newer-posts:hover {
-  border-color: #9EABB3;
+.newer-posts {
+  left: auto;
+  right: 0 ;
 }
 /* ==========================================================================
    8. Footer - The bottom of every page
    ========================================================================== */
 .site-footer {
-  position: relative;
-  margin: 0;
-  padding: 4rem 0;
-  border-top: #EBF2F6 1px solid;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.7em;
-  color: #BBC7CC;
-  text-align: center;
-  background: #F7FAFB;
-}
-.site-footer a {
-  color: #BBC7CC;
-  text-decoration: underline;
-}
-.site-footer a:hover {
-  color: #50585D;
-}
-.poweredby .icon-ghost {
-  font-weight: 700;
-  text-decoration: none;
-}
-.poweredby .icon-ghost:hover {
-  text-decoration: none;
-}
-.poweredby .icon-ghost:before {
-  font-size: 1rem;
-  margin-right: 0.2em;
-}
-/* The subscribe icon on the footer */
-.subscribe {
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  margin-left: -15px;
-  border: #EBF2F6 1px solid;
-  text-align: center;
-  line-height: 2.4rem;
-  border-radius: 50px;
-  background: #fff;
-  transition: box-shadow 0.5s;
-}
-/* The RSS icon, inserted via icon font */
-.subscribe:before {
-  color: #D2DEE3;
-  font-size: 10px;
-  position: absolute;
-  top: 9px;
-  left: 9px;
-  font-weight: bold;
-  transition: color 0.5s ease;
-}
-/* Add a box shadow to on hover */
-.subscribe:hover {
-  box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 3px;
-  transition: box-shadow 0.25s;
-}
-.subscribe:hover:before {
-  color: #50585D;
-}
-/* CSS tooltip saying "Subscribe!" - initially hidden */
-.tooltip {
-  opacity: 0;
-  display: inline-block;
-  padding: 4px 8px 5px 8px;
-  position: absolute;
-  top: -23px;
-  left: -21px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.1rem;
-  line-height: 1em;
-  text-align: center;
-  background: #50585D;
-  border-radius: 20px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s ease, top 0.3s ease;
-}
-/* The little chiclet arrow under the tooltip, pointing down */
-.tooltip:after {
-  content: "";
-  border-width: 5px 5px 0 5px;
-  border-style: solid;
-  border-color: #50585D transparent;
-  display: block;
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  margin-left: -5px;
-  z-index: 220;
-  width: 0;
-}
-/* On hover, show the tooltip! */
-.subscribe:hover .tooltip {
-  opacity: 1;
-  top: -33px;
+  font-family: 'Segoe UI', tahoma, sans-serif;
 }
 /* ==========================================================================
    9. Media Queries - Smaller than 900px
    ========================================================================== */
 @media only screen and (max-width: 900px) {
   blockquote {
-    margin-left: 0;
-  }
-  .site-head {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    height: auto;
-    min-height: 240px;
-    padding: 15% 0;
+    margin-right: 0;
   }
   .blog-title {
-    font-size: 4rem;
-    letter-spacing: -1px;
-  }
-  .blog-description {
-    font-size: 1.7rem;
-    line-height: 1.5em;
-  }
-  .post {
-    font-size: 0.9em;
-    line-height: 1.6em;
-  }
-  .post-template .post {
-    padding-bottom: 1rem;
-  }
-  .post-template .post-header {
-    padding: 40px 0;
+    letter-spacing: 0px;
   }
   h1 {
-    font-size: 4.8rem;
-    text-indent: -2px;
-  }
-  h2 {
-    font-size: 3.8rem;
-  }
-  h3 {
-    font-size: 3.3rem;
-  }
-  h4 {
-    font-size: 2.8rem;
+    text-indent: 0;
   }
 }
 /* ==========================================================================
    10. Media Queries - Smaller than 500px
    ========================================================================== */
 @media only screen and (max-width: 500px) {
-  .blog-logo img {
-    max-height: 80px;
-  }
-  .inner,
-  .pagination {
-    width: auto;
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-  .post {
-    width: auto;
-    margin-left: 16px;
-    margin-right: 16px;
-    font-size: 0.8em;
-    line-height: 1.6em;
-  }
-  .site-head {
-    padding: 10% 0;
-  }
-  .blog-title {
-    font-size: 3rem;
-  }
-  .blog-description {
-    font-size: 1.5rem;
-  }
   h1,
   h2 {
-    font-size: 3rem;
-    line-height: 1.1em;
-    letter-spacing: -1px;
-  }
-  h3 {
-    font-size: 2.8rem;
-  }
-  h4 {
-    font-size: 2.3rem;
-  }
-  .post-template .post {
-    padding-bottom: 0;
-  }
-  .post-template .post-header {
-    padding: 30px 0;
-  }
-  .post-meta {
-    font-size: 1.3rem;
-  }
-  .post-footer {
-    padding: 4rem 0;
-    text-align: center;
-  }
-  .post-footer .author {
-    margin: 0 0 2rem 0;
-    padding: 0 0 1.6rem 0;
-    border-bottom: #EBF2F6 1px dashed;
-  }
-  .post-footer .share {
-    position: static;
-    width: auto;
-  }
-  .post-footer .share a {
-    margin: 1.4rem 0.8rem 0 0.8rem;
-  }
-  .older-posts,
-  .newer-posts {
-    position: static;
-    margin: 10px 0;
-  }
-  .page-number {
-    display: block;
-  }
-  .site-footer {
-    margin-top: 6rem;
-    font-size: 1.1rem;
+    letter-spacing: 0px;
   }
 }
 /* ==========================================================================

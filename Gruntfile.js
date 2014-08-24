@@ -58,8 +58,10 @@ module.exports = function(grunt) {
 					compatibility: 'ie8',
 					keepSpecialComments: 0
 				},
-				src: '<%= concat.casper.dest %>',
-				dest: 'style.css'
+				files: {
+		          'style.css': ['<%= concat.casper.dest %>'],
+		          "rtl.css": ['css/rtl.css']
+		        }
 			}
 		},
 		imagemin: {
@@ -87,7 +89,7 @@ module.exports = function(grunt) {
 			casper: {
 				files: {
 					"css/style.css": ["src/less/style.less"],
-					"rtl.css": ["src/less/rtl.less"]
+					"css/rtl.css": ["src/less/rtl.less"]
 				}
 			}
 		},
