@@ -1,0 +1,302 @@
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+/*
+
+    1.  fonts
+    2.  General
+    3.  Utilities
+    4.  General
+    5.  Single Post
+    6.  Third Party Elements
+    7.  Pagination
+    8.  Footer
+    9.  Media Queries (Tablet)
+    10. Media Queries (Mobile)
+
+*/
+/* ==========================================================================
+   1. fonts
+   ========================================================================== */
+@font-face {
+  font-family: 'GESSTwoMedium';
+  src: url('fonts/ge-ss-med.eot');
+  src: url('fonts/ge-ss-med.eot') format('embedded-opentype'), url('fonts/ge-ss-med.woff') format('woff'), url('fonts/ge-ss-med.ttf') format('truetype'), url('fonts/ge-ss-med.svg#GESSTwoMedium') format('svg');
+}
+/* ==========================================================================
+   2. General - Setting up some base styles
+   ========================================================================== */
+html {
+  directory: rtl;
+}
+body {
+  font-family: 'Segoe UI', tahoma, sans-serif;
+  font-size: 2.0rem;
+  line-height: 1.6em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'GESSTwoMedium', sans-serif;
+}
+h1 {
+  letter-spacing: 0px;
+  text-indent: 0px;
+}
+h2 {
+  letter-spacing: 0px;
+  text-indent: 0px;
+}
+dl dt {
+  float: right;
+  clear: right;
+  text-align: left;
+}
+dl dd {
+  margin-left: 0;
+  margin-right: 200px;
+}
+blockquote {
+  margin: 1.6em -2.2em 1.6em 0;
+  padding: 0 1.6em 0 0;
+  border-right: #4a4a4a 0.4em solid;
+  border-left: 0;
+}
+blockquote small {
+  margin: 0.8em 1.5em 0.8em 0;
+}
+table th,
+table td {
+  text-align: right;
+}
+/* ==========================================================================
+   WP styles
+   ========================================================================== */
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+ul,
+ol {
+  margin: 0 3em 1.5em 0;
+}
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 1.5em;
+}
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+textarea {
+  padding-right: 0;
+  padding-left: 3px;
+  width: 98%;
+}
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+.main-navigation {
+  font-family: 'GESSTwoMedium', tahoma, sans-serif;
+}
+.main-navigation ul {
+  float: left;
+}
+.main-navigation li {
+  float: right;
+}
+.main-navigation ul ul {
+  left: auto;
+  right: 0;
+}
+.main-navigation ul ul ul {
+  left: auto;
+  right: 100%;
+  top: 0;
+}
+/* Small menu */
+.menu-toggle {
+  right: auto;
+  left: 0;
+}
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: right;
+  width: 50%;
+}
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+  float: left;
+  text-align: right;
+  width: 50%;
+}
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  left: auto;
+  right: 5px;
+}
+/*--------------------------------------------------------------
+7.0 Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+/*--------------------------------------------------------------
+8.0 Clearings
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+9.0 Widgets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.0 Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.2 Asides
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+11.0 Infinite scroll
+--------------------------------------------------------------*/
+/* ==========================================================================
+   4. General - The main styles for the the theme
+   ========================================================================== */
+/* The details of your blog. Defined in ghost/settings/ */
+.blog-title,
+.blog-description {
+  letter-spacing: 0px;
+  font-family: 'GESSTwoMedium', tahoma, sans-serif;
+}
+.post-meta {
+  font-family: 'GESSTwoMedium', tahoma, sans-serif;
+  word-break: initial;
+}
+.user-meta {
+  padding: 0.3rem 100px 0 40px;
+}
+.user-image {
+  left: auto;
+  right: 0;
+}
+.publish-meta {
+  right: auto;
+  left: 0;
+  text-align: left;
+}
+/* ==========================================================================
+   5. Single Post - When you click on an individual post
+   ========================================================================== */
+/* Create some space to the right for the share links */
+.post-footer .author {
+  margin-right: 0;
+  margin-left: 180px;
+}
+/* Drop the share links in the space to the right.
+   Doing it like this means it's easier for the author bio
+   to be flexible at smaller screen sizes while the share
+   links remain at a fixed width the whole time */
+.post-footer .share {
+  right: auto;
+  left: 0;
+}
+.post-footer .share a {
+  margin: 1.4rem 1.6rem 1.6rem 0;
+}
+/* ==========================================================================
+   6. Third Party Elements - Embeds from other services
+   ========================================================================== */
+/* Github */
+.form-allowed-tags {
+  float: left;
+  font-family: 'Segoe UI', tahoma, sans-serif;
+}
+.form-submit #submit {
+  float: right;
+  font-family: 'GESSTwoMedium', tahoma, sans-serif;
+}
+/* Main widget wrapper */
+.widget-area {
+  font-family: 'Segoe UI', tahoma, sans-serif;
+}
+.widget-area aside {
+  float: right;
+}
+#main > header.page-header {
+  font-family: 'Segoe UI', tahoma, sans-serif;
+}
+/* ==========================================================================
+   7. Pagination - Tools to let you flick between pages
+   ========================================================================== */
+/* The main wrapper for our pagination links */
+.pagination {
+  font-family: 'Segoe UI', tahoma, sans-serif;
+}
+.older-posts {
+  right: auto;
+  left: 0;
+}
+.newer-posts {
+  left: auto;
+  right: 0 ;
+}
+/* ==========================================================================
+   8. Footer - The bottom of every page
+   ========================================================================== */
+.site-footer {
+  font-family: 'Segoe UI', tahoma, sans-serif;
+}
+/* ==========================================================================
+   9. Media Queries - Smaller than 900px
+   ========================================================================== */
+@media only screen and (max-width: 900px) {
+  blockquote {
+    margin-right: 0;
+  }
+  .blog-title {
+    letter-spacing: 0px;
+  }
+  h1 {
+    text-indent: 0;
+  }
+}
+/* ==========================================================================
+   10. Media Queries - Smaller than 500px
+   ========================================================================== */
+@media only screen and (max-width: 500px) {
+  h1,
+  h2 {
+    letter-spacing: 0px;
+  }
+}
+/* ==========================================================================
+   End of file. Media queries should be the last thing here. Do not add stuff
+   below this point, or it will probably fuck everything up.
+   ========================================================================== */
