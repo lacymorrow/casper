@@ -660,7 +660,7 @@ textarea {
 }
 .main-navigation ul {
     list-style: none;
-    margin: 0 4rem 0 4rem;
+    margin: 0 4rem;
     padding: 0;
     float: right;
     font-size: 1.2rem;
@@ -689,6 +689,8 @@ textarea {
     position: absolute;
     top: 100%;
     z-index: 99999;
+    margin: 0;
+    width: 100%;
 }
 .main-navigation ul ul ul {
     left: 100%;
@@ -1652,6 +1654,15 @@ body.home .site-head:after {
 
     .blog-description {
         font-size: 1.5rem;
+    }
+
+    .main-navigation ul li.menu-item-has-children:hover ~ li{
+        opacity: 0;
+    }
+
+    .main-navigation ul ul ul {
+        top: 100%;
+        left: 0;
     }
 
 

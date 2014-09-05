@@ -90,7 +90,7 @@ function casper_scripts() {
 	wp_enqueue_style('casper-google-fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400');
 	wp_enqueue_style( 'casper-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'casper-index', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true );
-	
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -134,36 +134,36 @@ add_action( 'init', 'casper_add_editor_styles' );
  * Customizer hook
  */
 function casper_customizer_head() {
-   	if (get_theme_mod( 'casper_custom_meta' )!=false) { echo get_theme_mod( 'casper_custom_meta' ); } ?>    
+   	if (get_theme_mod( 'casper_custom_meta' )!=false) { echo get_theme_mod( 'casper_custom_meta' ); } ?>
 
    	<style type="text/css">
 		<?php if(get_header_textcolor()){ ?>
-			.blog-title a, .blog-description, .social-icons a { color: #<?php header_textcolor(); ?>; } 
+			.blog-title a, .blog-description, .social-icons a { color: #<?php header_textcolor(); ?>; }
 		<?php } ?>
 
 		<?php if('blank' === get_header_textcolor()) { ?>
-			.blog-description { display: none; } 
+			.blog-description { display: none; }
 		<?php } ?>
-		<?php if(false != get_theme_mod( 'casper_header_textcolor' ) && false != get_theme_mod( 'casper_display_header' )){ ?> 
-        	body:not(.home) .blog-title a, body:not(.home) .blog-description, body:not(.home) .social-icons a { 
-        		color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>; 
+		<?php if(false != get_theme_mod( 'casper_header_textcolor' ) && false != get_theme_mod( 'casper_display_header' )){ ?>
+        	body:not(.home) .blog-title a, body:not(.home) .blog-description, body:not(.home) .social-icons a {
+        		color: <?php echo get_theme_mod( 'casper_header_textcolor' ); ?>;
         	}
         <?php } ?>
 		<?php if(get_theme_mod('casper_header_color')){ ?>
 		    .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
 		<?php } ?>
-        <?php if(false != get_theme_mod( 'casper_display_header' )) { ?> 
+        <?php if(false != get_theme_mod( 'casper_display_header' )) { ?>
         	body:not(.home) #masthead{ background: none; }
         <?php } ?>
-        <?php if(false != get_theme_mod( 'casper_display_header_all' )) { ?> 
+        <?php if(false != get_theme_mod( 'casper_display_header_all' )) { ?>
         	body:not(.home) .site-head:after { display: none; }
         	body:not(.home) #masthead{ height: auto; border: none; }
         	body:not(.home) .blog-title, body:not(.home) .blog-description { display: none; }
         	body:not(.home) .inner { padding-top: 1em; }
         	body:not(.home) .main-navigation { position: relative; }
         <?php } ?>
-		
-		<?php if( get_theme_mod( 'casper_link_color' )) { ?> 
+
+		<?php if( get_theme_mod( 'casper_link_color' )) { ?>
 			section a { color: <?php echo get_theme_mod( 'casper_link_color' ); ?>; }
 		<?php } ?>
 
@@ -171,12 +171,12 @@ function casper_customizer_head() {
 			a:hover, body .blog-title a:hover, body .social-icons a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
 		<?php } ?>
 
-        <?php if(get_theme_mod( 'casper_menu_color' )){ ?> 
+        <?php if(get_theme_mod( 'casper_menu_color' )){ ?>
         	.main-navigation a { color: <?php echo get_theme_mod( 'casper_menu_color' ); ?>; }
         <?php } ?>
-        <?php if(get_theme_mod( 'casper_home_menu_color' )){ ?> 
+        <?php if(get_theme_mod( 'casper_home_menu_color' )){ ?>
         	.home .main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
-        	 <?php if(!get_theme_mod( 'casper_display_header' )){ ?> 
+        	 <?php if(!get_theme_mod( 'casper_display_header' )){ ?>
         	 	.main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
         	 <?php } ?>
         <?php } ?>
@@ -193,6 +193,11 @@ function casper_customizer_head() {
 			    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 			    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 			    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+			}
+        <?php } ?>
+        <?php if( false != get_theme_mod( 'casper_hide_page_header_dot' ) ) { ?>
+			.site-head:after {
+			    display: none;
 			}
         <?php } ?>
     </style>

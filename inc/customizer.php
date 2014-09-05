@@ -160,6 +160,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 	    'casper_display_header',
 	    array(
+	    	'priority'	=> 1,
 	        'section'   => 'casper_custom',
 	        'label'     => 'Only display header background on home page',
 	        'type'      => 'checkbox'
@@ -176,6 +177,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 	    'casper_display_header_all',
 	    array(
+	    	'priority'	=> 2,
 	        'section'   => 'casper_custom',
 	        'label'     => 'Only display header on home page',
 	        'type'      => 'checkbox'
@@ -192,6 +194,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 	    'casper_logo_circle',
 	    array(
+	    	'priority'	=> 3,
 	        'section'   => 'casper_custom',
 	        'label'     => 'Make logo circular',
 	        'type'      => 'checkbox'
@@ -208,8 +211,26 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 	    'casper_logo_frame',
 	    array(
+	    	'priority'	=> 4,
 	        'section'   => 'casper_custom',
 	        'label'     => 'Frame logo image',
+	        'type'      => 'checkbox'
+	    )
+	);
+	// Casper hide page header dot
+	$wp_customize->add_setting(
+	    'casper_hide_page_header_dot',
+	    array(
+	        'default'    =>  false,
+	        'transport'  =>  'refresh'
+	    )
+	);
+	$wp_customize->add_control(
+	    'casper_hide_page_header_dot',
+	    array(
+	    	'priority'	=> 5,
+	        'section'   => 'casper_custom',
+	        'label'     => 'Hide header \'dot\' on pages',
 	        'type'      => 'checkbox'
 	    )
 	);

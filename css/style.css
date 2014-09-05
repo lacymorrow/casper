@@ -1203,7 +1203,7 @@ textarea
 
     float: right;
 
-    margin: 0 4rem 0 4rem;
+    margin: 0 4rem;
     padding: 0;
 
     list-style: none;
@@ -1241,6 +1241,8 @@ textarea
     left: 0;
 
     display: none;
+
+    margin: 0;
 }
 .main-navigation ul ul ul
 {
@@ -2399,6 +2401,15 @@ body.home .site-head:after
     .blog-description
     {
         font-size: 1.5rem;
+    }
+    .main-navigation ul li.menu-item-has-children:hover ~ li
+    {
+        opacity: 0;
+    }
+    .main-navigation ul ul ul
+    {
+        top: 100%;
+        left: 0;
     }
     h1,
   h2
