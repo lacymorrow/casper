@@ -36,7 +36,7 @@
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
         </div>
     </nav><!-- #site-navigation -->
-    
+
     <div class="vertical-row">
         <div class="vertical">
             <div class="site-head-content inner">
@@ -108,6 +108,11 @@
                     <?php if ( false != get_theme_mod( 'casper_social_dribbble')) { ?>
                         <a class="icon-dribbble" href="<?php echo esc_url( get_theme_mod( 'casper_social_dribbble') ); ?>">
                             <span class="hidden"><?php _e( 'Dribbble', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_rss')) { ?>
+                        <a class="icon-feed" href="<?php echo esc_url( get_theme_mod( 'casper_social_rss') ); ?>">
+                            <span class="hidden"><?php _e( 'RSS', 'casper' ); ?></span>
                         </a>
                     <?php } ?>
                 </div>

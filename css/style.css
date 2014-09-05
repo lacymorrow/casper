@@ -463,7 +463,10 @@ table
 .icon-youtube:before,
 .icon-tumblr:before,
 .icon-dribbble:before,
-.icon-flickr:before
+.icon-flickr:before,
+.icon-search:before,
+.icon-compass:before,
+.icon-sliders:before
 {
     font-family: 'icons';
     font-weight: normal;
@@ -478,8 +481,20 @@ table
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-/* Each icon is created by inserting the corret character into the 
+/* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. Like a boss. */
+.icon-search:before
+{
+    content: '\f002';
+}
+.icon-compass:before
+{
+    content: '\f14e';
+}
+.icon-sliders:before
+{
+    content: '\f1de';
+}
 .icon-github-alt:before
 {
     content: '\f113';
@@ -1443,6 +1458,13 @@ textarea
     clear: both;
 
     margin: 0 0 1.5em;
+}
+.post-image:after
+{
+    display: block;
+    clear: both;
+
+    content: ' ';
 }
 /*--------------------------------------------------------------
 10.2 Asides

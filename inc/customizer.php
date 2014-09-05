@@ -16,7 +16,7 @@ function casper_customize_register( $wp_customize ) {
 	 */
 	class Casper_textarea_control extends WP_Customize_Control {
 	    public $type = 'textarea';
-	 
+
 	    public function render_content() {
 	        ?>
 	            <label>
@@ -215,7 +215,7 @@ function casper_customize_register( $wp_customize ) {
 	);
 	// Custom meta
 	$wp_customize->add_setting( 'casper_custom_meta' , array( 'sanitize_callback' => 'casper_sanitize_meta' ));
- 
+
 	$wp_customize->add_control(
 	    new Casper_textarea_control(
 	        $wp_customize,
@@ -229,7 +229,7 @@ function casper_customize_register( $wp_customize ) {
 	);
 	// Custom footer
 	$wp_customize->add_setting( 'casper_custom_footer' , array( 'sanitize_callback' => 'casper_sanitize_footer' ));
-	
+
 	$wp_customize->add_control(
 	    new Casper_textarea_control(
 	        $wp_customize,
@@ -269,6 +269,8 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_control('casper_social_linkedin', array('section' => 'casper_social', 'label' => 'LinkedIn', 'type' => 'text'));
 	$wp_customize->add_setting('casper_social_mail', array('transport' => 'refresh', 'sanitize_callback' => 'casper_sanitize_email'));
 	$wp_customize->add_control('casper_social_mail', array('section' => 'casper_social', 'label' => 'Email', 'type' => 'text'));
+	$wp_customize->add_setting('casper_social_rss', array('transport' => 'refresh', 'sanitize_callback' => 'casper_sanitize_uri'));
+	$wp_customize->add_control('casper_social_rss', array('section' => 'casper_social', 'label' => 'RSS', 'type' => 'text'));
 	$wp_customize->add_setting('casper_social_stack', array('transport' => 'refresh', 'sanitize_callback' => 'casper_sanitize_uri'));
 	$wp_customize->add_control('casper_social_stack', array('section' => 'casper_social', 'label' => 'Stack Overflow', 'type' => 'text'));
 	$wp_customize->add_setting('casper_social_tumblr', array('transport' => 'refresh', 'sanitize_callback' => 'casper_sanitize_uri'));

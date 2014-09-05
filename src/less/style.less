@@ -72,6 +72,9 @@
 .icon-tumblr:before,
 .icon-dribbble:before,
 .icon-flickr:before,
+.icon-search:before,
+.icon-compass:before,
+.icon-sliders:before
 {
     font-family: 'icons';
     speak: none;
@@ -85,8 +88,17 @@
     text-decoration: none;
 }
 
-/* Each icon is created by inserting the corret character into the 
+/* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. Like a boss. */
+.icon-search:before {
+    content: "\f002";
+}
+.icon-compass:before {
+    content: "\f14e";
+}
+.icon-sliders:before {
+    content: "\f1de";
+}
 .icon-github-alt:before {
     content: "\f113";
 }
@@ -374,8 +386,8 @@ kbd {
     font-weight: bold;
     background: #f4f4f4;
     border-radius: 4px;
-    box-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.2), 
+    box-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.2),
         0 1px 0 0 #fff inset;
 }
 
@@ -1543,9 +1555,9 @@ body.home .site-head:after {
     }
 
     .site-head {
-        -webkit-box-sizing: border-box; 
+        -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
-        box-sizing: border-box; 
+        box-sizing: border-box;
         height: auto;
         min-height: 240px;
         padding: 15% 0;
@@ -1603,7 +1615,7 @@ body.home .site-head:after {
         max-height: 80px;
     }
 
-    .inner, 
+    .inner,
     .pagination {
         width: auto;
         margin-left: 16px;

@@ -265,6 +265,10 @@ msgstr ""
 msgid "Dribbble"
 msgstr ""
 
+#: header.php:115
+msgid "RSS"
+msgstr ""
+
 #: inc/customizer.php:35 inc/customizer.php:43
 msgid "Logo"
 msgstr ""
