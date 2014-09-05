@@ -483,6 +483,16 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0;
 }
 
+.wrapword {
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-wrap;       /* css-3 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    word-break: break-all;
+    white-space: normal;
+}
+
 
 /* ==========================================================================
    WP styles
@@ -1292,7 +1302,7 @@ body.home .site-head:after {
 }
 
 .form-allowed-tags {
-    width:80%;
+    width:60%;
     float: right;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
@@ -1306,12 +1316,14 @@ body.home .site-head:after {
 }
 
 .form-submit #submit{
-    max-width: 18%;
+    .wrapword;
     float: left;
+    max-width: 35%;
     border-width: 3px;
     background: none;
     display: inline-block;
     padding: 15px;
+    margin-top: 1em;
     border: #EBF2F6 2px solid;
     text-decoration: none;
     transition: border ease 0.3s;

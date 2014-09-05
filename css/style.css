@@ -966,6 +966,21 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0;
     padding: 0;
 }
+.wrapword
+{
+    white-space: -moz-pre-wrap !important;
+  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+  /* Opera 4-6 */
+    white-space:   -o-pre-wrap;
+  /* Opera 7 */
+    white-space:      pre-wrap;
+    white-space: normal;
+  /* css-3 */
+    word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+    word-break: break-all;
+}
 /* ==========================================================================
    WP styles
    ========================================================================== */
@@ -1976,7 +1991,7 @@ body.home .site-head:after
 
     float: right;
 
-    width: 80%;
+    width: 60%;
     margin: -1rem;
 
     color: #9eabb3;
@@ -1995,11 +2010,24 @@ body.home .site-head:after
     display: inline-block;
     float: left;
 
-    max-width: 18%;
+    max-width: 35%;
+    margin-top: 1em;
     padding: 15px;
 
     transition: border ease .3s;
+    white-space: -moz-pre-wrap !important;
+  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+  /* Opera 4-6 */
+    white-space:   -o-pre-wrap;
+  /* Opera 7 */
+    white-space:      pre-wrap;
+    white-space: normal;
     text-decoration: none;
+  /* css-3 */
+    word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+    word-break: break-all;
 
     color: #9eabb3;
     border: #ebf2f6 2px solid;
