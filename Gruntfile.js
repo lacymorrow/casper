@@ -59,9 +59,9 @@ module.exports = function(grunt) {
 					keepSpecialComments: 0
 				},
 				files: {
-		          'style.css': ['<%= concat.casper.dest %>'],
-		          "rtl.css": ['css/rtl.css']
-		        }
+				        'style.css': ['<%= concat.casper.dest %>'],
+				        "rtl.css": ['css/rtl.css']
+			        }
 			}
 		},
 		imagemin: {
