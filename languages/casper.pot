@@ -193,8 +193,7 @@ msgstr ""
 
 #: footer.php:15
 msgid ""
-"<a href=\"%1$s\" rel=\"home\">Casper WP</a> &bull; Inspired by <span class="
-"\"icon-ghost\">Ghost.org</span>"
+"<a href=\"%1$s\" rel=\"home\">Casper WP</a> by Lacy Morrow"
 msgstr ""
 
 #: functions.php:44

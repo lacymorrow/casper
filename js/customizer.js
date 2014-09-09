@@ -16,7 +16,7 @@
 			$( '.blog-description' ).text( to );
 		} );
 	} );
-	/* 
+	/*
 	// Header text color
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
@@ -99,13 +99,13 @@
 	            $( '.blog-logo img' ).css( {'border' : 'none',
 											'-webkit-box-shadow' : 'none',
 											'-moz-box-shadow' : 'none',
-											'box-shadow' : 'none' 
+											'box-shadow' : 'none'
 	        	} );
         	} else {
 	            $( '.blog-logo img' ).css( {'border' : '3px solid white',
 	    									'-webkit-box-shadow' : '0 1px 1px rgba(0,0,0,0.3)',
 	   										'-moz-box-shadow' : '0 1px 1px rgba(0,0,0,0.3)',
-	   										'box-shadow' : '0 1px 1px rgba(0,0,0,0.3);} )' 
+	   										'box-shadow' : '0 1px 1px rgba(0,0,0,0.3);} )'
 	        	} );
 	        }
 	    });
@@ -114,9 +114,9 @@
 	wp.customize( 'casper_custom_footer', function( value ) {
         value.bind( function( to ) {
         	if (false == to){
-	            $( '.copywright').html('<a href="#">Casper WP</a> &bull; Inspired by <a class="icon-ghost" href="#">Ghost</a>');
+	            $( '.copyright').html('<a href="https://github.com/lacymorrow/casper-wp/" rel="home">Casper WP</a> by Lacy Morrow');
         	} else {
-	            $( '.copywright').html(to);
+	            $( '.copyright').html(to);
 	        }
         } );
     });
