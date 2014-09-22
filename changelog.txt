@@ -1,0 +1,19 @@
+= 1.1.0 =
+
+* Icon fixes
+
+* New icon font - Font Awesome
+
+* Clean up outdated info.
+
+= 1.0.17 =
+
+* Sub-menu support
+
+* New icons
+
+* Minimal mobile enhancements
+
+* Translation improvements for fix-size elements
+
+* Change Wordpress to WordPress in screenshot
