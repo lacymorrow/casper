@@ -133,7 +133,7 @@ msgid ""
 msgstr ""
 
 #: content-page.php:12 content-single.php:34
-msgid "in"
+msgid " in "
 msgstr ""
 
 #: content-page.php:30
