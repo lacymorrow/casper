@@ -12,7 +12,7 @@ Download the zip package of the theme and install either automatically through t
 
 # Using Grunt to build the package
 
-A gruntfile.js is included. cd into the theme directory and run npm install to install Grunt and all dependencies locally. Run grunt to build or grunt watch to continuously build.
+A gruntfile.js is included. `cd` into the theme directory and run `npm install` to install Grunt and all dependencies locally. Run `grunt` to build or `grunt watch` to continuously build.
 
 # Tasks
 

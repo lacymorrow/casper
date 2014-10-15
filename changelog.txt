@@ -1,6 +1,17 @@
 = 1.1.1 =
 
-* Fixed spacing in tag listings - https://github.com/lacymorrow/casper-wp/issues/50
+* Increase header size to <h1> - https://github.com/lacymorrow/casper-wp/issues/31
+
+* Fix menu on mobile - https://github.com/lacymorrow/casper-wp/issues/47
+
+* Fix spacing in tag listings - https://github.com/lacymorrow/casper-wp/issues/50
+
+* Add Flickr/stack-overflow/behance/codepen/deviantart/lastfm/spotify/soundclod icons - https://github.com/lacymorrow/casper-wp/issues/51
+
+* Create child theme - copy casper-child to themes directory and activate - https://github.com/lacymorrow/casper-wp/issues/59
+
+* Rename casper-wp to casper
+
 
 = 1.1.0 =
 
