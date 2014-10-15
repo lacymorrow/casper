@@ -265,7 +265,35 @@ msgid "Dribbble"
 msgstr ""
 
 #: header.php:115
+msgid "Behance"
+msgstr ""
+
+#: header.php:120
 msgid "RSS"
+msgstr ""
+
+#: header.php:125
+msgid "CodePen"
+msgstr ""
+
+#: header.php:130
+msgid "Deviant Art"
+msgstr ""
+
+#: header.php:135
+msgid "Flickr"
+msgstr ""
+
+#: header.php:140
+msgid "LastFM"
+msgstr ""
+
+#: header.php:145
+msgid "SoundCloud"
+msgstr ""
+
+#: header.php:150
+msgid "Spotify"
 msgstr ""
 
 #: inc/customizer.php:35 inc/customizer.php:43

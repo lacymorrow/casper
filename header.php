@@ -100,8 +100,8 @@
                             <span class="hidden"><?php _e( 'Bitbucket', 'casper' ); ?></span>
                         </a>
                     <?php } ?>
-                    <?php if ( false != get_theme_mod( 'casper_social_stack')) { ?>
-                        <a class="icon-stack-overflow" href="<?php echo esc_url( get_theme_mod( 'casper_social_stack') ); ?>">
+                    <?php if ( false != get_theme_mod( 'casper_social_stack_overflow')) { ?>
+                        <a class="icon-stack-overflow" href="<?php echo esc_url( get_theme_mod( 'casper_social_stack_overflow') ); ?>">
                             <span class="hidden"><?php _e( 'Stack Overflow', 'casper' ); ?></span>
                         </a>
                     <?php } ?>
@@ -110,9 +110,44 @@
                             <span class="hidden"><?php _e( 'Dribbble', 'casper' ); ?></span>
                         </a>
                     <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_behance')) { ?>
+                        <a class="icon-behance" href="<?php echo esc_url( get_theme_mod( 'casper_social_behance') ); ?>">
+                            <span class="hidden"><?php _e( 'Behance', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
                     <?php if ( false != get_theme_mod( 'casper_social_rss')) { ?>
                         <a class="icon-feed" href="<?php echo esc_url( get_theme_mod( 'casper_social_rss') ); ?>">
                             <span class="hidden"><?php _e( 'RSS', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_codepen')) { ?>
+                        <a class="icon-codepen" href="<?php echo esc_url( get_theme_mod( 'casper_social_codepen') ); ?>">
+                            <span class="hidden"><?php _e( 'CodePen', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_deviantart')) { ?>
+                        <a class="icon-deviantart" href="<?php echo esc_url( get_theme_mod( 'casper_social_deviantart') ); ?>">
+                            <span class="hidden"><?php _e( 'Deviant Art', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_flickr')) { ?>
+                        <a class="icon-flickr" href="<?php echo esc_url( get_theme_mod( 'casper_social_flickr') ); ?>">
+                            <span class="hidden"><?php _e( 'Flickr', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_lastfm')) { ?>
+                        <a class="icon-lastfm" href="<?php echo esc_url( get_theme_mod( 'casper_social_lastfm') ); ?>">
+                            <span class="hidden"><?php _e( 'LastFM', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_soundcloud')) { ?>
+                        <a class="icon-soundcloud" href="<?php echo esc_url( get_theme_mod( 'casper_social_soundcloud') ); ?>">
+                            <span class="hidden"><?php _e( 'SoundCloud', 'casper' ); ?></span>
+                        </a>
+                    <?php } ?>
+                    <?php if ( false != get_theme_mod( 'casper_social_spotify')) { ?>
+                        <a class="icon-spotify" href="<?php echo esc_url( get_theme_mod( 'casper_social_spotify') ); ?>">
+                            <span class="hidden"><?php _e( 'Spotify', 'casper' ); ?></span>
                         </a>
                     <?php } ?>
                 </div>
