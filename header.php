@@ -28,7 +28,7 @@
     <nav id="site-navigation" class="main-navigation" role="navigation">
         <div>
             <h1 class="menu-toggle">
-                <a class="icon-menu" href="#">
+                <a class="icon-bars" href="#">
                     <span class="hidden"><?php _e( 'Menu', 'casper' ); ?></span>
                 </a>
             </h1>
