@@ -68,6 +68,7 @@ function casper_setup() {
 endif; // casper_setup
 add_action( 'after_setup_theme', 'casper_setup' );
 
+if ( ! function_exists( 'casper_widgets_init' ) ) :
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
@@ -81,8 +82,10 @@ function casper_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
+endif; // casper_widgets_init
 add_action( 'widgets_init', 'casper_widgets_init' );
 
+if ( ! function_exists( 'casper_scripts' ) ) :
 /**
  * Enqueue scripts and styles.
  */
@@ -95,6 +98,7 @@ function casper_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+endif; // casper_scripts
 add_action( 'wp_enqueue_scripts', 'casper_scripts' );
 
 /**
@@ -122,14 +126,17 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+if ( ! function_exists( 'casper_add_editor_styles' ) ) :
 /**
  * Custom Editor Styles
  */
 function casper_add_editor_styles() {
     add_editor_style( 'css/custom-editor-style.css' );
 }
+endif; // casper_add_editor_styles
 add_action( 'init', 'casper_add_editor_styles' );
 
+if ( ! function_exists( 'casper_customizer_head' ) ) :
 /**
  * Customizer hook
  */
@@ -203,5 +210,6 @@ function casper_customizer_head() {
     </style>
     <?php
 }
+endif; // casper_customizer_head
 add_action( 'wp_head', 'casper_customizer_head' );
 ?>
