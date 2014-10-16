@@ -4454,6 +4454,10 @@ body.home .site-head:after
 
     padding: 0;
 }
+.post-content .wp-caption img
+{
+    padding: 0;
+}
 /* The author credit area after the post */
 .post-footer
 {

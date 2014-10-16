@@ -1040,14 +1040,19 @@ body.home .site-head:after {
 }
 
 /* Keep large images within the bounds of the post-width */
-.post-content img {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-    height: auto;
-    padding: 1em;
-    &.wp-smiley {
-        display: inline;
+.post-content {
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        height: auto;
+        padding: 1em;
+        &.wp-smiley {
+            display: inline;
+            padding: 0;
+        }
+    }
+    .wp-caption img {
         padding: 0;
     }
 }
