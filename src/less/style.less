@@ -696,6 +696,47 @@ textarea {
     display: none;
 }
 
+/* Main widget wrapper */
+.widget-area {
+    * { 
+        box-sizing: border-box;
+    }
+    width:80%;
+    max-width: 700px;
+    margin: 4rem auto;
+    padding-bottom: 4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: #9EABB3;
+}
+
+.widget-area h1 {
+    font-size: 2.5rem;
+}
+
+.widget-area aside {
+    float: left;
+    width: 50%;
+    height: 300px;
+    padding: 2rem 1rem;
+    overflow: hidden;
+}
+
+.search-submit {
+    border-width: 3px;
+    background: none;
+    display: inline-block;
+    padding: 15px;
+    border: #EBF2F6 2px solid;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: border ease 0.3s;
+}
+
+.search-submit:hover, .form-submit #submit:hover {
+    border-color: #9EABB3;
+}
+
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -1184,44 +1225,6 @@ body.home .site-head:after {
     color: #9EABB3;
 }
 
-/* Main widget wrapper */
-.widget-area {
-    width:80%;
-    max-width: 700px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.3rem;
-    color: #9EABB3;
-}
-
-.widget-area h1 {
-    font-size: 2.5rem;
-}
-
-.widget-area aside {
-    float: left;
-    width: 30%;
-    height: 260px;
-    padding: 2rem 1.5%;
-    overflow: hidden;
-}
-
-.search-submit {
-    border-width: 3px;
-    background: none;
-    display: inline-block;
-    padding: 15px;
-    border: #EBF2F6 2px solid;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: border ease 0.3s;
-}
-
-.search-submit:hover, .form-submit #submit:hover {
-    border-color: #9EABB3;
-}
-
 #main > header.page-header {
     width: 80%;
     max-width: 700px;
@@ -1429,6 +1432,14 @@ body.home .site-head:after {
 
     .post-template .post-header {
         padding: 40px 0;
+    }
+
+    .widget-area aside {
+        float: none;
+        width: auto;
+        height: auto;
+        padding: 1em;
+        overflow: hidden;
     }
 
     h1 {

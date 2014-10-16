@@ -2,6 +2,8 @@
 
 * Increase header size to <h1> - https://github.com/lacymorrow/casper-wp/issues/31
 
+* Fix widget layout issues; Made responsive - https://github.com/lacymorrow/casper-wp/issues/37
+
 * Fix menu on mobile - https://github.com/lacymorrow/casper-wp/issues/47
 
 * Fix inline emoticons breaking paragraph - https://github.com/lacymorrow/casper-wp/issues/49

@@ -4013,6 +4013,55 @@ textarea
 {
     display: none;
 }
+/* Main widget wrapper */
+.widget-area
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+
+    width: 80%;
+    max-width: 700px;
+    margin: 4rem auto;
+    padding-bottom: 4rem;
+
+    color: #9eabb3;
+}
+.widget-area *
+{
+    box-sizing: border-box;
+}
+.widget-area h1
+{
+    font-size: 2.5rem;
+}
+.widget-area aside
+{
+    float: left;
+    overflow: hidden;
+
+    width: 50%;
+    height: 300px;
+    padding: 2rem 1rem;
+}
+.search-submit
+{
+    display: inline-block;
+
+    padding: 15px;
+
+    transition: border ease .3s;
+    text-decoration: none;
+
+    border: #ebf2f6 2px solid;
+    border-width: 3px;
+    border-radius: 30px;
+    background: none;
+}
+.search-submit:hover,
+.form-submit #submit:hover
+{
+    border-color: #9eabb3;
+}
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -4619,51 +4668,6 @@ body.home .site-head:after
     border-width: 3px;
     background: none;
 }
-/* Main widget wrapper */
-.widget-area
-{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.3rem;
-
-    width: 80%;
-    max-width: 700px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
-
-    color: #9eabb3;
-}
-.widget-area h1
-{
-    font-size: 2.5rem;
-}
-.widget-area aside
-{
-    float: left;
-    overflow: hidden;
-
-    width: 30%;
-    height: 260px;
-    padding: 2rem 1.5%;
-}
-.search-submit
-{
-    display: inline-block;
-
-    padding: 15px;
-
-    transition: border ease .3s;
-    text-decoration: none;
-
-    border: #ebf2f6 2px solid;
-    border-width: 3px;
-    border-radius: 30px;
-    background: none;
-}
-.search-submit:hover,
-.form-submit #submit:hover
-{
-    border-color: #9eabb3;
-}
 #main > header.page-header
 {
     font-family: 'Open Sans', sans-serif;
@@ -4912,6 +4916,15 @@ body.home .site-head:after
     .post-template .post-header
     {
         padding: 40px 0;
+    }
+    .widget-area aside
+    {
+        float: none;
+        overflow: hidden;
+
+        width: auto;
+        height: auto;
+        padding: 1em;
     }
     h1
     {
