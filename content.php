@@ -19,6 +19,7 @@
 					if(  false == get_theme_mod( 'casper_hide_categories') ) {
 						printf( __( ' on ', 'casper' ).'%1$s', $category_list );
 					}
+        	    	edit_post_link( __( 'Edit&rarr;', 'casper' ), '<span class="edit-link">&nbsp;&bull;&nbsp;', '</span>' ); 
 				?>
 			</span>
 		<?php endif; ?>
