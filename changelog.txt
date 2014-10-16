@@ -18,6 +18,8 @@
 
 * Fix captioned images extra padding - https://github.com/lacymorrow/casper-wp/issues/57
 
+* Add author image - https://github.com/lacymorrow/casper-wp/issues/58
+
 * Create child theme - copy casper-child to themes directory and activate - https://github.com/lacymorrow/casper-wp/issues/59
 
 * Add custom 'Read More' link option - https://github.com/lacymorrow/casper/issues/61
