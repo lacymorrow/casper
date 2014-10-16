@@ -37,24 +37,26 @@
 			<noscript><?php the_post_thumbnail('thumbnail'); ?></noscript>
 	    <?php } ?> 
     </header>
-    <?php if ( is_search() ) : // Only display Excerpts for Search ?>
-		<section class="post-excerpt">
-	        <p><?php the_excerpt(); ?></p>
-	    </section><!-- .entry-summary -->
-	<?php else : ?>
-		<section class="post-content">
-			<?php if ( false != get_theme_mod( 'casper_read_more_link')) {
-				the_content( get_theme_mod( 'casper_read_more_link') );
-			} else {
-				the_content( __( '&hellip;&nbsp;<span class="meta-nav">&rarr;</span>', 'casper' ) );
-			} ?>
-		    <?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'casper' ),
-					'after'  => '</div>',
-				) );
-			?>
-			<div class="clear">&nbsp;</div>
-		</section>
-	<?php endif; ?>
+	<section class="post-content">
+
+		<?php 
+		if ( false != get_theme_mod( 'casper_read_more_link')) {
+			$read_more = get_theme_mod( 'casper_read_more_link');
+		} else {
+			$read_more = __( '&hellip;&nbsp;<span class="meta-nav">&rarr;</span>', 'casper' );
+		}
+		if ( has_excerpt() || false != get_theme_mod( 'casper_auto_excerpt') ) {
+			the_excerpt();
+		} else {
+			the_content( $read_more );
+		}
+		?>
+	    <?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'casper' ),
+				'after'  => '</div>',
+			) );
+		?>
+		<div class="clear">&nbsp;</div>
+	</section>
 </article><!-- #post-## -->

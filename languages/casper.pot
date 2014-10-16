@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Casper 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-15 22:23-0700\n"
+"POT-Creation-Date: 2014-10-15 23:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -187,11 +187,11 @@ msgstr ""
 msgid " in "
 msgstr ""
 
-#: content-page.php:47 content-single.php:45
+#: content-page.php:47 content-single.php:45 content.php:22
 msgid "Edit&rarr;"
 msgstr ""
 
-#: content-page.php:66
+#: content-page.php:67
 msgid "Edit"
 msgstr ""
 
@@ -199,7 +199,7 @@ msgstr ""
 msgid "&hellip;&nbsp<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content-single.php:71 content.php:52
+#: content-single.php:71 content.php:56
 msgid "Pages:"
 msgstr ""
 
@@ -207,7 +207,7 @@ msgstr ""
 msgid " on "
 msgstr ""
 
-#: content.php:48
+#: content.php:46 functions.php:69
 msgid "&hellip;&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -224,7 +224,7 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:77
+#: functions.php:86
 msgid "Footer Bar"
 msgstr ""
 

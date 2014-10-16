@@ -234,6 +234,23 @@ function casper_customize_register( $wp_customize ) {
 	        'type'      => 'checkbox'
 	    )
 	);
+	// Automatically limit post summary
+	$wp_customize->add_setting(
+	    'casper_auto_excerpt',
+	    array(
+	        'default'    =>  false,
+	        'transport'  =>  'refresh'
+	    )
+	);
+	$wp_customize->add_control(
+	    'casper_auto_excerpt',
+	    array(
+	    	'priority'	=> 6,
+	        'section'   => 'casper_custom',
+	        'label'     => 'Auto-limit summary length',
+	        'type'      => 'checkbox'
+	    )
+	);
 	// Don't display Categories
 	$wp_customize->add_setting(
 	    'casper_hide_categories',
@@ -245,7 +262,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 	    'casper_hide_categories',
 	    array(
-	    	'priority'	=> 6,
+	    	'priority'	=> 7,
 	        'section'   => 'casper_custom',
 	        'label'     => 'Don\'t display categories',
 	        'type'      => 'checkbox'
@@ -262,7 +279,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 	    'casper_hide_tags',
 	    array(
-	    	'priority'	=> 7,
+	    	'priority'	=> 8,
 	        'section'   => 'casper_custom',
 	        'label'     => 'Don\'t display tags',
 	        'type'      => 'checkbox'
@@ -279,7 +296,7 @@ function casper_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 	    'casper_hide_dates',
 	    array(
-	    	'priority'	=> 8,
+	    	'priority'	=> 9,
 	        'section'   => 'casper_custom',
 	        'label'     => 'Don\'t display dates',
 	        'type'      => 'checkbox'

@@ -62,6 +62,15 @@ function casper_setup() {
 		'gallery',
 	) );
 
+	function new_excerpt_more( $more ) {
+		if ( false != get_theme_mod( 'casper_read_more_link')) {
+			return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . get_theme_mod( 'casper_read_more_link') . '</a>';
+		} else {
+			return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __( '&hellip;&nbsp;<span class="meta-nav">&rarr;</span>', 'casper' ) . '</a>';
+		}
+	}
+	add_filter( 'excerpt_more', 'new_excerpt_more' );
+
 	// Enable automatic theme updates
 	add_filter( 'auto_update_theme', '__return_true' );
 }
