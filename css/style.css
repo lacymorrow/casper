@@ -4448,6 +4448,12 @@ body.home .site-head:after
     margin: 0 auto;
     padding: 1em;
 }
+.post-content img.wp-smiley
+{
+    display: inline;
+
+    padding: 0;
+}
 /* The author credit area after the post */
 .post-footer
 {
@@ -4718,6 +4724,11 @@ body.home .site-head:after
     border: #ebf2f6 2px solid;
     border-radius: 30px;
 }
+.older-posts:hover,
+.newer-posts:hover
+{
+    border-color: #9eabb3;
+}
 .older-posts
 {
     right: 0;
@@ -4731,11 +4742,6 @@ body.home .site-head:after
 .newer-posts
 {
     left: 0;
-}
-.older-posts:hover,
-.newer-posts:hover
-{
-    border-color: #9eabb3;
 }
 /* ==========================================================================
    8. Footer - The bottom of every page

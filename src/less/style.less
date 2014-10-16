@@ -109,10 +109,9 @@ h6 {
 a {
     color: #4a4a4a;
     transition: color ease 0.3s;
-}
-
-a:hover {
-    color: #57A3E8;
+    &:hover {
+        color: #57A3E8;
+    }
 }
 
 h1 a, h2 a, h3 a,
@@ -162,27 +161,22 @@ blockquote {
     margin: 1.6em 0 1.6em -2.2em;
     padding: 0 0 0 1.6em;
     border-left: #4a4a4a 0.4em solid;
+    p {
+        margin: 0.8em 0;
+        font-style: italic;
+    }
+    small {
+        display: inline-block;
+        margin: 0.8em 0 0.8em 1.5em;
+        font-size:0.9em;
+        color: #ccc;
+        &:before { content: '\2014 \00A0'; }
+    }
+    cite {
+        font-weight:bold;
+        a { font-weight: normal; }
+    }
 }
-
-blockquote p {
-    margin: 0.8em 0;
-    font-style: italic;
-}
-
-blockquote small {
-    display: inline-block;
-    margin: 0.8em 0 0.8em 1.5em;
-    font-size:0.9em;
-    color: #ccc;
-}
-
-blockquote small:before { content: '\2014 \00A0'; }
-
-blockquote cite {
-    font-weight:bold;
-}
-
-blockquote cite a { font-weight: normal; }
 
 mark {
     background-color: #ffc336;
@@ -1052,6 +1046,10 @@ body.home .site-head:after {
     margin: 0 auto;
     height: auto;
     padding: 1em;
+    &.wp-smiley {
+        display: inline;
+        padding: 0;
+    }
 }
 
 /* The author credit area after the post */
@@ -1227,15 +1225,15 @@ body.home .site-head:after {
     font-family: 'Open Sans', sans-serif;
     color: #9EABB3;
     text-align: center;
-}
-#main > header.page-header > h1 {
-    font-size: 1.3rem;
-    font-weight: normal;
-    line-height: normal;
-    text-indent: 0;
-    letter-spacing: normal;
-    margin: 0 4rem;
-    padding: 0;
+    & > h1 {
+        font-size: 1.3rem;
+        font-weight: normal;
+        line-height: normal;
+        text-indent: 0;
+        letter-spacing: normal;
+        margin: 0 4rem;
+        padding: 0;
+    }
 }
 /* ==========================================================================
    7. Pagination - Tools to let you flick between pages
@@ -1251,12 +1249,10 @@ body.home .site-head:after {
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
+    a {
+        color: #9EABB3;
+    }
 }
-
-.pagination a {
-    color: #9EABB3;
-}
-
 /* Push the previous/next links out to the left/right */
 .older-posts,
 .newer-posts {
@@ -1267,6 +1263,9 @@ body.home .site-head:after {
     text-decoration: none;
     border-radius: 30px;
     transition: border ease 0.3s;
+    &:hover {
+        border-color: #9EABB3;
+    }
 }
 
 .older-posts {
@@ -1280,11 +1279,6 @@ body.home .site-head:after {
 
 .newer-posts {
     left: 0;
-}
-
-.older-posts:hover,
-.newer-posts:hover {
-    border-color: #9EABB3;
 }
 
 
