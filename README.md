@@ -20,6 +20,11 @@ The `style.css` file in the theme directory is minified. A human-readable versio
 
 A `gruntfile.js` is included. `cd` into the theme directory and run `npm install` to install Grunt and all dependencies locally. Run `grunt` to build or `grunt watch` to continuously build.
 
+##### i18n
+
+To generate a `.pot` language file you must have xgettext installed. On OSX using homebrew run `brew install gettext && brew link gettext --force` to install. Run `grunt i18n` to generate language files.
+
+
 ###### Tasks
 
  * Compile `src/css/style.less` and other LESS and CSS files in `src/css/`

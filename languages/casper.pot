@@ -1,16 +1,22 @@
-# Copyright (C) 2014 Lacy Morrow
-# This file is distributed under the GNU General Public License.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Casper 1.0.3\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/casper-wp\n"
-"POT-Creation-Date: 2014-04-15 15:43:43+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Lacy Morrow <me@lacymorrow.com>\n"
+"Project-Id-Version: Casper 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-15 22:23-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
@@ -23,14 +29,17 @@ msgid ""
 msgstr ""
 
 #: archive.php:27
+#, php-format
 msgid "Author: %s"
 msgstr ""
 
 #: archive.php:30
+#, php-format
 msgid "Day: %s"
 msgstr ""
 
 #: archive.php:33
+#, php-format
 msgid "Month: %s"
 msgstr ""
 
@@ -40,6 +49,7 @@ msgid "F Y"
 msgstr ""
 
 #: archive.php:36
+#, php-format
 msgid "Year: %s"
 msgstr ""
 
@@ -89,6 +99,7 @@ msgid "Archives"
 msgstr ""
 
 #: comments.php:28
+#, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -111,11 +122,16 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#. //codex.wordpress.org/Template_Hierarchy
+#. *
+#. * @package Casper
+#.
 #: content-none.php:13
 msgid "Nothing Found"
 msgstr ""
 
 #: content-none.php:19
+#, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
@@ -132,58 +148,66 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:12 content-single.php:34
-msgid " in "
-msgstr ""
-
-#: content-page.php:30
-msgid "Edit"
-msgstr ""
-
-#. translators: used between list items, there is a space after the comma
-#: content-single.php:9 content-single.php:12 content.php:10
+#: content-page.php:10 content-page.php:13 content-single.php:8
+#: content-single.php:11 content.php:10
 msgid ", "
 msgstr ""
 
-#: content-single.php:17
+#: content-page.php:18 content-single.php:16
+#, php-format
 msgid ""
 "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
 "\">permalink</a>."
 msgstr ""
 
-#: content-single.php:19
+#: content-page.php:20 content-single.php:18
+#, php-format
 msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: content-single.php:25
+#: content-page.php:26 content-single.php:24
+#, php-format
 msgid ""
 "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
 "rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: content-single.php:27
+#: content-page.php:28 content-single.php:26
+#, php-format
 msgid ""
 "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
 "\">permalink</a>."
 msgstr ""
 
-#: content-single.php:35
+#: content-page.php:42 content-single.php:40
+msgid " | "
+msgstr ""
+
+#: content-page.php:45 content-single.php:43
+msgid " in "
+msgstr ""
+
+#: content-page.php:47 content-single.php:45
 msgid "Edit&rarr;"
 msgstr ""
 
-#: content-single.php:56
+#: content-page.php:66
+msgid "Edit"
+msgstr ""
+
+#: content-single.php:68
 msgid "&hellip;&nbsp<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content-single.php:59 content.php:37
+#: content-single.php:71 content.php:52
 msgid "Pages:"
 msgstr ""
 
-#: content.php:14
-msgid "on "
+#: content.php:20
+msgid " on "
 msgstr ""
 
-#: content.php:34
+#: content.php:48
 msgid "&hellip;&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -192,23 +216,23 @@ msgid "Subscribe!"
 msgstr ""
 
 #: footer.php:15
-msgid ""
-"<a href=\"%1$s\" rel=\"home\">Casper WP</a> by Lacy Morrow"
+#, php-format
+msgid "<a href=\"%1$s\" rel=\"home\">Casper WP</a> by Lacy Morrow"
 msgstr ""
 
 #: functions.php:44
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:73
+#: functions.php:77
 msgid "Footer Bar"
 msgstr ""
 
-#: header.php:35
+#: header.php:32
 msgid "Menu"
 msgstr ""
 
-#: header.php:38
+#: header.php:35
 msgid "Skip to content"
 msgstr ""
 
@@ -296,6 +320,11 @@ msgstr ""
 msgid "Spotify"
 msgstr ""
 
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
 #: inc/customizer.php:35 inc/customizer.php:43
 msgid "Logo"
 msgstr ""
@@ -325,6 +354,7 @@ msgid "Menu Color"
 msgstr ""
 
 #: inc/extras.php:63
+#, php-format
 msgid "Page %s"
 msgstr ""
 
@@ -355,38 +385,7 @@ msgid "<span class=\"meta-nav\">&larr;</span> %title"
 msgstr ""
 
 #: inc/template-tags.php:87
+#, php-format
 msgid ""
 "<span class=\"posted-on\">%1$s</span><span class=\"byline\"> by %2$s</span>"
-msgstr ""
-
-#: search.php:16
-msgid "Search Results for: %s"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Casper"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "https://github.com/lacymorrow/casper-wp"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"Casper (for WordPress) is a simple yet beautiful theme for bloggers."
-"Inspired by the Ghost blogging platform, Casper is a WordPress port of the "
-"default theme by the same name. The goal of this project is to emulate the "
-"gorgeous theme while taking advantage of features exclusive to the WordPress "
-"framework. There are plenty of customization options included, accessible "
-"through the WordPress Customizer. Already included are hooks to serve "
-"responsive images appropriately and media queries to provide a fast and "
-"seamless experience from desktop to mobile."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Lacy Morrow"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://lacymorrow.com"
 msgstr ""

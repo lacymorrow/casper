@@ -234,6 +234,57 @@ function casper_customize_register( $wp_customize ) {
 	        'type'      => 'checkbox'
 	    )
 	);
+	// Don't display Categories
+	$wp_customize->add_setting(
+	    'casper_hide_categories',
+	    array(
+	        'default'    =>  false,
+	        'transport'  =>  'refresh'
+	    )
+	);
+	$wp_customize->add_control(
+	    'casper_hide_categories',
+	    array(
+	    	'priority'	=> 6,
+	        'section'   => 'casper_custom',
+	        'label'     => 'Don\'t display categories',
+	        'type'      => 'checkbox'
+	    )
+	);
+	// Don't display Tags
+	$wp_customize->add_setting(
+	    'casper_hide_tags',
+	    array(
+	        'default'    =>  false,
+	        'transport'  =>  'refresh'
+	    )
+	);
+	$wp_customize->add_control(
+	    'casper_hide_tags',
+	    array(
+	    	'priority'	=> 7,
+	        'section'   => 'casper_custom',
+	        'label'     => 'Don\'t display tags',
+	        'type'      => 'checkbox'
+	    )
+	);
+	// Don't display Dates
+	$wp_customize->add_setting(
+	    'casper_hide_dates',
+	    array(
+	        'default'    =>  false,
+	        'transport'  =>  'refresh'
+	    )
+	);
+	$wp_customize->add_control(
+	    'casper_hide_dates',
+	    array(
+	    	'priority'	=> 8,
+	        'section'   => 'casper_custom',
+	        'label'     => 'Don\'t display dates',
+	        'type'      => 'checkbox'
+	    )
+	);
 	// Custom meta
 	$wp_customize->add_setting( 'casper_custom_meta' , array( 'sanitize_callback' => 'casper_sanitize_meta' ));
 
