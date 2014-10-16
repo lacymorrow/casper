@@ -248,6 +248,22 @@ function casper_customize_register( $wp_customize ) {
 	        )
 	    )
 	);
+
+	// Custom read more link
+	$wp_customize->add_setting( 'casper_read_more_link' , array( 'sanitize_callback' => 'casper_sanitize_text' ));
+
+	$wp_customize->add_control(
+	    new Casper_textarea_control(
+	        $wp_customize,
+	        'casper_read_more_link',
+	        array(
+	            'label' => '\'Read More\' link',
+	            'section' => 'casper_custom',
+	            'settings' => 'casper_read_more_link'
+	        )
+	    )
+	);
+
 	// Custom footer
 	$wp_customize->add_setting( 'casper_custom_footer' , array( 'sanitize_callback' => 'casper_sanitize_footer' ));
 
@@ -334,6 +350,16 @@ function casper_sanitize_uri($uri){
 		return '';
 	}
 	return esc_url_raw($uri);
+}
+
+/**
+ * Sanitize Text
+ */
+function casper_sanitize_text($str){
+	if('' === $str){
+		return '';
+	}
+	return sanitize_text_field( $str);
 }
 
 /**

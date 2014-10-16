@@ -33,13 +33,18 @@
 	    </section><!-- .entry-summary -->
 	<?php else : ?>
 		<section class="post-content">
-		    <?php the_content( __( '&hellip;&nbsp;<span class="meta-nav">&rarr;</span>', 'casper' ) ); ?>
+			<?php if ( false != get_theme_mod( 'casper_read_more_link')) {
+				the_content( get_theme_mod( 'casper_read_more_link') );
+			} else {
+				the_content( __( '&hellip;&nbsp;<span class="meta-nav">&rarr;</span>', 'casper' ) );
+			} ?>
 		    <?php
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . __( 'Pages:', 'casper' ),
 					'after'  => '</div>',
 				) );
 			?>
+			<div class="clear">&nbsp;</div>
 		</section>
 	<?php endif; ?>
 </article><!-- #post-## -->
