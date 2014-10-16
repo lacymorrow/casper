@@ -1,8 +1,12 @@
 = 1.1.1 =
 
+* Add auto-excerpt option - https://github.com/lacymorrow/casper/issues/17
+
 * Increase header size to <h1> - https://github.com/lacymorrow/casper-wp/issues/31
 
 * Fix widget layout issues; Made responsive - https://github.com/lacymorrow/casper-wp/issues/37
+
+* Add Excerpts - https://github.com/lacymorrow/casper/issues/43
 
 * Fix menu on mobile - https://github.com/lacymorrow/casper-wp/issues/47
 
