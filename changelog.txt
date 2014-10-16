@@ -14,6 +14,8 @@
 
 * Clear DOM after posts -  https://github.com/lacymorrow/casper/issues/52
 
+* Make tags, categories, dates optional - https://github.com/lacymorrow/casper-wp/issues/55
+
 * Fix captioned images extra padding - https://github.com/lacymorrow/casper-wp/issues/57
 
 * Create child theme - copy casper-child to themes directory and activate - https://github.com/lacymorrow/casper-wp/issues/59
@@ -21,6 +23,8 @@
 * Add custom 'Read More' link option - https://github.com/lacymorrow/casper/issues/61
 
 * Rename casper-wp to casper
+
+* Add `grunt i18n` for theme internationalization
 
 
 = 1.1.0 =

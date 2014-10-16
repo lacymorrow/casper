@@ -4533,8 +4533,7 @@ body.home .site-head:after
 /* Create some space to the right for the share links */
 .post-footer .author
 {
-    margin-right: 180px;
-    margin-bottom: 3rem;
+    margin: 0 1rem 3rem 1rem;
 }
 .post-footer .author a
 {
@@ -4567,6 +4566,17 @@ body.home .site-head:after
 .post-footer .share a:hover
 {
     color: #50585d;
+}
+.avatar
+{
+    display: block;
+    float: left;
+
+    margin-right: 1em;
+    padding: 5px;
+
+    border-radius: 50%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 }
 /* ==========================================================================
    6. Third Party Elements - Embeds from other services

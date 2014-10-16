@@ -72,14 +72,17 @@
 					'after'  => '</div>',
 				) );
 			?>
+			<div class="clear">&nbsp;</div>
 		</section>
 	<?php endif; ?>
 
 	<footer class="post-footer">
 
 	    <section class="author">
+	    	<?php echo get_avatar( get_the_author_meta( 'ID' ) , 100 ); ?>
 	        <h4><?php the_author_link(); ?></h4>
 	        <p><?php the_author_meta('description'); ?></p>
+			<div class="clear">&nbsp;</div>
 	    </section>
 	</footer>
 </article><!-- #post-## -->

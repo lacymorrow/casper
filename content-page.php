@@ -62,6 +62,7 @@
     </header><!-- .entry-header -->
 	<div class="post-content">
 		<?php the_content(); ?>
+        <div class="clear">&nbsp;</div>
 	</div><!-- .entry-content -->
 	<?php edit_post_link( __( 'Edit', 'casper' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->
