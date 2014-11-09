@@ -55,7 +55,8 @@ function casper_customize_register( $wp_customize ) {
 	// Theme header bg color
 	$wp_customize->add_setting( 'casper_header_color' , array(
 	    'default'     => '#303538',
-	    'transport'   => 'postMessage'
+	    'transport'   => 'postMessage',
+	    'sanitize_callback' => 'casper_sanitize_color'
 	) );
 	$wp_customize->add_control(
 	    new WP_Customize_Color_Control(
@@ -71,7 +72,8 @@ function casper_customize_register( $wp_customize ) {
 	// Home head text color
 	$wp_customize->add_setting( 'casper_header_textcolor' , array(
 	    'default'     => '#50585D',
-	    'transport'   => 'postMessage'
+	    'transport'   => 'postMessage',
+	    'sanitize_callback' => 'casper_sanitize_color'
 	) );
 	$wp_customize->add_control(
 	    new WP_Customize_Color_Control(
@@ -87,7 +89,8 @@ function casper_customize_register( $wp_customize ) {
 	// Theme link color
 	$wp_customize->add_setting( 'casper_link_color' , array(
 	    'default'     => '#4a4a4a',
-	    'transport'   => 'postMessage'
+	    'transport'   => 'postMessage',
+	    'sanitize_callback' => 'casper_sanitize_color'
 	) );
 	$wp_customize->add_control(
 	    new WP_Customize_Color_Control(
@@ -103,7 +106,8 @@ function casper_customize_register( $wp_customize ) {
 	// Theme hover color
 	$wp_customize->add_setting( 'casper_hover_color' , array(
 	    'default'     => '#57A3E8',
-	    'transport'   => 'refresh'
+	    'transport'   => 'refresh',
+	    'sanitize_callback' => 'casper_sanitize_color'
 	) );
 	$wp_customize->add_control(
 	    new WP_Customize_Color_Control(
@@ -119,7 +123,8 @@ function casper_customize_register( $wp_customize ) {
 	// Home Menu color
 	$wp_customize->add_setting( 'casper_home_menu_color' , array(
 	    'default'     => '#ffffff',
-	    'transport'   => 'refresh'
+	    'transport'   => 'refresh',
+	    'sanitize_callback' => 'casper_sanitize_color'
 	) );
 	$wp_customize->add_control(
 	    new WP_Customize_Color_Control(
@@ -135,7 +140,8 @@ function casper_customize_register( $wp_customize ) {
 	// Menu color
 	$wp_customize->add_setting( 'casper_menu_color' , array(
 	    'default'     => '#50585D',
-	    'transport'   => 'refresh'
+	    'transport'   => 'refresh',
+	    'sanitize_callback' => 'casper_sanitize_color'
 	) );
 	$wp_customize->add_control(
 	    new WP_Customize_Color_Control(
@@ -155,6 +161,7 @@ function casper_customize_register( $wp_customize ) {
 	    array(
 	        'default'    =>  false,
 	        'transport'  =>  'refresh'
+	        'sanitize_callback' => 'casper_sanitize_checkbox'
 	    )
 	);
 	$wp_customize->add_control(
@@ -171,7 +178,8 @@ function casper_customize_register( $wp_customize ) {
 	    'casper_display_header_all',
 	    array(
 	        'default'    =>  false,
-	        'transport'  =>  'refresh'
+	        'transport'  =>  'refresh',
+	        'sanitize_callback' => 'casper_sanitize_checkbox'
 	    )
 	);
 	$wp_customize->add_control(
@@ -188,7 +196,8 @@ function casper_customize_register( $wp_customize ) {
 	    'casper_logo_circle',
 	    array(
 	        'default'    =>  false,
-	        'transport'  =>  'postMessage'
+	        'transport'  =>  'postMessage',
+	        'sanitize_callback' => 'casper_sanitize_checkbox'
 	    )
 	);
 	$wp_customize->add_control(
@@ -205,7 +214,8 @@ function casper_customize_register( $wp_customize ) {
 	    'casper_logo_frame',
 	    array(
 	        'default'    =>  false,
-	        'transport'  =>  'postMessage'
+	        'transport'  =>  'postMessage',
+	        'sanitize_callback' => 'casper_sanitize_checkbox'
 	    )
 	);
 	$wp_customize->add_control(
@@ -222,7 +232,8 @@ function casper_customize_register( $wp_customize ) {
 	    'casper_hide_page_header_dot',
 	    array(
 	        'default'    =>  false,
-	        'transport'  =>  'refresh'
+	        'transport'  =>  'refresh',
+	        'sanitize_callback' => 'casper_sanitize_checkbox'
 	    )
 	);
 	$wp_customize->add_control(
@@ -239,7 +250,8 @@ function casper_customize_register( $wp_customize ) {
 	    'casper_auto_excerpt',
 	    array(
 	        'default'    =>  false,
-	        'transport'  =>  'refresh'
+	        'transport'  =>  'refresh',
+	        'sanitize_callback' => 'casper_sanitize_checkbox'
 	    )
 	);
 	$wp_customize->add_control(
@@ -256,7 +268,8 @@ function casper_customize_register( $wp_customize ) {
 	    'casper_hide_categories',
 	    array(
 	        'default'    =>  false,
-	        'transport'  =>  'refresh'
+	        'transport'  =>  'refresh',
+	        'sanitize_callback' => 'casper_sanitize_checkbox'
 	    )
 	);
 	$wp_customize->add_control(
@@ -273,7 +286,8 @@ function casper_customize_register( $wp_customize ) {
 	    'casper_hide_tags',
 	    array(
 	        'default'    =>  false,
-	        'transport'  =>  'refresh'
+	        'transport'  =>  'refresh',
+	        'sanitize_callback' => 'casper_sanitize_checkbox'
 	    )
 	);
 	$wp_customize->add_control(
@@ -290,7 +304,8 @@ function casper_customize_register( $wp_customize ) {
 	    'casper_hide_dates',
 	    array(
 	        'default'    =>  false,
-	        'transport'  =>  'refresh'
+	        'transport'  =>  'refresh',
+	        'sanitize_callback' => 'casper_sanitize_checkbox'
 	    )
 	);
 	$wp_customize->add_control(
@@ -409,6 +424,26 @@ function casper_customize_preview_js() {
 	wp_enqueue_script( 'casper_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'jquery', 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'casper_customize_preview_js' );
+
+/**
+ * Sanitize color
+ */
+function casper_sanitize_color($content){
+	if (ctype_xdigit($content)) {
+	    return $content;
+	}
+	return false;
+}
+
+/**
+ * Sanitize checkbox
+ */
+function casper_sanitize_checkbox($content){
+	if('selected' === $content || 'checked' === $content || 'true' === $content || true === $content){
+		return $content;
+	}
+	return false;
+}
 
 /**
  * Sanitize URIs

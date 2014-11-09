@@ -11,9 +11,16 @@ Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPr
 
 ## Usage
 
-Download the [zip](https://github.com/lacymorrow/casper-wp/archive/master.zip) package of the theme and install either automatically through the WordPress Dashboard > Appearance tab, or by uploading the `casper-wp` folder to your WordPress/wp-content/themes directory.
+Download the [zip](https://github.com/lacymorrow/casper/archive/master.zip) package of the theme and install either automatically through the WordPress Dashboard > Appearance tab, or by uploading the `casper-wp` folder to your WordPress/wp-content/themes directory.
 
 The `style.css` file in the theme directory is minified. A human-readable version of is located at `css/style.css`.
+
+
+## Editing Casper
+
+The recommended way to edit the Casper theme is to use the [Casper child theme](https://github.com/lacymorrow/casper-child). This will ensure that none of your changes will be lost when you update Casper. Install and activate the child theme and make changes as you would normally. Any file included in the theme will override a Casper theme file (exceptions being `functions.php` and `style.css`).
+
+If you want to make changes to the core theme, or want to contribute, read below on how to build the package.
 
 
 #### Using Grunt to build the package

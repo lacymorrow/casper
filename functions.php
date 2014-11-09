@@ -143,7 +143,7 @@ function casper_add_editor_styles() {
     add_editor_style( 'css/custom-editor-style.css' );
 }
 endif; // casper_add_editor_styles
-add_action( 'init', 'casper_add_editor_styles' );
+add_action( 'after_setup_theme', 'casper_add_editor_styles' );
 
 if ( ! function_exists( 'casper_customizer_head' ) ) :
 /**
