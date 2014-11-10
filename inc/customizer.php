@@ -160,7 +160,7 @@ function casper_customize_register( $wp_customize ) {
 	    'casper_display_header',
 	    array(
 	        'default'    =>  false,
-	        'transport'  =>  'refresh'
+	        'transport'  =>  'refresh',
 	        'sanitize_callback' => 'casper_sanitize_checkbox'
 	    )
 	);
