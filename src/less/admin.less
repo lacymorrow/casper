@@ -1,0 +1,56 @@
+
+/* Big cover image on the home page */
+#headimg {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    min-height: 250px;
+    text-align: center;
+    color: #fff;
+    background: #303538;
+    background-size: cover;
+    border-bottom: #EBF2F6 1px solid;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
+    .blog-logo {
+        text-decoration: none;
+        color: white;
+    }
+    .blog-logo img {
+        display: block;
+        max-height: 120px;
+        width: auto;
+        margin: 0 auto;
+        line-height: 0;
+    }
+
+    /* The details of your blog. Defined in ghost/settings/ */
+    h1.displaying-header-text {
+        margin: 10px 0 10px 0;
+        font-size: 4rem;
+        letter-spacing: -1px;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 2;
+    }
+
+    #desc {
+        margin: 0;
+        font-size: 1.6rem;
+        line-height: 1.5em;
+        font-weight: 300;
+        font-family: 'Noto Serif', serif;
+        letter-spacing: 0;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+        position: relative;
+        z-index: 2;
+    }
+}
