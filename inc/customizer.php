@@ -37,7 +37,8 @@ function casper_customize_register( $wp_customize ) {
 	    'description' => 'Upload a logo to display above the site title on each page',
 	) );
 	$wp_customize->add_setting( 'casper_logo'  , array(
-	    'transport'   => 'refresh'
+	    'transport'   => 'refresh',
+	    'sanitize_callback' => 'casper_sanitize_uri'
 	) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'casper_logo', array(
 	    'label'    => __( 'Logo', 'casper' ),
@@ -496,5 +497,8 @@ function casper_sanitize_footer($content){
 	if('' === $content){
 		return '';
 	}
-	return wp_kses($content, wp_kses_allowed_html('post'));
+	if ( current_user_can('unfiltered_html') )
+		return wp_kses($content, wp_kses_allowed_html('post'));
+	else
+		return stripslashes( wp_filter_post_kses( addslashes($content) ) );
 }

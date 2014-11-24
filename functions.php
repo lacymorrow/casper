@@ -146,6 +146,17 @@ endif; // casper_add_editor_styles
 add_action( 'after_setup_theme', 'casper_add_editor_styles' );
 
 if ( ! function_exists( 'casper_customizer_head' ) ) :
+
+
+/**
+ * Admin CSS
+ */
+function casper_admin_css(){
+	wp_enqueue_style ('casper_admin_style', get_template_directory_uri() . '/css/admin.css', array(), false, false);
+}
+add_action('admin_head', 'casper_admin_css');
+
+
 /**
  * Customizer hook
  */

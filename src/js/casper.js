@@ -3,17 +3,8 @@
  */
 
 /*globals jQuery, document */
-var Casper = (function ($) {
+var Casper = (function (window, $) {
     "use strict";
-
-    $(document).ready(function(){
-        init();
-    });
-
-    var init = function () {
-    	$(".post-content").fitVids();
-    	makeImagesResponsive();
-    }
 
     /*
     // @name: Responsive-img.js
@@ -24,20 +15,23 @@ var Casper = (function ($) {
     */
     var makeImagesResponsive = function () {
         var e = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-            t = document.getElementsByTagName("body")[0].getElementsByTagName("img");
-        if (t.length === 0) return;
-        var n;
-        t[0].hasAttribute ? n = function(e, t) {
-            return e.hasAttribute(t)
-        } : n = function(e, t) {
-            return e.getAttribute(t) !== null
+            t = document.getElementsByTagName("body")[0].getElementsByTagName("img"),
+            r = window.devicePixelRatio ? window.devicePixelRatio >= 1.2 ? 1 : 0 : 0,
+            i,
+            n;
+        if (t.length === 0) {
+            return;
+        }
+        n = t[0].hasAttribute ? function (e, t) {
+            return e.hasAttribute(t);
+        } : function (e, t) {
+            return e.getAttribute(t) !== null;
         };
-        var r = window.devicePixelRatio ? window.devicePixelRatio >= 1.2 ? 1 : 0 : 0;
-        for (var i = 0; i < t.length; i++) {
+        for (i = 0; i < t.length; i++) {
             var s = t[i],
                 o = r && n(s, "data-src2x") ? "data-src2x" : "data-src",
                 u = r && n(s, "data-src-base2x") ? "data-src-base2x" : "data-src-base";
-            s.onload = function(q) {
+            s.onload = function (q) {
                 this.style.opacity = '1';
             };
             if (!n(s, o)) continue;
@@ -74,17 +68,19 @@ var Casper = (function ($) {
             }
         }
     }
-    if (window.addEventListener) {
-        window.addEventListener("load", makeImagesResponsive, !1);
-        window.addEventListener("resize", makeImagesResponsive, !1)
-    } else {
-        window.attachEvent("onload", makeImagesResponsive);
-        window.attachEvent("onresize", makeImagesResponsive)
-    };
 
-
-    return {
-    	makeImagesResponsive : makeImagesResponsive
+    var init = function () {
+        $(".post-content").fitVids();
+        $(window).load(function () {
+            makeImagesResponsive();
+        });
     }
 
-}(jQuery));
+    $(document).ready(function() {
+        init();
+    });
+
+    return {
+    }
+
+}(window, jQuery));

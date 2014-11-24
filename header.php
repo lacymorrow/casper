@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?>>
 
-<header id="masthead" role="banner" class="site-head site-header" <?php if(get_header_image() ) : ?>style="background-image: url(<?php header_image(); ?>);"<?php endif ?>>
+<header id="masthead" role="banner" class="site-head site-header" <?php if(get_header_image() ) : ?>style="background-image: url(<?php esc_url(header_image()); ?>);"<?php endif ?>>
     <nav id="site-navigation" class="main-navigation" role="navigation">
         <div>
             <h1 class="menu-toggle">
