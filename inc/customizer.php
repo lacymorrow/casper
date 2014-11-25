@@ -430,10 +430,11 @@ add_action( 'customize_preview_init', 'casper_customize_preview_js' );
  * Sanitize color
  */
 function casper_sanitize_color($content){
+	$content = str_replace('#', '', $content);
 	if (ctype_xdigit($content)) {
 	    return $content;
 	}
-	return false;
+	return '';
 }
 
 /**
@@ -443,7 +444,7 @@ function casper_sanitize_checkbox($content){
 	if('selected' === $content || 'checked' === $content || 'true' === $content || true === $content){
 		return $content;
 	}
-	return false;
+	return '';
 }
 
 /**

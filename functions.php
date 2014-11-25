@@ -197,15 +197,14 @@ function casper_customizer_head() {
 		<?php if(get_theme_mod( 'casper_hover_color' )) { ?>
 			a:hover, body .blog-title a:hover, body .social-icons a:hover { color: <?php echo get_theme_mod( 'casper_hover_color' ); ?>; }
 		<?php } ?>
-
+		<?php if(!get_theme_mod( 'casper_display_header' )){ ?>
+			.main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
+		<?php } ?>
         <?php if(get_theme_mod( 'casper_menu_color' )){ ?>
         	.main-navigation a { color: <?php echo get_theme_mod( 'casper_menu_color' ); ?>; }
         <?php } ?>
         <?php if(get_theme_mod( 'casper_home_menu_color' )){ ?>
         	.home .main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
-        	 <?php if(!get_theme_mod( 'casper_display_header' )){ ?>
-        	 	.main-navigation a { color: <?php echo get_theme_mod( 'casper_home_menu_color' ); ?>; }
-        	 <?php } ?>
         <?php } ?>
         <?php if( false != get_theme_mod( 'casper_logo_circle' ) ) { ?>
 			.blog-logo img {
