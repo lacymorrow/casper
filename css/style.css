@@ -4589,14 +4589,16 @@ body.home .site-head:after
 
     list-style-type: none;
 }
-.comment
+.comment,
+.pingback
 {
     margin-bottom: 1.5em;
     padding: 1em 1.5em;
 
     border: 1px solid #ccc;
 }
-.children .comment
+.children .comment,
+.pingback
 {
     margin-bottom: .75em;
     padding: .5em .75em;
