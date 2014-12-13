@@ -698,7 +698,7 @@ textarea {
 
 /* Main widget wrapper */
 .widget-area {
-    * { 
+    * {
         box-sizing: border-box;
     }
     width:80%;
@@ -1159,6 +1159,60 @@ body.home .site-head:after {
     display: block;
 }
 
+/* ==========================================================================
+   5.1 Comments
+   ========================================================================== */
+.comment-list,
+.children {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+.comment {
+    border: 1px solid #ccc;
+    margin-bottom: 1.5em;
+    padding: 1em 1.5em;
+}
+
+.children .comment {
+    margin-bottom: 0.75em;
+    padding: 0.5em 0.75em;
+}
+
+.reply a {
+    .wrapword;
+    max-width: 35%;
+    border-radius: 3px;
+    border-width: 3px;
+    background: none;
+    display: inline-block;
+    padding: 15px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+    border: #EBF2F6 2px solid;
+    text-decoration: none;
+    transition: border ease 0.3s;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    color: #9EABB3;
+    cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+    -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+}
+
+.reply a:hover {
+    border-color: #9EABB3;
+}
+
+.children,
+.comment-respond {
+    margin-top: 1.5em;
+}
+
+.comment-form {
+    overflow: hidden;
+}
 
 /* ==========================================================================
    6. Third Party Elements - Embeds from other services
