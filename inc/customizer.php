@@ -431,10 +431,10 @@ add_action( 'customize_preview_init', 'casper_customize_preview_js' );
  */
 function casper_sanitize_color($content){
 	$content = str_replace('#', '', $content);
-	if (ctype_xdigit($content)) {
-	    return $content;
+	if (!ctype_xdigit($content)) {
+	    return '';
 	}
-	return '';
+	return '#' . $content;
 }
 
 /**
