@@ -177,7 +177,7 @@ function casper_customizer_head() {
         	}
         <?php } ?>
 		<?php if(get_theme_mod('casper_header_color')){ ?>
-		    .site-head { background-color: #<?php echo get_theme_mod( 'casper_header_color' ); ?>; }
+		    .site-head { background-color: <?php echo get_theme_mod( 'casper_header_color' ); ?>; }
 		<?php } ?>
         <?php if(false != get_theme_mod( 'casper_display_header' )) { ?>
         	body:not(.home) #masthead{ background: none; }
