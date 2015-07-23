@@ -48,7 +48,7 @@ Want to report a bug, request a feature, or help me build this project? The more
 Many thanks to the [Ghost](http://ghost.org) & [WordPress](http://wordpress.org) teams, as well as the [Underscores _s](http://underscores.me/) contributers, and [kvendrik](https://github.com/kvendrik/responsive-images.js). Built using all of the above.
 
 ## Roadmap
- * Add support for title-tag 9via https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag)
+ * Add support for title-tag (via https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag)
  * Update Casper WP to match the updated Ghost version 
  * Implement an update mechanism to pull changes from the Ghost project to keep the development in sync
 
