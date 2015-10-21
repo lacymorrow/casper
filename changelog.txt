@@ -2,29 +2,29 @@
 
 * Add auto-excerpt option - https://github.com/lacymorrow/casper/issues/17
 
-* Increase header size to <h1> - https://github.com/lacymorrow/casper-wp/issues/31
+* Increase header size to <h1> - https://github.com/lacymorrow/casper/issues/31
 
-* Fix widget layout issues; Made responsive - https://github.com/lacymorrow/casper-wp/issues/37
+* Fix widget layout issues; Made responsive - https://github.com/lacymorrow/casper/issues/37
 
 * Add Excerpts - https://github.com/lacymorrow/casper/issues/43
 
-* Fix menu on mobile - https://github.com/lacymorrow/casper-wp/issues/47
+* Fix menu on mobile - https://github.com/lacymorrow/casper/issues/47
 
-* Fix inline emoticons breaking paragraph - https://github.com/lacymorrow/casper-wp/issues/49
+* Fix inline emoticons breaking paragraph - https://github.com/lacymorrow/casper/issues/49
 
-* Fix spacing in tag listings - https://github.com/lacymorrow/casper-wp/issues/50
+* Fix spacing in tag listings - https://github.com/lacymorrow/casper/issues/50
 
-* Add Flickr/stack-overflow/behance/codepen/deviantart/lastfm/spotify/soundclod icons - https://github.com/lacymorrow/casper-wp/issues/51
+* Add Flickr/stack-overflow/behance/codepen/deviantart/lastfm/spotify/soundclod icons - https://github.com/lacymorrow/casper/issues/51
 
 * Clear DOM after posts -  https://github.com/lacymorrow/casper/issues/52
 
-* Make tags, categories, dates optional - https://github.com/lacymorrow/casper-wp/issues/55
+* Make tags, categories, dates optional - https://github.com/lacymorrow/casper/issues/55
 
-* Fix captioned images extra padding - https://github.com/lacymorrow/casper-wp/issues/57
+* Fix captioned images extra padding - https://github.com/lacymorrow/casper/issues/57
 
-* Add author image - https://github.com/lacymorrow/casper-wp/issues/58
+* Add author image - https://github.com/lacymorrow/casper/issues/58
 
-* Create child theme - copy casper-child to themes directory and activate - https://github.com/lacymorrow/casper-wp/issues/59
+* Create child theme - copy casper-child to themes directory and activate - https://github.com/lacymorrow/casper/issues/59
 
 * Add custom 'Read More' link option - https://github.com/lacymorrow/casper/issues/61
 

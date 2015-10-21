@@ -114,7 +114,7 @@
 	wp.customize( 'casper_custom_footer', function( value ) {
         value.bind( function( to ) {
         	if (false == to){
-	            $( '.copyright').html('<a href="https://github.com/lacymorrow/casper-wp/" rel="home">Casper WP</a> by Lacy Morrow');
+	            $( '.copyright').html('<a href="https://github.com/lacymorrow/casper/" rel="home">Casper</a> by Lacy Morrow');
         	} else {
 	            $( '.copyright').html(to);
 	        }
