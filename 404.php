@@ -12,7 +12,7 @@ get_header();
 
 			<section class="error-404 not-found hentry">
 				<header class="page-header">
-					<h2 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'casper' ); ?></h1>
+					<h1 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'casper' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
