@@ -35,9 +35,5 @@
   "bugs": {
     "url": "https://github.com/lacymorrow/casper/issues"
   },
-  "licenses": [
-    {
-      "type": "GPL"
-    }
-  ]
+  "license": "GPL"
 }
