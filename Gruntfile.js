@@ -64,16 +64,6 @@ module.exports = function(grunt) {
 			        }
 			}
 		},
-		imagemin: {
-		    casper: {
-		        files: [{
-					expand: true,                  // Enable dynamic expansion
-					cwd: 'src/img/',               // Src matches are relative to this path
-					src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-					dest: 'img/'                   // Destination path prefix
-				}]
-		    }
-		},
 		jshint: {
 			casper: ['Gruntfile.js', 'src/js/**/*.js', 'js/**/*.js'],
 			options: {
@@ -171,6 +161,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('i18n', ['checktextdomain', 'pot']);
 	grunt.registerTask('js', [ /* 'jshint', */ 'uglify']);
 	grunt.registerTask('css', ['less', 'concat', 'csscomb', /* 'csslint', */ 'autoprefixer', 'cssmin']);
-	grunt.registerTask('default', ['css', 'js', 'imagemin']);
+	grunt.registerTask('default', ['css', 'js']);
 
 };
