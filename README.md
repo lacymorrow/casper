@@ -1,3 +1,6 @@
+
+![Casper](http://lacymorrow.com/projects/casper/wp-content/uploads/2014/09/logo.png "Casper")
+
 # Casper
 A Ghost-like WordPress theme
 
