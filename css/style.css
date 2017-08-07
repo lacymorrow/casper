@@ -4495,7 +4495,7 @@ body.home .site-head:after
     max-width: 100%;
     height: auto;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1em 0; /* zero left and right padding */
 }
 .post-content img.wp-smiley
 {
