@@ -1,7 +1,7 @@
 
 ![Casper](http://lacymorrow.com/projects/casper/wp-content/uploads/2014/09/logo.png "Casper")
 
-# Casper
+# Casper [![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]()
 A Ghost-like WordPress theme
 
 Casper *(for WordPress)* is a simple yet beautiful theme for bloggers.
