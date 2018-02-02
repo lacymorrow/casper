@@ -2,6 +2,7 @@
 ![Casper](img/casper.png "Casper")
 
 # Casper [![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]() [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+> A Ghost-like 👻 WordPress theme
 A Ghost-like WordPress theme
 
 Casper *(for WordPress)* is a simple yet beautiful theme for bloggers.
@@ -48,7 +49,10 @@ To generate a `.pot` language file you must have xgettext installed. On OSX usin
 Want to report a bug, request a feature, or help me build this project? The more the merrier!
 
 
-Many thanks to the [Ghost](http://ghost.org) & [WordPress](http://wordpress.org) teams, as well as the [Underscores _s](http://underscores.me/) contributers, and [kvendrik](https://github.com/kvendrik/responsive-images.js). Built using all of the above.
+Many thanks to the [Ghost](http://ghost.org) & [WordPress](http://wordpress.org) teams, as well as the [Underscores \_s](http://underscores.me/) contributers, and [kvendrik](https://github.com/kvendrik/responsive-images.js).
+
+Built using all of the above.
+
 
 ## Roadmap
  * Update Casper WP to match the updated Ghost version - _Casper 2!_
