@@ -1,7 +1,7 @@
 
 ![Casper](img/casper.png "Casper")
 
-# Casper [![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]
+# Casper [![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]()
 A Ghost-like WordPress theme
 
 Casper *(for WordPress)* is a simple yet beautiful theme for bloggers.
