@@ -1,7 +1,7 @@
 
 ![Casper](img/casper.png "Casper")
 
-# Casper [![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]()
+# Casper [![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]() [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 A Ghost-like WordPress theme
 
 Casper *(for WordPress)* is a simple yet beautiful theme for bloggers.
@@ -14,7 +14,7 @@ Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPr
 
 ## Usage
 
-Download the [zip](https://github.com/lacymorrow/casper/archive/master.zip) package of the theme and install either automatically through the WordPress Dashboard > Appearance tab, or by uploading the `casper-wp` folder to your WordPress/wp-content/themes directory.
+Download the [zip](https://github.com/lacymorrow/casper/archive/master.zip) package of the theme and install either automatically through the WordPress Dashboard > Appearance tab, or by uploading the `casper` folder to your WordPress/wp-content/themes directory.
 
 The `style.css` file in the theme directory is minified. A human-readable version of is located at `css/style.css`.
 
@@ -51,8 +51,7 @@ Want to report a bug, request a feature, or help me build this project? The more
 Many thanks to the [Ghost](http://ghost.org) & [WordPress](http://wordpress.org) teams, as well as the [Underscores _s](http://underscores.me/) contributers, and [kvendrik](https://github.com/kvendrik/responsive-images.js). Built using all of the above.
 
 ## Roadmap
- * Add support for title-tag (via https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag)
- * Update Casper WP to match the updated Ghost version 
+ * Update Casper WP to match the updated Ghost version - _Casper 2!_
  * Implement an update mechanism to pull changes from the Ghost project to keep the development in sync
 
 
