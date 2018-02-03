@@ -1,13 +1,16 @@
 
 ![Casper](img/casper.png "Casper")
 
-# Casper [![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]() [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+# Casper 
 > A Ghost-like 👻 WordPress theme
-A Ghost-like WordPress theme
+
+[![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]() [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 Casper *(for WordPress)* is a simple yet beautiful theme for bloggers.
 
 Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPress](http://wordpress.org) port of the [default theme by the same name](https://github.com/TryGhost/Casper). The goal of this project is to emulate the gorgeous theme while taking advantage of features exclusive to the WordPress framework. There are plenty of customization options included, accessible through the WordPress Customizer. Already included are hooks to serve responsive images appropriately and media queries to provide a fast and seamless experience from desktop to mobile.
+
+![screenshot](screenshot.png "screenshot")
 
 ### [Demo](http://lacymorrow.com/projects/casper/)
 
