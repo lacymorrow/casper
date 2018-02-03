@@ -1,7 +1,6 @@
 
 ![Casper](img/casper.png "Casper")
 
-# Casper 
 > A Ghost-like 👻 WordPress theme
 
 [![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]() [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
