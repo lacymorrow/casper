@@ -52,7 +52,7 @@ Casper is open-source and simple to develop and extend.
 
 A `gruntfile.js` is included. `cd` into the theme directory and run `npm install` to install Grunt and all dependencies locally. Run `grunt` to build or `grunt watch` to continuously build.
 
-###### Tasks
+##### Tasks
 
  * Compile `src/css/style.less` and other LESS and CSS files in `src/css/`
  * Any CSS is combed, linted, prefixed, then compiled with `css/style.css`
