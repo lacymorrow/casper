@@ -15,6 +15,20 @@ Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPr
 
 ### [Download Casper from the WordPress.org Theme Directory](http://wordpress.org/themes/casper)
 
+
+## Table of Contents
+
+- [Usage](#usage)
+- [Editing](#editing-casper)
+- [Building](#building-casper)
+    - [With Grunt](#using-grunt-to-build-the-package)
+    - [Grunt Tasks](#tasks)
+    - [i18n](#i18n)
+- [Get Involved](#getting-involved)
+- [Roadmap](#roadmap)
+- [License](#license)
+
+
 ## Usage
 
 Download the [zip](https://github.com/lacymorrow/casper/archive/master.zip) package of the theme and install either automatically through the WordPress Dashboard > Appearance tab, or by uploading the `casper` folder to your WordPress/wp-content/themes directory.
@@ -29,14 +43,14 @@ The recommended way to edit the Casper theme is to use the [Casper child theme](
 If you want to make changes to the core theme, or want to contribute, read below on how to build the package.
 
 
+## Building Casper
+
+Casper is open-source and simple to develop and extend.
+
+
 #### Using Grunt to build the package
 
 A `gruntfile.js` is included. `cd` into the theme directory and run `npm install` to install Grunt and all dependencies locally. Run `grunt` to build or `grunt watch` to continuously build.
-
-##### i18n
-
-To generate a `.pot` language file you must have xgettext installed. On OSX using homebrew run `brew install gettext && brew link gettext --force` to install. Run `grunt i18n` to generate language files.
-
 
 ###### Tasks
 
@@ -45,6 +59,11 @@ To generate a `.pot` language file you must have xgettext installed. On OSX usin
  * `css/style.css` is minified into `style.css`
  * Images in `src/img/` are compressed and copied to `img`
  * Theme JavaScript and other js files in `src/js/` are linted, minified, and combined into `js/main.js`
+
+##### i18n
+
+To generate a `.pot` language file you must have xgettext installed. On OSX using homebrew run `brew install gettext && brew link gettext --force` to install. Run `grunt i18n` to generate language files.
+
 
 ## Getting Involved
 
