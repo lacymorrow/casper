@@ -3,7 +3,7 @@
 
 > A Ghost-like 👻 WordPress theme
 
-[![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]() [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]() [![Build Status](https://travis-ci.org/lacymorrow/casper.svg?branch=master)](https://travis-ci.org/lacymorrow/casper) [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 Casper *(for WordPress)* is a simple yet beautiful theme for bloggers.
 
