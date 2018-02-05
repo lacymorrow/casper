@@ -48,24 +48,24 @@ before_script:
     - cd $WP_DEVELOP_DIR
     - echo $WP_DEVELOP_DIR
     - cp wp-tests-config-sample.php wp-tests-config.php
-    - sed -i "s/youremptytestdbnamehere/wordpress_test/" wp-tests-config.php
-    - sed -i "s/yourusernamehere/root/" wp-tests-config.php
-    - sed -i "s/yourpasswordhere//" wp-tests-config.php
+    #- sed -i "s/youremptytestdbnamehere/wordpress_test/" wp-tests-config.php
+    #- sed -i "s/yourusernamehere/root/" wp-tests-config.php
+    #- sed -i "s/yourpasswordhere//" wp-tests-config.php
     # Create WordPress database.
     - mysql -e 'CREATE DATABASE wordpress_test;' -uroot
     # Install CodeSniffer for WordPress Coding Standards checks.
-    - mkdir php-codesniffer && curl -L https://github.com/squizlabs/PHP_CodeSniffer/archive/master.tar.gz | tar xz --strip-components=1 -C php-codesniffer
+    #- mkdir php-codesniffer && curl -L https://github.com/squizlabs/PHP_CodeSniffer/archive/master.tar.gz | tar xz --strip-components=1 -C php-codesniffer
     # Install WordPress Coding Standards.
-    - mkdir wordpress-coding-standards && curl -L https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/archive/master.tar.gz | tar xz --strip-components=1 -C wordpress-coding-standards
+    #- mkdir wordpress-coding-standards && curl -L https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/archive/master.tar.gz | tar xz --strip-components=1 -C wordpress-coding-standards
     # Hop into CodeSniffer directory.
-    - cd php-codesniffer
+    #- cd php-codesniffer
     # Set install path for WordPress Coding Standards
     # @link https://github.com/squizlabs/PHP_CodeSniffer/blob/4237c2fc98cc838730b76ee9cee316f99286a2a7/CodeSniffer.php#L1941
-    - scripts/phpcs --config-set installed_paths ../wordpress-coding-standards
+    #- scripts/phpcs --config-set installed_paths ../wordpress-coding-standards
     # Hop into themes directory.
     - cd $theme_dir
     # After CodeSniffer install you should refresh your path.
-    - phpenv rehash
+    #- phpenv rehash
     # Install JSCS: JavaScript Code Style checker
     # @link http://jscs.info/
     - npm install -g jscs
@@ -93,4 +93,4 @@ script:
     # -n flag: Do not print warnings (shortcut for --warning-severity=0)
     # --standard: Use WordPress as the standard.
     # --extensions: Only sniff PHP files.
-    - $WP_DEVELOP_DIR/php-codesniffer/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php
+    #- $WP_DEVELOP_DIR/php-codesniffer/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php
