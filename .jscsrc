@@ -1,0 +1,6 @@
+{
+    "preset": "wordpress",
+    "fileExtensions": [ ".js" ],
+    "excludeFiles": [
+    ]
+}
