@@ -5,7 +5,8 @@
  */
 
 ( function( $ ) {
-	// blog title and description.
+
+	// Blog title and description.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
 			$( '.blog-title a' ).text( to );
@@ -17,6 +18,7 @@
 		} );
 	} );
 	/*
+
 	// Header text color
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
@@ -53,9 +55,9 @@
 	// Other Page Header text color
 	wp.customize( 'casper_header_textcolor', function( value ) {
 		value.bind( function( to ) {
-			if ( 'blank' === to || '' === to || false === to) {
+			if ( 'blank' === to || '' === to || false === to ) {
 				$( ' header .blog-title a,  header .blog-description,  .social-icons a' ).css( {
-					'color' : 'inherit'
+					'color': 'inherit'
 				} );
 			} else {
 				$( ' header .blog-title a,  header .blog-description,  .social-icons a' ).css( {
@@ -79,15 +81,15 @@
     // Circle logo
 	wp.customize( 'casper_logo_circle', function( value ) {
         value.bind( function( to ) {
-        	if (false === !!to){
-	            $( '.blog-logo img' ).css( {'-webkit-border-radius' : '0',
-	        								'-moz-border-radius' : '0',
-	        								'border-radius' : '0'
+        	if ( '' === to ) {
+	            $( '.blog-logo img' ).css( { '-webkit-border-radius': '0',
+	        								'-moz-border-radius': '0',
+	        								'border-radius': '0'
 	        	} );
         	} else {
-	            $( '.blog-logo img' ).css( {'-webkit-border-radius' : '50%',
-	        								'-moz-border-radius' : '50%',
-	        								'border-radius' : '50%'
+	            $( '.blog-logo img' ).css( { '-webkit-border-radius': '50%',
+	        								'-moz-border-radius': '50%',
+	        								'border-radius': '50%'
 	        	} );
 	        }
         } );
@@ -95,17 +97,17 @@
     // Logo frame
 	wp.customize( 'casper_logo_frame', function( value ) {
         value.bind( function( to ) {
-        	if (false === !!to){
-	            $( '.blog-logo img' ).css( {'border' : 'none',
-											'-webkit-box-shadow' : 'none',
-											'-moz-box-shadow' : 'none',
-											'box-shadow' : 'none'
+        	if ( '' === to ) {
+	            $( '.blog-logo img' ).css( { 'border': 'none',
+											'-webkit-box-shadow': 'none',
+											'-moz-box-shadow': 'none',
+											'box-shadow': 'none'
 	        	} );
         	} else {
-	            $( '.blog-logo img' ).css( {'border' : '3px solid white',
-	    									'-webkit-box-shadow' : '0 1px 1px rgba(0,0,0,0.3)',
-	   										'-moz-box-shadow' : '0 1px 1px rgba(0,0,0,0.3)',
-	   										'box-shadow' : '0 1px 1px rgba(0,0,0,0.3);} )'
+	            $( '.blog-logo img' ).css( { 'border': '3px solid white',
+	    									'-webkit-box-shadow': '0 1px 1px rgba(0,0,0,0.3)',
+	   										'-moz-box-shadow': '0 1px 1px rgba(0,0,0,0.3)',
+	   										'box-shadow': '0 1px 1px rgba(0,0,0,0.3);} )'
 	        	} );
 	        }
 	    });
@@ -113,10 +115,10 @@
     // Footer info
 	wp.customize( 'casper_custom_footer', function( value ) {
         value.bind( function( to ) {
-        	if (false === !!to){
-	            $( '.copyright').html('<a href="https://github.com/lacymorrow/casper/" rel="home">Casper</a> by Lacy Morrow');
+        	if ( '' === to ) {
+	            $( '.copyright' ).html( '<a href="https://github.com/lacymorrow/casper/" rel="home">Casper</a> by Lacy Morrow' );
         	} else {
-	            $( '.copyright').html(to);
+	            $( '.copyright' ).html( to );
 	        }
         } );
     });
