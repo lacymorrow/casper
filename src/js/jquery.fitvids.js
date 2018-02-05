@@ -1,4 +1,3 @@
-/* global jQuery */
 /*!
 * FitVids 1.0.3
 *
@@ -11,7 +10,7 @@
 
 (function( $ ){
 
-  "use strict";
+  'use strict';
 
   $.fn.fitVids = function( options ) {
     var settings = {
@@ -39,12 +38,12 @@
 
     return this.each(function(){
       var selectors = [
-        "iframe[src*='player.vimeo.com']",
-        "iframe[src*='youtube.com']",
-        "iframe[src*='youtube-nocookie.com']",
-        "iframe[src*='kickstarter.com'][src*='video.html']",
-        "object",
-        "embed"
+        'iframe[src*="player.vimeo.com"]',
+        'iframe[src*="youtube.com"]',
+        'iframe[src*="youtube-nocookie.com"]',
+        'iframe[src*="kickstarter.com"][src*="video.html"]',
+        'object',
+        'embed'
       ];
 
       if (settings.customSelector) {
@@ -52,7 +51,7 @@
       }
 
       var $allVideos = $(this).find(selectors.join(','));
-      $allVideos = $allVideos.not("object object"); // SwfObj conflict patch
+      $allVideos = $allVideos.not('object object'); // SwfObj conflict patch
 
       $allVideos.each(function(){
         var $this = $(this);
@@ -64,7 +63,7 @@
           var videoID = 'fitvid' + Math.floor(Math.random()*999999);
           $this.attr('id', videoID);
         }
-        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+'%');
         $this.removeAttr('height').removeAttr('width');
       });
     });

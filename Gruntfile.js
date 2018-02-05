@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+	module.exports = function(grunt) {
   	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
   	require('time-grunt')(grunt);
 	grunt.initConfig({
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 				expand: true,
 				flatten: true,
 				src: '<%= concat.casper.dest %>'
-		    },
+		    }
 		},
 		concat: {
 			options: {
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 				        'style.css': ['<%= concat.casper.dest %>'],
-				        "rtl.css": ['css/rtl.css']
+				        'rtl.css': ['css/rtl.css']
 			        }
 			}
 		},
@@ -78,9 +78,9 @@ module.exports = function(grunt) {
 		less: {
 			casper: {
 				files: {
-					"css/style.css": ["src/less/style.less"],
-					"css/rtl.css": ["src/less/rtl.less"],
-					"css/admin.css": ["src/less/admin.less"]
+					'css/style.css': ['src/less/style.less'],
+					'css/rtl.css': ['src/less/rtl.less'],
+					'css/admin.css': ['src/less/admin.less']
 				}
 			}
 		},
@@ -103,12 +103,12 @@ module.exports = function(grunt) {
 		            '_nx:1,2,4c,5d',
 		            '_n_noop:1,2,3d',
 		            '_nx_noop:1,2,3c,4d'
-		      ],
+		      ]
 		   },
 		   files: {
 		       src:  [ '*.php', 'inc/*.php' ], //All php files
-		       expand: true,
-		   },
+		       expand: true
+		   }
 		},
 		pot: {
 		    options: {
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
 		    	  '_nx:1,2,4c',
 		    	  '_n_noop:1,2',
 		    	  '_nx_noop:1,2,3c'
-		    	 ],
+		    	 ]
 		    },
 		    files:{
 		        src:  [ '*.php', 'inc/*.php' ], //Parse all php files
@@ -147,7 +147,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			options: {
-				livereload: true,
+				livereload: true
 			},
 		    casper: {
 		    	files: ['Gruntfile.js', 'src/**/*'],
@@ -155,7 +155,7 @@ module.exports = function(grunt) {
 		    	options: {
 		    		nospawn: true
 		    	}
-		    }, 
+		    }
 		}
 	});
 	grunt.registerTask('i18n', ['checktextdomain', 'pot']);

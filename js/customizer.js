@@ -79,7 +79,7 @@
     // Circle logo
 	wp.customize( 'casper_logo_circle', function( value ) {
         value.bind( function( to ) {
-        	if (false == to){
+        	if (false === !!to){
 	            $( '.blog-logo img' ).css( {'-webkit-border-radius' : '0',
 	        								'-moz-border-radius' : '0',
 	        								'border-radius' : '0'
@@ -95,7 +95,7 @@
     // Logo frame
 	wp.customize( 'casper_logo_frame', function( value ) {
         value.bind( function( to ) {
-        	if (false == to){
+        	if (false === !!to){
 	            $( '.blog-logo img' ).css( {'border' : 'none',
 											'-webkit-box-shadow' : 'none',
 											'-moz-box-shadow' : 'none',
@@ -113,7 +113,7 @@
     // Footer info
 	wp.customize( 'casper_custom_footer', function( value ) {
         value.bind( function( to ) {
-        	if (false == to){
+        	if (false === !!to){
 	            $( '.copyright').html('<a href="https://github.com/lacymorrow/casper/" rel="home">Casper</a> by Lacy Morrow');
         	} else {
 	            $( '.copyright').html(to);
