@@ -50,7 +50,7 @@
                             y = g[0].split('<');
                         m = e <= v[1] && e > y[1];
                     } else { 
-                        m = e <= v[1]
+                        m = e <= v[1];
                     }
                 } else {
                     v = p.split('>');
@@ -59,7 +59,7 @@
                             w = b[0].split('>');
                         m = e >= v[1] && e < w[1];
                     } else {
-                        m = e >= v[1]
+                        m = e >= v[1];
                     }
                 }
                 if (m) {

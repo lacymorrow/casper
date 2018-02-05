@@ -2,5 +2,6 @@
     "preset": "wordpress",
     "fileExtensions": [ ".js" ],
     "excludeFiles": [
+    	"js/main.js"
     ]
 }
