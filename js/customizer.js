@@ -81,7 +81,7 @@
             $( 'section a' ).css( 'color', to );
         } );
     });
-    
+
     // Circle logo
     wp.customize( 'casper_logo_circle', function( value ) {
         value.bind( function( to ) {
@@ -117,7 +117,7 @@
             }
         });
     });
-    
+
     // Footer info
     wp.customize( 'casper_custom_footer', function( value ) {
         value.bind( function( to ) {
