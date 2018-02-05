@@ -17,7 +17,7 @@
         var e = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
             t = document.getElementsByTagName( 'body' )[0].getElementsByTagName( 'img' ),
             r = window.devicePixelRatio ? window.devicePixelRatio >= 1.2 ? 1 : 0 : 0,
-            a, b, c, d, g, f, h, i, l, m, n, o, p, s, u, v, w, y, E;
+            a, b, c, d, g, f, h, i, l, m, n, o, p, s, u, v, w, y, E, S;
         if ( 0 === t.length ) {
             return;
         }
@@ -42,8 +42,7 @@
             for ( c = 0; c < l.length; c++ ) {
                 h = l[c].replace( ':', '||' ).split( '||' ),
                 p = h[0],
-                d = h[1],
-                v, m;
+                d = h[1];
                 if ( p.indexOf( '<' ) !== -1 ) {
                     v = p.split( '<' );
                     if ( l[c - 1] ) {
@@ -64,8 +63,7 @@
                     }
                 }
                 if ( m ) {
-                    E = d.indexOf( '//' ) !== -1 ? 1 : 0,
-                        S;
+                    E = d.indexOf( '//' ) !== -1 ? 1 : 0;
                     1 === E ? S = d : S = a + d;
                     s.src !== S && s.setAttribute( 'src', S );
                     break;
