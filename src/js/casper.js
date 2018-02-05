@@ -35,7 +35,7 @@ var Casper = (function (window, $) {
                 this.style.opacity = '1';
             };
             if (!n(s, o)) { continue; }
-            var a = n(s, u) ? s.getAttribute(u) : ',
+            var a = n(s, u) ? s.getAttribute(u) : '',
                 f = s.getAttribute(o),
                 l = f.split(',');
             for (var c = 0; c < l.length; c++) {
