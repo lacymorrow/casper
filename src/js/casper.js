@@ -3,7 +3,7 @@
  */
 
 /*globals jQuery, document */
-var Casper = (function (window, $) {
+(function (window, $) {
     'use strict';
 
     /*
@@ -88,5 +88,3 @@ var Casper = (function (window, $) {
     };
 
 }(window, jQuery));
-
-export default Casper;
