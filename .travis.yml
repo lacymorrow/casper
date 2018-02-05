@@ -1,7 +1,7 @@
 # Travis CI configuration file.
 # @link https://travis-ci.org/
 
-# For use with the Twenty Sixteen WordPress theme
+# Based on the methods seen in the Twenty Sixteen WordPress theme
 # @link https://github.com/WordPress/twentysixteen/
 
 # Declare project language and PHP versions to test against.
