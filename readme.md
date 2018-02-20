@@ -7,7 +7,16 @@
 
 Casper *(for WordPress)* is a simple yet beautiful theme for bloggers.
 
-Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPress](http://wordpress.org) port of the [default theme by the same name](https://github.com/TryGhost/Casper). The goal of this project is to emulate the gorgeous theme while taking advantage of features exclusive to the WordPress framework. There are plenty of customization options included, accessible through the WordPress Customizer. Already included are hooks to serve responsive images appropriately and media queries to provide a fast and seamless experience from desktop to mobile.
+Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPress](http://wordpress.org) port of the [default theme by the same name](https://github.com/TryGhost/Casper). The goal of this project is to emulate the gorgeous theme while taking advantage of features exclusive to the WordPress framework.
+
+There are plenty of customization options included, accessible through the WordPress Customizer. Already included are hooks to serve responsive images appropriately and media queries to provide a fast and seamless experience from desktop to mobile.
+
+## Features
+* Search feature   🕸
+* Comments section   🙊
+* Customizer integration   🎱
+* Social icons pre-included   🐾
+* Responsive site and images for mobile and desktop   🐛 
 
 [![screenshot](screenshot.png "screenshot")](http://lacymorrow.com/projects/casper/)
 
