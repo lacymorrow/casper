@@ -15,7 +15,8 @@ Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPr
 * Comments section   🙊
 * Customizer integration   🌈
 * Social icons pre-included   🐾
-* Responsive site and images for mobile and desktop   🐛 
+* Responsive site and images   🐛 
+
 
 [![screenshot](screenshot.png "screenshot")](http://lacymorrow.com/projects/casper/)
 
