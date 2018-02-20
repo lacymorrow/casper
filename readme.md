@@ -11,7 +11,7 @@ Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPr
 
 
 ## Features
-* Search feature   🕸
+* Search feature   🔦
 * Comments section   🙊
 * Customizer integration   🌈
 * Social icons pre-included   🐾
