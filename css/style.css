@@ -93,12 +93,12 @@ template
 html
 {
     font-family: sans-serif;
+    /* 1 */
 
-  /* 1 */
         -ms-text-size-adjust: 100%;
-  /* 2 */
+    /* 2 */
     -webkit-text-size-adjust: 100%;
-  /* 2 */
+    /* 2 */
 }
 /**
  * Remove default margin.
@@ -283,11 +283,11 @@ fieldset
  */
 legend
 {
-  /* 1 */
+    /* 1 */
     padding: 0;
 
     border: 0;
-  /* 2 */
+    /* 2 */
 }
 /**
  * 1. Correct font family not being inherited in all browsers.
@@ -300,12 +300,12 @@ select,
 textarea
 {
     font-family: inherit;
-  /* 1 */
+    /* 1 */
     font-size: 100%;
+    /* 2 */
 
-  /* 2 */
     margin: 0;
-  /* 3 */
+    /* 3 */
 }
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
@@ -339,11 +339,11 @@ html input[type='button'],
 input[type='reset'],
 input[type='submit']
 {
-  /* 2 */
+    /* 2 */
     cursor: pointer;
 
     -webkit-appearance: button;
-  /* 3 */
+    /* 3 */
 }
 /**
  * Re-set default cursor for disabled elements.
@@ -361,9 +361,9 @@ input[type='checkbox'],
 input[type='radio']
 {
     box-sizing: border-box;
-  /* 1 */
+    /* 1 */
     padding: 0;
-  /* 2 */
+    /* 2 */
 }
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
@@ -373,9 +373,9 @@ input[type='radio']
 input[type='search']
 {
     -webkit-box-sizing: content-box;
-  /* 1 */
+    /* 1 */
        -moz-box-sizing: content-box;
-  /* 2 */
+    /* 2 */
             box-sizing: content-box;
 
     -webkit-appearance: textfield;
@@ -406,10 +406,10 @@ input::-moz-focus-inner
 textarea
 {
     overflow: auto;
+    /* 1 */
 
-  /* 1 */
     vertical-align: top;
-  /* 2 */
+    /* 2 */
 }
 /* ==========================================================================
    Tables
@@ -432,7 +432,8 @@ table
  */
 /* FONT PATH
  * -------------------------- */
-@font-face {
+@font-face
+{
     font-family: 'icons';
     font-weight: normal;
     font-style: normal;
@@ -555,7 +556,7 @@ table
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
 
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }
 .fa-rotate-180
 {
@@ -563,7 +564,7 @@ table
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
 
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 .fa-rotate-270
 {
@@ -571,7 +572,7 @@ table
         -ms-transform: rotate(270deg);
             transform: rotate(270deg);
 
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 .fa-flip-horizontal
 {
@@ -579,7 +580,7 @@ table
         -ms-transform: scale(-1, 1);
             transform: scale(-1, 1);
 
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
 }
 .fa-flip-vertical
 {
@@ -587,7 +588,7 @@ table
         -ms-transform: scale(1, -1);
             transform: scale(1, -1);
 
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
 }
 :root .fa-rotate-90,
 :root .fa-rotate-180,
@@ -3541,16 +3542,16 @@ margin on the iframe, cause it breaks stuff. */
 .wrapword
 {
     white-space: -moz-pre-wrap !important;
-  /* Mozilla, since 1999 */
+    /* Mozilla, since 1999 */
     white-space: -pre-wrap;
-  /* Opera 4-6 */
+    /* Opera 4-6 */
     white-space:   -o-pre-wrap;
-  /* Opera 7 */
+    /* Opera 7 */
     white-space:      pre-wrap;
     white-space: normal;
-  /* css-3 */
+    /* css-3 */
     word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
+    /* Internet Explorer 5.5+ */
     word-break: break-all;
 }
 /* ==========================================================================
@@ -3596,10 +3597,10 @@ dd
 }
 img
 {
-  /* Make sure images are scaled correctly. */
+    /* Make sure images are scaled correctly. */
     max-width: 100%;
     height: auto;
-  /* Adhere to container width. */
+    /* Adhere to container width. */
 }
 figure
 {
@@ -3623,23 +3624,23 @@ select,
 textarea
 {
     font-size: 100%;
+    /* Corrects font size not being inherited in all browsers */
 
-  /* Corrects font size not being inherited in all browsers */
     margin: 0;
+    /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 
-  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
     vertical-align: baseline;
+    /* Improves appearance and consistency in all browsers */
 
-  /* Improves appearance and consistency in all browsers */
     *vertical-align: middle;
-  /* Improves appearance and consistency in IE6/IE7 */
+    /* Improves appearance and consistency in IE6/IE7 */
 }
 button,
 input[type='button'],
 input[type='reset'],
 input[type='submit']
 {
-  /* Corrects inability to style clickable 'input' types in iOS */
+    /* Corrects inability to style clickable 'input' types in iOS */
     font-size: 12px;
     font-size: 1.2rem;
     line-height: 1;
@@ -3655,8 +3656,8 @@ input[type='submit']
     background: #e6e6e6;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 15px 17px rgba(255, 255, 255, .5), inset 0 -5px 12px rgba(0, 0, 0, .05);
     text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+    /* Improves usability and consistency of cursor style between image-type 'input' and others */
 
-  /* Improves usability and consistency of cursor style between image-type 'input' and others */
     -webkit-appearance: button;
 }
 button:hover,
@@ -3683,13 +3684,13 @@ input[type='checkbox'],
 input[type='radio']
 {
     padding: 0;
-  /* Addresses excess padding in IE8/9 */
+    /* Addresses excess padding in IE8/9 */
 }
 input[type='search']
 {
-  /* Addresses appearance set to searchfield in S5, Chrome */
+    /* Addresses appearance set to searchfield in S5, Chrome */
     -webkit-box-sizing: content-box;
-  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+    /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
        -moz-box-sizing: content-box;
             box-sizing: content-box;
 
@@ -3697,15 +3698,15 @@ input[type='search']
 }
 input[type='search']::-webkit-search-decoration
 {
-  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+    /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
     -webkit-appearance: none;
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner
 {
     padding: 0;
+    /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
 
-  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
     border: 0;
 }
 input[type='text'],
@@ -3739,10 +3740,10 @@ input[type='search']
 textarea
 {
     overflow: auto;
+    /* Improves readability and alignment in all browsers */
 
-  /* Improves readability and alignment in all browsers */
     width: 98%;
-  /* Removes default vertical scrollbar in IE6/7/8/9 */
+    /* Removes default vertical scrollbar in IE6/7/8/9 */
     padding-left: 3px;
 
     vertical-align: top;
@@ -3856,7 +3857,7 @@ textarea
 @media screen and (max-width: 600px)
 {
     .menu-toggle,
-  .main-navigation.toggled .nav-menu
+    .main-navigation.toggled .nav-menu
     {
         display: block;
     }
@@ -3941,7 +3942,7 @@ textarea
     border-radius: 3px;
     background-color: #f1f1f1;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
-  /* Above WP toolbar */
+    /* Above WP toolbar */
 }
 /*--------------------------------------------------------------
 7.0 Alignments
@@ -4131,7 +4132,7 @@ textarea
 .infinite-scroll .paging-navigation,
 .infinite-scroll.neverending .site-footer
 {
-  /* Theme Footer (when set to scrolling) */
+    /* Theme Footer (when set to scrolling) */
     display: none;
 }
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
@@ -4617,17 +4618,17 @@ body.home .site-head:after
     cursor: pointer;
     transition: border ease .3s;
     white-space: -moz-pre-wrap !important;
-  /* Mozilla, since 1999 */
+    /* Mozilla, since 1999 */
     white-space: -pre-wrap;
-  /* Opera 4-6 */
+    /* Opera 4-6 */
     white-space:   -o-pre-wrap;
-  /* Opera 7 */
+    /* Opera 7 */
     white-space:      pre-wrap;
     white-space: normal;
     text-decoration: none;
-  /* css-3 */
+    /* css-3 */
     word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
+    /* Internet Explorer 5.5+ */
     word-break: break-all;
 
     color: #9eabb3;
@@ -4637,10 +4638,10 @@ body.home .site-head:after
     background: none;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 15px 17px rgba(255, 255, 255, .5), inset 0 -5px 12px rgba(0, 0, 0, .05);
     text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+    /* Improves usability and consistency of cursor style between image-type 'input' and others */
 
-  /* Improves usability and consistency of cursor style between image-type 'input' and others */
     -webkit-appearance: button;
-  /* Corrects inability to style clickable 'input' types in iOS */
+    /* Corrects inability to style clickable 'input' types in iOS */
 }
 .reply a:hover
 {
@@ -4737,17 +4738,17 @@ body.home .site-head:after
 
     transition: border ease .3s;
     white-space: -moz-pre-wrap !important;
-  /* Mozilla, since 1999 */
+    /* Mozilla, since 1999 */
     white-space: -pre-wrap;
-  /* Opera 4-6 */
+    /* Opera 4-6 */
     white-space:   -o-pre-wrap;
-  /* Opera 7 */
+    /* Opera 7 */
     white-space:      pre-wrap;
     white-space: normal;
     text-decoration: none;
-  /* css-3 */
+    /* css-3 */
     word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
+    /* Internet Explorer 5.5+ */
     word-break: break-all;
 
     color: #9eabb3;
@@ -5042,7 +5043,7 @@ body.home .site-head:after
         max-height: 80px;
     }
     .inner,
-  .pagination
+    .pagination
     {
         width: auto;
         margin-right: 16px;
@@ -5079,7 +5080,7 @@ body.home .site-head:after
         left: 0;
     }
     h1,
-  h2
+    h2
     {
         font-size: 3rem;
         line-height: 1.1em;
@@ -5130,7 +5131,7 @@ body.home .site-head:after
         margin: 1.4rem .8rem 0 .8rem;
     }
     .older-posts,
-  .newer-posts
+    .newer-posts
     {
         position: static;
 

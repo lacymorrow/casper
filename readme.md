@@ -59,9 +59,21 @@ Casper is open-source and simple to develop and extend.
 
 #### Using Grunt to build the package
 
-A `gruntfile.js` is included. `cd` into the theme directory and run `npm install` to install Grunt and all dependencies locally. Run `grunt` to build or `grunt watch` to continuously build.
+```bash
+# Clone and install dependencies
 
-##### Tasks
+$ git clone https://github.com/lacymorrow/casper.git
+$ cd casper
+$ npm install
+
+
+# Build the distribution
+
+$ grunt
+```
+_or `grunt watch` to continuously build._
+
+##### Grunt Tasks
 
  * Compile `src/css/style.less` and other LESS and CSS files in `src/css/`
  * Any CSS is combed, linted, prefixed, then compiled with `css/style.css`
@@ -69,22 +81,21 @@ A `gruntfile.js` is included. `cd` into the theme directory and run `npm install
  * Images in `src/img/` are compressed and copied to `img`
  * Theme JavaScript and other js files in `src/js/` are linted, minified, and combined into `js/main.js`
 
-##### i18n
+##### i18n (_internationalization_)
 
 To generate a `.pot` language file you must have xgettext installed. On OSX using homebrew run `brew install gettext && brew link gettext --force` to install. Run `grunt i18n` to generate language files.
 
 
 ## Getting Involved
 
-Want to report a bug, request a feature, or help me build this project? The more the merrier!
+Want to report a bug, request a feature, or help me build this project? The more the merrier!  🐞
+
+Many thanks to the [Ghost](http://ghost.org) & [WordPress](http://wordpress.org) teams, as well as the [Underscores \_s](http://underscores.me/) contributers, and [kvendrik](https://github.com/kvendrik/responsive-images.js).  ☄️
+
+Built using all of the above.  ⛄️
 
 
-Many thanks to the [Ghost](http://ghost.org) & [WordPress](http://wordpress.org) teams, as well as the [Underscores \_s](http://underscores.me/) contributers, and [kvendrik](https://github.com/kvendrik/responsive-images.js).
-
-Built using all of the above.
-
-
-## Roadmap
+## 🏎  Roadmap
  * Update Casper WP to match the updated Ghost version - _Casper 2!_
  * Implement an update mechanism to pull changes from the Ghost project to keep the development in sync
 
