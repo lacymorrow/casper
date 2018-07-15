@@ -27,11 +27,11 @@
    2. General - Setting up some base styles
    ========================================================================== */
 html {
-  direction: rtl;
+  directory: rtl;
 }
 body {
   font-family: 'Segoe UI', tahoma, sans-serif;
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 1.6em;
 }
 h1,
