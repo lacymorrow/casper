@@ -53,7 +53,7 @@
         cssmin: {
             casper: {
                 options: {
-                    banner: '<%= banner %>',
+                    banner: 'aaaafad',
                     noAdvanced: true,
                     compatibility: 'ie8',
                     keepSpecialComments: 0
