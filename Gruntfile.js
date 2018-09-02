@@ -53,15 +53,14 @@
         cssmin: {
             casper: {
                 options: {
-                    banner: 'aaaafad',
                     noAdvanced: true,
                     compatibility: 'ie8',
                     keepSpecialComments: 0
                 },
-                files: {
-                        'style.css': ['<%= concat.casper.dest %>'],
-                        'rtl.css': ['css/rtl.css']
-                    }
+                casper: {
+                    src: 'css/style.css',
+                    dest: 'style.css'
+                }
             }
         },
         jshint: {
