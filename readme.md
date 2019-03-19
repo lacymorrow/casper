@@ -33,7 +33,7 @@ Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPr
     - [With Grunt](#using-grunt-to-build-the-package)
     - [Grunt Tasks](#grunt-tasks)
     - [i18n](#i18n-internationalization)
-- [Get Involved](#getting-involved)
+- [Development](#development)
 - [Roadmap](#roadmap)
 - [License](#license)
 
@@ -64,6 +64,7 @@ Casper is open-source and simple to develop and extend.
 
 $ git clone https://github.com/lacymorrow/casper.git
 $ cd casper
+$ npm install -g grunt-cli
 $ npm install
 
 
