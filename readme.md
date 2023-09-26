@@ -1,9 +1,9 @@
 
-[![Casper](img/casper.png "Casper")](http://lacymorrow.com/projects/casper/)
+[![Casper](https://raw.githubusercontent.com/lacymorrow/casper/master/img/casper.png "Casper")](http://lacymorrow.com/projects/casper/)
 
 > A Ghost-like 👻 WordPress theme
 
-[![Build Status](https://travis-ci.org/lacymorrow/casper.svg?branch=master)](https://travis-ci.org/lacymorrow/casper) [![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]() [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[![WordPress](https://img.shields.io/wordpress/v/akismet.svg)]() [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 Casper *(for WordPress)* is a simple yet beautiful theme for bloggers.
 
@@ -18,7 +18,7 @@ Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPr
 * Responsive site and images   🐛 
 
 
-[![screenshot](screenshot.png "screenshot")](http://lacymorrow.com/projects/casper/)
+[![screenshot](https://raw.githubusercontent.com/lacymorrow/casper/master/screenshot.png "screenshot")](http://lacymorrow.com/projects/casper/)
 
 ### [Demo](http://lacymorrow.com/projects/casper/)
 
