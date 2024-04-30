@@ -20,7 +20,7 @@ Inspired by the [Ghost](http://ghost.org) blogging platform, Casper is a [WordPr
 
 [![screenshot](https://raw.githubusercontent.com/lacymorrow/casper/master/screenshot.png "screenshot")](http://lacymorrow.com/projects/casper/)
 
-### [Demo](http://lacymorrow.com/projects/casper/)
+### [Demo](https://casper.lacymorrow.com)
 
 ### [Download Casper from the WordPress.org Theme Directory](http://wordpress.org/themes/casper)
 
