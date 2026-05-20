@@ -3230,7 +3230,7 @@ h5,
 h6
 {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1;
+    line-height: 1.2em;
 
     margin-top: 0;
 
@@ -3346,6 +3346,10 @@ blockquote p
     font-style: italic;
 
     margin: .8em 0;
+}
+blockquote p em
+{
+    font-style: normal;
 }
 blockquote small
 {
